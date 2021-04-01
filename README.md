@@ -1,4 +1,4 @@
-= Minhas anotações =
+# Minhas anotações
 
 Páginas (vimwiki) do sítio https://anotacoes.segunda.tech
 
