@@ -4,8 +4,6 @@ Esta página/wiki é mantida por Marcio Frayze David (marcio@segunda.tech).
 
 Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente inspirada nos conceitos de slip box.
 
-== Índice ==
-
 === Programação Funcional ===
 
 [[Typeclass]]
