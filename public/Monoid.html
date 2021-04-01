@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Monoid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="O que é um Monoid?"><h1 id="O que é um Monoid?" class="header"><a href="#O que é um Monoid?">O que é um Monoid?</a></h1></div>
+
+<p>
+refs: <a href="http://blog.sigfpe.com/2009/01/haskell-monoids-and-their-uses.html">http://blog.sigfpe.com/2009/01/haskell-monoids-and-their-uses.html</a>
+</p>
+
+<p>
+Em <a href="Haskell.html">Haskell</a>, Monoid é uma <a href="Typeclass.html">Typeclass</a>.
+</p>
+
+<p>
+A sua principal característica é a capacidade de combinar valores, criando
+um novo valor da mesma typeclass. Podemos encará-la como sendo um acumulador.
+</p>
+
+<p>
+Todo Monoid precisa obedecer à duas leis:
+</p>
+
+<div id="O que é um Monoid?-Primeira: lei de identidade"><h2 id="Primeira: lei de identidade" class="header"><a href="#O que é um Monoid?-Primeira: lei de identidade">Primeira: lei de identidade</a></h2></div>
+
+<div id="O que é um Monoid?-Primeira: lei de identidade-Deve possuir um valor identidade"><h3 id="Deve possuir um valor identidade" class="header"><a href="#O que é um Monoid?-Primeira: lei de identidade-Deve possuir um valor identidade">Deve possuir um valor identidade</a></h3></div>
+
+<p>
+Precisa sempre ter um valor identidade, que quando combinado
+com qualquer outro Monoid m, resulta no próprio Monoid m.
+</p>
+
+<div id="O que é um Monoid?-Primeira: lei de identidade-Deve possuir uma operação mappend"><h3 id="Deve possuir uma operação mappend" class="header"><a href="#O que é um Monoid?-Primeira: lei de identidade-Deve possuir uma operação mappend">Deve possuir uma operação mappend</a></h3></div>
+
+<p>
+A operação mappend combina 2 Monoids e tem como resultado um
+Monoid da mesma typeclass.
+</p>
+
+<p>
+A forma infixa de se usar mappend é usando &lt;&gt; que é sinônimo de mappend.
+</p>
+
+<p>
+Obs: A função mappend deve ser removida da typeclass Monoid em versões
+futuras do Haskell.
+</p>
+
+<p>
+Fonte: <a href="https://hackage.haskell.org/package/base-4.14.1.0/docs/Data-Monoid.html">https://hackage.haskell.org/package/base-4.14.1.0/docs/Data-Monoid.html</a>
+</p>
+
+<div id="O que é um Monoid?-Segunda: lei da associetividade"><h2 id="Segunda: lei da associetividade" class="header"><a href="#O que é um Monoid?-Segunda: lei da associetividade">Segunda: lei da associetividade</a></h2></div>
+
+<p>
+A ordem de execução não importa. Ou seja:
+</p>
+
+<p>
+(x &lt;&gt; y) &lt;&gt; z = x &lt;&gt; (y &lt;&gt; z)
+</p>
+
+<p>
+Embora a associetividade deva ser obedecida, não temos
+garantias em relação a mudança de ordem dos elementos.
+Em alguns casos o resultado será o mesmo mas em outros
+resultará em um valor diferente. Ou seja, não temos
+garantias que um Monoid é comutativo. Mais em: <a href="Monoids comutativos.html">Monoids comutativos</a> 
+</p>
+
+<div id="O que é um Monoid?-Exemplos"><h2 id="Exemplos" class="header"><a href="#O que é um Monoid?-Exemplos">Exemplos</a></h2></div>
+
+<div id="O que é um Monoid?-Exemplos-Listas"><h3 id="Listas" class="header"><a href="#O que é um Monoid?-Exemplos-Listas">Listas</a></h3></div>
+
+<p>
+A identidade de uma lista é a lista vazia: []
+</p>
+
+<p>
+E a função de combinação é:
+</p>
+
+<p>
+(&lt;&gt;) = (++)
+</p>
+
+<p>
+E o resultado de [ 1, 2 ] &lt;&gt; ([ 3, 4 ] &lt;&gt; [ 5, 6 ]) é o mesmo de
+([1, 2] &lt;&gt; [3, 4]) &lt;&gt; [5, 6]
+</p>
+
+<p>
+Embora a lista seja um exemplo clássico e ilustra bem o que é
+um Monoid, na verdade essa <a href="Typeclass.html">Typeclass</a> é bem mais robusta e
+poderosa que isso.
+</p>
+
+<p>
+E no caso das listas, embora seja associativa, a alteração da ordem
+dos elementos resultará em um valor diferente.
+</p>
+
+<p>
+Ou seja, o resultado de [ 1 ] &lt;&gt; [ 2 ] é diferente de [ 2 ] &lt;&gt; [ 1 ]
+</p>
+
+<div id="O que é um Monoid?-Exemplos-Vantagens"><h3 id="Vantagens" class="header"><a href="#O que é um Monoid?-Exemplos-Vantagens">Vantagens</a></h3></div>
+
+<p>
+Em geral já temos outras operações para combinar coisas. Por exemplo,
+podemos juntar duas lista usando a função (++):
+</p>
+
+<p>
+[1, 2] ++ [3, 4]
+</p>
+
+<p>
+E o resultado será o mesmo do que fazermos:
+</p>
+
+<p>
+[1, 2] &lt;&gt; [3, 4]
+</p>
+
+<p>
+Mas, sendo um Monoid, podemos utilizar também a função <a href="mconcat.html">mconcat</a>.
+</p>
+
+</body>
+</html>

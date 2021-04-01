@@ -1,0 +1,20 @@
+= Integer não é um Monoid =
+
+Para tornar Integer um [[Monoid]], precisaríamos definir as funções mappend e mempty.
+
+Se considerarmos a soma, mappend poderia ser a função (+) e mempty poderia ser 0.
+
+Mas isso tornaria este Monoid limitado à soma. Mas poderíamos querer fazer uma
+multiplicação! Neste caso, teríamos que definir o mappend como sendo (*) e o
+mempty como sendo 1.
+
+Como isso não é possível, não é uma boa ideia tornar Integer um [[Monoid]].
+
+Para resolver esta situação, existem os monoids Sum e Product.
+
+Ex:
+
+import Data.Monoid  
+Sum 1 <> Sum 3 = Sum 4
+
+Desta forma, podemos utilizar Sum e Product com a função [[mconcat]].

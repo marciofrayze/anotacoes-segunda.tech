@@ -1,0 +1,76 @@
+= O que é um Monoid? =
+
+refs: http://blog.sigfpe.com/2009/01/haskell-monoids-and-their-uses.html
+
+Em [[Haskell]], Monoid é uma [[Typeclass]].
+
+A sua principal característica é a capacidade de combinar valores, criando
+um novo valor da mesma typeclass. Podemos encará-la como sendo um acumulador.
+
+Todo Monoid precisa obedecer à duas leis:
+
+== Primeira: lei de identidade ==
+
+=== Deve possuir um valor identidade === 
+
+Precisa sempre ter um valor identidade, que quando combinado
+com qualquer outro Monoid m, resulta no próprio Monoid m.
+
+=== Deve possuir uma operação mappend ===
+
+A operação mappend combina 2 Monoids e tem como resultado um
+Monoid da mesma typeclass.
+
+A forma infixa de se usar mappend é usando <> que é sinônimo de mappend.
+
+Obs: A função mappend deve ser removida da typeclass Monoid em versões
+futuras do Haskell.
+
+Fonte: https://hackage.haskell.org/package/base-4.14.1.0/docs/Data-Monoid.html
+
+== Segunda: lei da associetividade ==
+
+A ordem de execução não importa. Ou seja:
+
+(x <> y) <> z = x <> (y <> z)
+
+Embora a associetividade deva ser obedecida, não temos
+garantias em relação a mudança de ordem dos elementos.
+Em alguns casos o resultado será o mesmo mas em outros
+resultará em um valor diferente. Ou seja, não temos
+garantias que um Monoid é comutativo. Mais em: [[Monoids comutativos]] 
+
+== Exemplos ==
+
+=== Listas ===
+
+A identidade de uma lista é a lista vazia: []
+
+E a função de combinação é:
+
+(<>) = (++)
+
+E o resultado de [ 1, 2 ] <> ([ 3, 4 ] <> [ 5, 6 ]) é o mesmo de
+([1, 2] <> [3, 4]) <> [5, 6]
+
+Embora a lista seja um exemplo clássico e ilustra bem o que é
+um Monoid, na verdade essa [[Typeclass]] é bem mais robusta e
+poderosa que isso.
+
+E no caso das listas, embora seja associativa, a alteração da ordem
+dos elementos resultará em um valor diferente.
+
+Ou seja, o resultado de [ 1 ] <> [ 2 ] é diferente de [ 2 ] <> [ 1 ]
+
+=== Vantagens ===
+
+Em geral já temos outras operações para combinar coisas. Por exemplo,
+podemos juntar duas lista usando a função (++):
+
+[1, 2] ++ [3, 4]
+
+E o resultado será o mesmo do que fazermos:
+
+[1, 2] <> [3, 4]
+
+Mas, sendo um Monoid, podemos utilizar também a função [[mconcat]].

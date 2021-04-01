@@ -1,0 +1,16 @@
+= Typeclass =
+
+ref: http://www.learnyouahaskell.com/types-and-typeclasses
+
+Uma Typeclass é similar às interfaces no mundo da programação orientada a objetos (mas melhor!).
+
+A Typeclass define um conjunto de comportamentos esperados.
+
+Através dela podemos utilizar então [[Class constrains]] em nossas funções.
+
+== Exemplos ==
+
+Exemplos básicos de Typeclasses muito usadas em [[Haskell]] são:
+
+[[Eq]], [[Ord]], [[Show]], [[Read]], [[Enum]], [[Bounded]], [[Num]], [[Integral]] e [[Floating]].
+

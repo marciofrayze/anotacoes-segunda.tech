@@ -1,0 +1,13 @@
+= A função mconcat =
+
+mconcat é uma função que recebe uma lista de [[Monoid]] e retorna um
+Monoid do mesmo tipo.
+
+Ela pode simplificar o código pois:
+
+import Data.Monoid  
+mconcat [Sum 3, Sum 6]
+
+É equivalente a fazer:
+
+Sum 3 <> Sum 6

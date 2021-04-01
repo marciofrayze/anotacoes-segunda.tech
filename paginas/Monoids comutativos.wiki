@@ -1,0 +1,33 @@
+= Monoids comutativos =
+
+Um [[Monoid]] pode ou não ser comutativo.
+
+Para ser comutativo deve obedecer a seguinte regra:
+
+a <> b == b <> a
+
+Por exemplo:
+
+[1, 2] <> [3, 4]
+
+É diferente de:
+
+[3, 4] <> [1, 2]
+
+Logo, a lista não é um Monoid comutativo.
+
+Neste caso podemos dizer que trata-se de um [[Dual Monoid]]. 
+
+Já Sum é comutativo:
+
+import Data.Monoid  
+Sum 1 <> Sum 3
+
+Retornará o mesmo valor de:
+
+import Data.Monoid  
+Sum 3 <> Sum 1
+
+Saber se o Monoid é ou não comutativo pode ser útil para
+permitir o paralelismo, garantindo o mesmo resultado (caso
+seja comutativo) não importando a ordem em que seja processado.

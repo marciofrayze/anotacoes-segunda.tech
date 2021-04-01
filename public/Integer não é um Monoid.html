@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Integer não é um Monoid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Integer não é um Monoid"><h1 id="Integer não é um Monoid" class="header"><a href="#Integer não é um Monoid">Integer não é um Monoid</a></h1></div>
+
+<p>
+Para tornar Integer um <a href="Monoid.html">Monoid</a>, precisaríamos definir as funções mappend e mempty.
+</p>
+
+<p>
+Se considerarmos a soma, mappend poderia ser a função (+) e mempty poderia ser 0.
+</p>
+
+<p>
+Mas isso tornaria este Monoid limitado à soma. Mas poderíamos querer fazer uma
+multiplicação! Neste caso, teríamos que definir o mappend como sendo (*) e o
+mempty como sendo 1.
+</p>
+
+<p>
+Como isso não é possível, não é uma boa ideia tornar Integer um <a href="Monoid.html">Monoid</a>.
+</p>
+
+<p>
+Para resolver esta situação, existem os monoids Sum e Product.
+</p>
+
+<p>
+Ex:
+</p>
+
+<p>
+import Data.Monoid  
+Sum 1 &lt;&gt; Sum 3 = Sum 4
+</p>
+
+<p>
+Desta forma, podemos utilizar Sum e Product com a função <a href="mconcat.html">mconcat</a>.
+</p>
+
+</body>
+</html>

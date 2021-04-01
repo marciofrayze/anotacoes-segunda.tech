@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Monoids comutativos</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Monoids comutativos"><h1 id="Monoids comutativos" class="header"><a href="#Monoids comutativos">Monoids comutativos</a></h1></div>
+
+<p>
+Um <a href="monoid.html">monoid</a> pode ou não ser comutativo.
+</p>
+
+<p>
+Para ser comutativo deve obedecer a seguinte regra:
+</p>
+
+<p>
+a &lt;&gt; b == b &lt;&gt; a
+</p>
+
+<p>
+Por exemplo:
+</p>
+
+<p>
+[1, 2] &lt;&gt; [3, 4]
+</p>
+
+<p>
+É diferente de:
+</p>
+
+<p>
+[3, 4] &lt;&gt; [1, 2]
+</p>
+
+<p>
+Logo, a lista não é um monoid comutativo.
+</p>
+
+<p>
+Neste caso podemos dizer que trata-se de um <a href="Dual Monoid.html">Dual Monoid</a>. 
+</p>
+
+<p>
+Já Sum é comutativo:
+</p>
+
+<p>
+import Data.Monoid  
+Sum 1 &lt;&gt; Sum 3
+</p>
+
+<p>
+Retornará o mesmo valor de:
+</p>
+
+<p>
+import Data.Monoid  
+Sum 3 &lt;&gt; Sum 1
+</p>
+
+<p>
+Saber se o Monoid é ou não comutativo pode ser útil para
+permitir o paralelismo, garantindo o mesmo resultado (caso
+seja comutativo) não importando a ordem em que seja processado.
+</p>
+
+</body>
+</html>
