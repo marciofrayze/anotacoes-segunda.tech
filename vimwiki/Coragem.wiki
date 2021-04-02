@@ -1,0 +1,22 @@
+= Coragem =
+
+Coragem é um dos valores fundamentais da [[Programação Extrema]].
+
+Ter coragem é diferente de agir de forma irresponśavel. 
+
+A questão central é identificarmos nossos medos e
+adequarmos nosso processo de desenvolvimento para minimizarmos
+os fatores que estão contribuindo para que tenhamos medo.
+
+Este medo pode se expressar de diferentes formas. Por exemplo:
+* Medo de fazer uma nova publicação. 
+* Medo de refatorarmos um trecho do código. 
+* Medo de apagarmos um trecho de código morto.
+* Medo de expressarmos nossas opiniões.
+* Medo de informarmos que cometemos um erro.
+* Medo de não conseguir cumprir prazos e espectatívas de outras pessoas.
+
+As práticas da [[Programação Extrema]] vão nos ajudar
+a minimizar as causas destes medos, permitindo que
+tenhamos mais coragem de refatorar o código do sistema,
+melhorar o design, expressarmos nossas opiniões, etc.
