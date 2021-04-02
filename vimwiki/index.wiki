@@ -8,6 +8,8 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 
 [[Typeclass]]
 
+[[Functor]]
+
 [[Monoid]]
 
 [[Monoids comutativos]]
@@ -17,3 +19,7 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 [[mconcat]]
 
 [[Integer não é um Monoid]]
+
+== Extreme programming ==
+
+[[Coragem]]

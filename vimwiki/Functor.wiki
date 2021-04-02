@@ -1,0 +1,6 @@
+= Functor =
+
+Functor representa uma [[Typeclass]] capaz de realizar uma transformação
+de uma categoria para outra.
+
+...
