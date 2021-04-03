@@ -20,6 +20,11 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 
 [[Integer não é um Monoid]]
 
-== Extreme programming ==
+=== Extreme programming ===
 
 [[Coragem]]
+
+=== Gestão ===
+
+[[Schedule chicken]]
+

@@ -13,8 +13,9 @@ Como isso não é possível, não é uma boa ideia tornar Integer um [[Monoid]].
 Para resolver esta situação, existem os monoids Sum e Product.
 
 Ex:
-
+{{{haskell
 import Data.Monoid  
 Sum 1 <> Sum 3 = Sum 4
+}}}
 
 Desta forma, podemos utilizar Sum e Product com a função [[mconcat]].

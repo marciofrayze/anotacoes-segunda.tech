@@ -1,0 +1,6 @@
+= Livro Extreme Programming Explained =
+
+* Autores: Kent Beck, Cynthia Andres
+* Ano: 2004 (segunda edição)
+
+https://www.goodreads.com/book/show/67833.Extreme_Programming_Explained

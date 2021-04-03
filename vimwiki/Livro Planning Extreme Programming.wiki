@@ -1,0 +1,6 @@
+= Planning Extreme Programming =
+
+* Autores: Kent Beck, Martin Fowler
+* Ano: 2000
+
+https://www.goodreads.com/book/show/67839.Planning_Extreme_Programming

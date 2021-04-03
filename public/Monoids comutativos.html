@@ -17,26 +17,23 @@ Um <a href="Monoid.html">Monoid</a> pode ou não ser comutativo.
 <p>
 Para ser comutativo deve obedecer a seguinte regra:
 </p>
-
-<p>
+<pre haskell>
 a &lt;&gt; b == b &lt;&gt; a
-</p>
+</pre>
 
 <p>
 Por exemplo:
 </p>
-
-<p>
+<pre haskell>
 [1, 2] &lt;&gt; [3, 4]
-</p>
+</pre>
 
 <p>
 É diferente de:
 </p>
-
-<p>
+<pre haskell>
 [3, 4] &lt;&gt; [1, 2]
-</p>
+</pre>
 
 <p>
 Logo, a lista não é um Monoid comutativo.
@@ -49,20 +46,18 @@ Neste caso podemos dizer que trata-se de um <a href="Dual Monoid.html">Dual Mono
 <p>
 Já Sum é comutativo:
 </p>
-
-<p>
+<pre haskell>
 import Data.Monoid  
-Sum 1 &lt;&gt; Sum 3
-</p>
+Sum 1 &lt;&gt; Sum 3  
+</pre>
 
 <p>
 Retornará o mesmo valor de:
 </p>
-
-<p>
+<pre haskell>
 import Data.Monoid  
-Sum 3 &lt;&gt; Sum 1
-</p>
+Sum 3 &lt;&gt; Sum 1  
+</pre>
 
 <p>
 Saber se o Monoid é ou não comutativo pode ser útil para
