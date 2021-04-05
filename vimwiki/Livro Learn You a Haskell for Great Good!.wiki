@@ -1,0 +1,4 @@
+= Learn You a Haskell for Great Good! =
+
+* Miran Lipovaca
+* http://learnyouahaskell.com/

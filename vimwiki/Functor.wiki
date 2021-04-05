@@ -1,6 +1,35 @@
 = Functor =
 
-Functor representa uma [[Typeclass]] capaz de realizar uma transformação
-de uma categoria para outra.
+refs:
+* [[Livro Learn You a Haskell for Great Good!]]
+  * Capítulo 8: Making Our Own Types and Typeclasses
+    * http://learnyouahaskell.com/making-our-own-types-and-typeclasses#the-functor-typeclass
+  * Capítulo 11: Functors, Applicative Functors and Monoids
+    * http://learnyouahaskell.com/functors-applicative-functors-and-monoids
+* Site Wiki Haskell
+  * https://wiki.haskell.org/Functor
+  
+== Definição ==
 
-...
+Em [[Haskell]], Functor representa uma [[Typeclass]] capaz de 
+realizar uma transformação.
+
+{{{Haskell
+class Functor f where  
+    fmap :: (a -> b) -> f a -> f b  
+}}}
+
+Onde *_(a -> b)_* é uma função de transformação que será
+aplicada à cada elemento do functor *_f a_* e o
+resultado final será o *_f b_*.
+
+== Exemplos ==
+
+Um exemplo clássico de Functor são as Listas.
+
+Podemos fazer um *_map_* em uma lista, executando uma
+função de transformação para cada elemento. Como
+resultado, temos uma lista de mesmo tamanho, mas
+podendo conter elementos de algum outro tipo ou
+do mesmo tipo, mas com outros valores, ou até mesmo
+uma lista igual à inicial.
