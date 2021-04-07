@@ -1,4 +1,4 @@
-= Planning Extreme Programming =
+= Livro Planning Extreme Programming =
 
 * Autores: Kent Beck, Martin Fowler
 * Ano: 2000
