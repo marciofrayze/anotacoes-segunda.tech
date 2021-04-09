@@ -87,7 +87,7 @@ momento. Assim evitamos aqueles diálogos do tipo:
 Já presenciei situações onde as desenvolvedoras estavam
 fazendo várias alterações arriscadas direto em produção, sem saber 
 se aquilo tinha chances de corrigir o problema, já que não não haviam
-ainda identificado a causa. E no fim descobriam que era uma [[falha]] 
+ainda identificado a causa. E no fim descobriam que era uma falha 
 na infraestrutura ou em outro sistema ou qualquer outra coisa que
 estava fora da visão do time e que nenhuma das ações realizadas
 tinham relação com a origem do problema.
