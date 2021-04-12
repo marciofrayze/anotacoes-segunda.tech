@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div id="Functor"><h1 id="Functor" class="header"><a href="#Functor">Functor</a></h1></div>
+<div id="_Functor_"><h1 id="_Functor_" class="header"><a href="#_Functor_"><em>Functor</em></a></h1></div>
 
 <p>
 refs:
@@ -45,11 +45,11 @@ Site Wiki Haskell
 </ul>
 </ul>
   
-<div id="Functor-Definição"><h2 id="Definição" class="header"><a href="#Functor-Definição">Definição</a></h2></div>
+<div id="_Functor_-Definição"><h2 id="Definição" class="header"><a href="#_Functor_-Definição">Definição</a></h2></div>
 
 <p>
-Em <a href="Haskell.html">Haskell</a>, Functor representa uma <a href="Typeclass.html">Typeclass</a> capaz de 
-realizar uma transformação.
+Em <a href="Haskell.html">Haskell</a>, um <em>Functor</em> representa uma <a href="Typeclass.html">Typeclass</a> capaz de 
+realizar uma transformação, e é definida por:
 </p>
 
 <pre Haskell>
@@ -58,24 +58,160 @@ class Functor f where
 </pre>
 
 <p>
-Onde <span id="Functor-Definição-<em>(a -&gt; b)</em>"></span><strong id="<em>(a -&gt; b)</em>"><em>(a -&gt; b)</em></strong> é uma função de transformação que será
-aplicada à cada elemento do functor <span id="Functor-Definição-<em>f a</em>"></span><strong id="<em>f a</em>"><em>f a</em></strong> e o
-resultado final será o <span id="Functor-Definição-<em>f b</em>"></span><strong id="<em>f b</em>"><em>f b</em></strong>.
-</p>
-
-<div id="Functor-Exemplos"><h2 id="Exemplos" class="header"><a href="#Functor-Exemplos">Exemplos</a></h2></div>
-
-<p>
-Um exemplo clássico de Functor são as Listas.
+Onde <span id="_Functor_-Definição-<em>(a -&gt; b)</em>"></span><strong id="<em>(a -&gt; b)</em>"><em>(a -&gt; b)</em></strong> é uma função de transformação que será
+aplicada à cada elemento do <em>Functor</em> <span id="_Functor_-Definição-<em>f a</em>"></span><strong id="<em>f a</em>"><em>f a</em></strong> e o
+resultado final será um novo <em>Functor</em>, representado
+por <span id="_Functor_-Definição-<em>f b</em>"></span><strong id="<em>f b</em>"><em>f b</em></strong>.
 </p>
 
 <p>
-Podemos fazer um <span id="Functor-Exemplos-<em>map</em>"></span><strong id="<em>map</em>"><em>map</em></strong> em uma lista, executando uma
+Lembrando que em Haskell <em><span id="_Functor_-Definição-Class"></span><strong id="Class">Class</strong></em> tem um
+significado bem diferente do usado na orientação a objetos.
+Para mais informações, leia sobre <a href="Typeclass.html">o que é uma Typeclass</a>.
+</p>
+
+<div id="_Functor_-Exemplos"><h2 id="Exemplos" class="header"><a href="#_Functor_-Exemplos">Exemplos</a></h2></div>
+
+<p>
+Um exemplo clássico de <em>Functor</em> são as Listas.
+</p>
+
+<p>
+Podemos fazer um <span id="_Functor_-Exemplos-<em>fmap</em>"></span><strong id="<em>fmap</em>"><em>fmap</em></strong> em uma lista, executando uma
 função de transformação para cada elemento. Como
-resultado, temos uma lista de mesmo tamanho, mas
+resultado temos uma lista de mesmo tamanho, mas
 podendo conter elementos de algum outro tipo ou
-do mesmo tipo, mas com outros valores, ou até mesmo
+do mesmo tipo mas com outros valores, ou até mesmo
 uma lista igual à inicial.
+</p>
+
+<p>
+O primeiro parâmetro de <em><span id="_Functor_-Exemplos-fmap"></span><strong id="fmap">fmap</strong></em> pode ser uma função
+nomeada (declarada anteriormente) ou uma <a href="Lambda expression.html">Lambda expression</a>.
+</p>
+
+<div id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)"><h3 id="Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)" class="header"><a href="#_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)">Utilizando <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-fmap"></span><strong id="fmap">fmap</strong></em> com uma expressão lambda (<em>lambda expression</em>)</a></h3></div>
+
+<p>
+Se quisermos somar 1 à todos os elementos de uma lista
+de números, podemos escrever o seguinte código em Haskell:
+</p>
+
+<pre haskell>
+fmap (\n -&gt; n + 1) [1, 2, 3, 4] 
+</pre>
+
+<p>
+No trecho <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-<em>(\n -&gt; n + 1)</em>"></span><strong id="<em>(\n -&gt; n + 1)</em>"><em>(\n -&gt; n + 1)</em></strong>, estamos definindo uma expressão
+lambda que receberá como parametro um número <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-n"></span><strong id="n">n</strong></em> e irá
+retornar <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-<em>n + 1</em>"></span><strong id="<em>n + 1</em>"><em>n + 1</em></strong>. Esta função será executada para
+cada elemento da lista e uma nova lista será criada
+com o resultado dessas execuções.  
+</p>
+
+<p>
+Desta forma o resultado do <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-<em>fmap"></span><strong id="<em>fmap"><em>fmap</strong></em> será:
+</p>
+
+<pre haskell>
+[2, 3, 4, 5]
+</pre>
+
+<p>
+Neste exemplo mantivemos o mesmo tipo de elemento, mas
+poderíamos ter como resultado uma lista com outro tipo.
+</p>
+
+<p>
+Se quiséssemos por exemplo transformar uma lista de números
+em uma lista de Strings ou, no caso do Haskell, um array
+de char, poderíamos escrever o seguinte código:
+</p>
+
+<pre haskell>
+fmap (\n -&gt; show n) [1, 2, 3, 4] 
+</pre>
+
+<p>
+Onde <a href="show.html">show</a> é uma função do Haskell capaz de transformar
+um número em um array de caracteres. 
+</p>
+
+<p>
+Em nosso código acima, <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-<em>fmap</em>"></span><strong id="<em>fmap</em>"><em>fmap</em></strong> irá primeiro executar a
+função <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-show"></span><strong id="show">show</strong></em> passando o primeiro elemento da lista
+como parâmetro, que irá retornar o valor "1". 
+Em seguida irá percorrer os demais elementos da lista e,
+um por um, irá executar a função <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-show"></span><strong id="show">show</strong></em>, passando um
+elemento da lista por vez. Conforme esta operação é feita
+o resultado de cada executação é armazenado em uma nova lista.
+</p>
+
+<p>
+Após percorrer por todos os elementos e terminar
+de criar a lista com o resultado de todas as
+operações, <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-<em>fmap</em>"></span><strong id="<em>fmap</em>"><em>fmap</em></strong> irá retornar a nova lista:
+</p>
+
+<pre haskell>
+["1", "2, "3", "4"]
+</pre>
+
+<p>
+Por isso dizemos que <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-<em>fmap</em>"></span><strong id="<em>fmap</em>"><em>fmap</em></strong> é uma função de <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-transformação"></span><strong id="transformação">transformação</strong>.
+</p>
+
+<p>
+Mas embora seja possível mudar o tipo dos elementos
+contidos dentro do <em>Functor</em> (neste caso, a Lista) através
+do <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-fmap"></span><strong id="fmap">fmap</strong></em>, não é possível mudarmos o tamanho do <em>Functor</em>. Ou
+seja, dada uma lista com 4 elementos, o <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda (_lambda expression_)-fmap"></span><strong id="fmap">fmap</strong></em> sempre
+retornará uma lista contendo 4 elementos.
+</p>
+
+<div id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma função nomeada (_named function_)"><h3 id="Utilizando _*fmap*_ com uma função nomeada (_named function_)" class="header"><a href="#_Functor_-Exemplos-Utilizando _*fmap*_ com uma função nomeada (_named function_)">Utilizando <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma função nomeada (_named function_)-fmap"></span><strong id="fmap">fmap</strong></em> com uma função nomeada (<em>named function</em>)</a></h3></div>
+
+<p>
+Podemos utilizar uma função já existente e passa-lá como
+parâmetro para o <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma função nomeada (_named function_)-fmap"></span><strong id="fmap">fmap</strong></em>. Por exemplo:
+</p>
+
+<pre haskell>
+soma1 n = n + 1
+
+fmap soma1 [1, 2, 3, 4] 
+</pre>
+
+<p>
+E o resultado será igual ao obtido quando utilizamos uma
+expressão lambda:
+</p>
+<pre haskell>
+[2, 3, 4, 5]
+</pre>
+
+<p>
+Este mecânismo é útil em 2 situações:
+</p>
+<ul>
+<li>
+Quando a função é muito complexa, para facilitar o entendimento do código ou;
+
+<li>
+Quando querermos re-aproveitar uma função pré-existente.
+
+</ul>
+
+<div id="_Functor_-Exemplos-Outros Functors"><h3 id="Outros Functors" class="header"><a href="#_Functor_-Exemplos-Outros Functors">Outros Functors</a></h3></div>
+
+<p>
+É comum usarmos listas para exemplificarmos o uso do <em><span id="_Functor_-Exemplos-Outros Functors-fmap"></span><strong id="fmap">fmap</strong></em>, mas
+existem vários outros tipos de <em>Functors</em> e podemos até mesmo
+criar nossos próprios <em>Functors</em>!
+</p>
+
+<p>
+(...)
 </p>
 
 </body>
