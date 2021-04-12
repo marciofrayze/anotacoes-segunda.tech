@@ -15,7 +15,7 @@ junto com comunicação, simplicidade, feedback e respeito.
 
 Ter coragem, neste contexto, não é sobre a coragem necessária
 para que um soldado consiga enfrentar uma guerra. Também não é 
-sobre agir de forma irresponśavel, pulando do avião sem paraquedas.
+sobre agir de forma irresponsável, pulando do avião sem paraquedas.
 
 A questão é que ao desenvolvermos softwares vamos encarar 
 situações que vão causar medo tanto em nós, pessoas desenvolvedoras,
@@ -30,7 +30,7 @@ Entre os medos comuns das clientes estão:
 * Medo de perder controle do projeto.
 * Medo de não ter suas expectativas atendidas.
 
-Já entre nós, pessoas desenvolvedoras, enfrentamos:
+Já as pessoas desenvolvedoras enfrentam:
 
 * Medo de ficar sobrecarregada.
 * Medo de expressar opiniões.
@@ -38,11 +38,11 @@ Já entre nós, pessoas desenvolvedoras, enfrentamos:
 * Medo de não conseguir cumprir os prazos acordados.
 * Medo de não atingir as expectativas geradas por outras pessoas.
 * Medo de não ter as informações necessárias para finalizar o trabalho.
-* Medo de ter que se sujeitar a um cronograma onde é inviável implementar um código com a qualidade que gostaria.
+* Medo de ter que se sujeitar a um cronograma em que é inviável implementar um código com a qualidade que gostaria.
 
 Em um ambiente assim é comum que ambos os lados tentem levantar 
 um muro para se proteger, e o resultado tende a ser a elaboração 
-de um processo longo, complexo e ineficiênte, já que cada lado
+de um processo longo, complexo e ineficiente, já que cada lado
 parece desconfiar das intenções do outro. 
 
 == Dia a dia da pessoa desenvolvedora ==
@@ -50,7 +50,7 @@ parece desconfiar das intenções do outro.
 As práticas da [[Programação Extrema|XP]] se expandem por todo processo de desenvolvimento.
 
 Ela também nos auxilia com alguns outros tipos de medos recorrentes que estão mais
-ligado com às práticas de implementação, como por exemplo:
+ligado com as práticas de implementação, como por exemplo:
 
 * Medo de fazer uma nova publicação em produção. 
 * Medo de refatorar um trecho do código. 
