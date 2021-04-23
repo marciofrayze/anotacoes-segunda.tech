@@ -11,7 +11,7 @@ refs:
   * https://www.desenvolvimentoagil.com.br/xp/valores/coragem
 
 Coragem é um dos valores fundamentais da [[Programação Extrema]],
-junto com comunicação, simplicidade, feedback e respeito.
+junto com comunicação, simplicidade, [[Feedback|feedback]] e respeito.
 
 Ter coragem, neste contexto, não é sobre a coragem necessária
 para que um soldado consiga enfrentar uma guerra. Também não é 

@@ -1,0 +1,160 @@
+ = Feedback =
+
+refs: 
+* [[Livro Extreme Programming Explained]]
+  * Capítulo 4: Values, página 19. 
+* [[Livro Extreme Programming]]
+  * Capítulo 3: Valores do XP, página 49.
+* Site Desenvolvimento Ágil
+  * https://www.desenvolvimentoagil.com.br/xp/valores/feedback
+* Site Extreme Programming
+  * http://www.extremeprogramming.org/values.html (Feedback)
+  * http://www.extremeprogramming.org/rules/customer.html (_The Customer is Always Available_)
+
+Feedback é um dos valores fundamentais da [[Programação Extrema]],
+junto com [[Coragem|coragem]], comunicação, simplicidade e respeito.
+
+Segundo o site [[http://www.extremeprogramming.org/values.html|extremeprogramming.org]], quando
+praticamos XP nos comprometemos a:
+- Entregar um software funcionando em toda iteração;
+- Demonstrar nosso software cedo e muitas vezes, para então escutarmos atentamente e realizar quaisquer alterações necessárias;
+- Falar sobre o projeto e adaptar nosso processo a ele, não o contrário.
+
+Para atingir estas metas precisamos constantemente revisar se estamos
+caminhando para direção correta, afinal, para adaptar
+nosso processo de forma contínua precisamos também avaliá-lo continuamente.
+
+Abaixo discutimos as diversas formas de feedback que ocorrem em diferentes camadas.
+
+== Feedback através de testes automatizados ==
+
+Programação Extrema e TDD tem uma forte relação histórica. Nasceram em
+períodos próximos e foram disseminadas pelo mesmo grupo de pessoas, então
+não é surpresa que a XP incentive o uso de TDD.
+
+E os testes são uma das nossas formas de feedback. Criamos testes para
+que nos guiem em direção a um [[Design Incremental]].
+É através deles também que garantimos que um [[Bug de regressão]] não
+voltará a acontecer. Além disso, nos ajudam a manter o sistema integro, 
+especialmente quando praticados em conjunto com outra prática importante 
+da Programação Extrema: [[Integração contínua]].
+
+Quando escrevemos testes recebemos também feedbacks um pouco mais
+discretos, mas não menos importantes. Por exemplo: 
+- Quão difícil foi escrever o teste?
+- Quando uma função ou classe foi refatorada, algum teste quebrou?
+- Quantos testes tiveram que ser alterados para adicionar uma nova funcionalidade ao sistema? E estes testes tinham relação com a parte do sistema que estava sendo alterada?
+ 
+Este tipo de feedback facilita a identificação antecipada de falhas no _design_ do
+nosso sistema.
+
+=== Indo além do TDD ===
+
+O uso de testes automatizados não se limita ao uso clássico
+que encontramos nos livros de TDD. Com ferramentas como [[https://www.archunit.org/|ArchUnit]],
+conseguimos até mesmo criar uma [[Teste sua arquitetura de forma automatizada|definição testável da arquitetura]]
+de nosso sistema.
+
+Outro contexto interessante que podemos utilizá-los é para testar
+a performance da nossa aplicação, com bibliotecas como [[https://jmeter.apache.org/|JMeter]] ou [[https://github.com/postmanlabs/newman|Newman]].
+
+Criando este tipos de testes e configurando nossa _pipeline_ de build
+(com tecnologias como [[https://www.jenkins.io/|Jenkins]] ou [[https://docs.gitlab.com/ee/ci/|GitLab CI]]),
+conseguimos ter um feedback contínuo que a arquitetura definida nos 
+testes está sendo seguida por todas as pessoas do time
+e que a performace da nossa aplicação está dentro dos critérios
+estabelecidos.
+
+Mas estes são apenas algumas das tarefas que um time pode automatizar
+através dos testes. O livro [[https://evolutionaryarchitecture.com|Building Evolutionary Architectures]]
+nos trás algumas outras ideias de situações que podemos utilizar os
+testes automatizados a nosso favor.
+
+== Feedback da cliente ==
+
+Na XP a cliente faz parte do time. Entre as suas responsabilidade, estão:
+- Estar sempre disponível, preferencialmente no mesmo local para conversas frente a frente;
+- Fazer parte do planejamento, junto com demais integrantes do time;
+- Escrever e priorizar as histórias de usuário;
+- Auxiliar na criação de teste funcionais, ajudando na criação de massa e dos resultados que precisam ser computados, que serão então verificados de forma automatizada;
+- Decidir, baseado no feedback dos testes funcionais, se a aplicação deve ou não ser implantada.
+
+Ao contrário de um [[https://en.wikipedia.org/wiki/Waterfall_model|modelo Watterfall]], na Programação Extrema
+(e modelos ágeis em geral) a cliente não perde muito tempo criando
+histórias de usuário detalhadas. Isso faz com que os pormenores da
+solução sejam postergados para o momento mais próximo da
+implementação de fato, quando o time já tem uma visão mais clara do
+que precisa de fato ser feito. 
+
+E não é incomum que a cliente mude suas necessidades conforme o
+sistema é desenvolvido, já que neste estágio as suas reais
+necessidades ficam mais evidentes. A Programação Extrema abraça
+essas mudanças e as incorpora em seu planejamento.
+
+Desta forma, a pessoa (ou pessoas) que representam a cliente
+possuem um papel fundamental no feedback constante, ajudando
+a direcionar o desenvolvimento para que ao final de cada iteração
+o time consiga ser o mais produtivo possível, focando nas funcoinalidades
+que realmente agregaram o máximo de valor ao produto.
+
+E seu trabalho não termina aí. Ela precisa acompanhar como as
+funcionalidades e alterações estão se comportando após
+sua implantação em produção e usar isso como feedback para evolução
+do desenvolvimento do sistema.
+
+== Feedback das pessoas desenvolvedoras ==
+
+Como pessoa desenvolvedora integrante de um time XP, suas responsabilidades
+incluem:
+- Realizar simultaneamente e incrementalmente o design, codificação e testes da aplicação;
+- Seguir as práticas de _test first_ ([[TDD]]);
+- Respeitar os prazos e terminar toda iteração com um software funcionando para demonstração;
+- Integrar continuamente (a cada poucas horas) seu código na _branch_ principal do projeto;
+- Praticar [[Programação pareada|programação pareada]] ou [[Mob programming|mob programming]].
+- Abraçar mudanças nos requisitos do sistema;
+- Participar do planejamento da iteração;
+- Se candidatar a fazer as tarefas que deseja implementar e estimá-las.
+
+A estimativa de esforço de uma tarefa deve ser feita pela
+pessoa que escolheu aquela tarefa. E essa informação é crucial
+para que a cliente consiga priorizar melhor as suas necessidades.
+Afinal, se uma determinada tarefa exigir um esforço muito grande
+e a cliente achar que agrega pouco valor naquele momento, provavelmente
+não faz muito sentido priorizá-la.
+
+O compromisso em entregar um sofware funcionando não significa que
+existe um contrato inflexível. Todo o planejamento deve ser revisto
+diariamente e por isso é importante que a pessoa desenvolvedora
+tenha uma postura transparênte, expondo abertamente para o time
+suas dificuldades e incertezas. Isso normalmente ocorre durante
+a [[Reunião diária|reunião diária]] e é preciso ter [[Coragem|coragem]].
+
+Já a prática de [[Integração contínua|integração contínua]] ajuda o time
+a ter uma visão mais clara do código como um todo. Ao
+evitarmos a criação de [[Feature branchs|feature branchs]], temos um feedback
+mais rápido do _desgin_ do nosso sistema. Às vezes pessoas
+diferentes tem soluções distintas para situações similares.
+Ao demorarmos para integrar as soluções, corremos o risco
+de termos dificuldade de integrarmos as 2 visões do sistema em
+um único _branch_. 
+
+== Feedback da Tracker ==
+
+Na Programação Extrema temos um papel chamado [[Tracker]], que também
+possui uma funcão importante no contexto de feedback. Mas para
+não alongar demais este artigo, optei por deixar esta discussão
+para outro momento.
+
+== Conclusão ==
+
+Feedback é apenas um dos valores fundamentais da [[Programação Extrema]],
+junto com [[Coragem|coragem]], comunicação, simplicidade e respeito.
+
+Aqui citei apenas algumas das várias formas existentes de
+feedback.
+
+Para entender mais sobre [[Programação Extrema]] recomendo a leitura
+dos seguintes livros:
+* [[Livro Extreme Programming Explained|Extreme Programming Explained]]
+* [[Livro Planning Extreme Programming|Planning Extreme Programming]]
+* [[Livro Extreme Programming|Extreme Programming]]

@@ -1,0 +1,3 @@
+= Teste sua arquitetura de forma automatizada =
+
+...

@@ -1,0 +1,40 @@
+= Diferença entre fmap e map =
+
+Ref.
+* Site Stack overflow: What's the point of map in Haskell, when there is fmap?
+  * https://stackoverflow.com/questions/6824255/whats-the-point-of-map-in-haskell-when-there-is-fmap
+* Discussões na lista de e-mails do Haskell.org
+  * https://mail.haskell.org/pipermail/haskell-prime/2006-August/thread.html
+  
+Em [[Haskell]], temos as funções _*fmap*_ e *_map_*. Em teoria poderíamos ter
+apenas uma, e isso foi discutido na [[https://mail.haskell.org/pipermail/haskell-prime/2006-August/thread.html|lista de e-mails do Haskell.org]].
+
+O tipo da função *_fmap_* é:
+{{{haskell
+fmap :: Functor f => (a -> b) -> f a -> f b
+}}}
+
+E a de _*map*_ é:
+{{{haskell
+map :: (a -> b) -> [a] -> [b]
+}}}
+
+As duas são muito parecidas, mas _*fmap*_ espera que _*a*_ e *_b_*
+sejam [[Functor|Functors]], enquanto _*map*_ espera que _*a*_ e _*b*_ sejam
+listas.
+
+Como sabemos que a _Lista_ é um [[Functor]], também podemos
+passa-la como parâmetro para a função _*fmap*_, mas o inverso
+não é verdade: a função _*map*_ é restrita para o tipo Lista.
+Isso porque embora _Lista_ seja um _Functor_, nem todo _Functor_
+é uma _Lista_.
+
+O histórico é um pouco confuso, mas o estado atual da
+linguaguem é o seguinte: poderíamos ter apenas uma função
+que tratasse _Functors_, mas as mensagens de erro disparadas
+pelo compilador em casos de erros poderiam ser um pouco
+confusas para as pessoas desenvolvedoras mais novatas. Por
+isso, o time do [[Haskell]] optou por manter estas duas
+função: uma especializada em _Listas_ e uma mais genéricas,
+capaz de tratar quaisquer tipos de _Functors_.
+

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Feedback</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Feedback"><h1 id="Feedback" class="header"><a href="#Feedback" class="justcenter">Feedback</a></h1></div>
+
+<p>
+refs: 
+</p>
+<ul>
+<li>
+<a href="Livro Extreme Programming Explained.html">Livro Extreme Programming Explained</a>
+
+<ul>
+<li>
+Capítulo 4: Values, página 19. 
+
+</ul>
+<li>
+<a href="Livro Extreme Programming.html">Livro Extreme Programming</a>
+
+<ul>
+<li>
+Capítulo 3: Valores do XP, página 49.
+
+</ul>
+<li>
+Site Desenvolvimento Ágil
+
+<ul>
+<li>
+<a href="https://www.desenvolvimentoagil.com.br/xp/valores/feedback">https://www.desenvolvimentoagil.com.br/xp/valores/feedback</a>
+
+</ul>
+<li>
+Site Extreme Programming
+
+<ul>
+<li>
+<a href="http://www.extremeprogramming.org/values.html">http://www.extremeprogramming.org/values.html</a> (Feedback)
+
+<li>
+<a href="http://www.extremeprogramming.org/rules/customer.html">http://www.extremeprogramming.org/rules/customer.html</a> (<em>The Customer is Always Available</em>)
+
+</ul>
+</ul>
+
+<p>
+Feedback é um dos valores fundamentais da <a href="Programação Extrema.html">Programação Extrema</a>,
+junto com <a href="Coragem.html">coragem</a>, comunicação, simplicidade e respeito.
+</p>
+
+<p>
+Segundo o site <a href="http://www.extremeprogramming.org/values.html">extremeprogramming.org</a>, quando
+praticamos XP nos comprometemos a:
+</p>
+<ul>
+<li>
+Entregar um software funcionando em toda iteração;
+
+<li>
+Demonstrar nosso software cedo e muitas vezes, para então escutarmos atentamente e realizar quaisquer alterações necessárias;
+
+<li>
+Falar sobre o projeto e adaptar nosso processo a ele, não o contrário.
+
+</ul>
+
+<p>
+Para atingir estas metas precisamos constantemente revisar se estamos
+caminhando para direção correta, afinal, para adaptar
+nosso processo de forma contínua precisamos também avaliá-lo continuamente.
+</p>
+
+<p>
+Abaixo discutimos as diversas formas de feedback que ocorrem em diferentes camadas.
+</p>
+
+<div id="Feedback-Feedback através de testes automatizados"><h2 id="Feedback através de testes automatizados" class="header"><a href="#Feedback-Feedback através de testes automatizados">Feedback através de testes automatizados</a></h2></div>
+
+<p>
+Programação Extrema e TDD tem uma forte relação histórica. Nasceram em
+períodos próximos e foram disseminadas pelo mesmo grupo de pessoas, então
+não é surpresa que a XP incentive o uso de TDD.
+</p>
+
+<p>
+E os testes são uma das nossas formas de feedback. Criamos testes para
+que nos guiem em direção a um <a href="Design Incremental.html">Design Incremental</a>.
+É através deles também que garantimos que um <a href="Bug de regressão.html">Bug de regressão</a> não
+voltará a acontecer. Além disso, nos ajudam a manter o sistema integro, 
+especialmente quando praticados em conjunto com outra prática importante 
+da Programação Extrema: <a href="Integração contínua.html">Integração contínua</a>.
+</p>
+
+<p>
+Quando escrevemos testes recebemos também feedbacks um pouco mais
+discretos, mas não menos importantes. Por exemplo: 
+</p>
+<ul>
+<li>
+Quão difícil foi escrever o teste?
+
+<li>
+Quando uma função ou classe foi refatorada, algum teste quebrou?
+
+<li>
+Quantos testes tiveram que ser alterados para adicionar uma nova funcionalidade ao sistema? E estes testes tinham relação com a parte do sistema que estava sendo alterada?
+
+</ul>
+ 
+<p>
+Este tipo de feedback facilita a identificação antecipada de falhas no <em>design</em> do
+nosso sistema.
+</p>
+
+<div id="Feedback-Feedback através de testes automatizados-Indo além do TDD"><h3 id="Indo além do TDD" class="header"><a href="#Feedback-Feedback através de testes automatizados-Indo além do TDD">Indo além do TDD</a></h3></div>
+
+<p>
+O uso de testes automatizados não se limita ao uso clássico
+que encontramos nos livros de TDD. Com ferramentas como <a href="https://www.archunit.org/">ArchUnit</a>,
+conseguimos até mesmo criar uma <a href="Teste sua arquitetura de forma automatizada.html">definição testável da arquitetura</a>
+de nosso sistema.
+</p>
+
+<p>
+Outro contexto interessante que podemos utilizá-los é para testar
+a performance da nossa aplicação, com bibliotecas como <a href="https://jmeter.apache.org/">JMeter</a> ou <a href="https://github.com/postmanlabs/newman">Newman</a>.
+</p>
+
+<p>
+Criando este tipos de testes e configurando nossa <em>pipeline</em> de build
+(com tecnologias como <a href="https://www.jenkins.io/">Jenkins</a> ou <a href="https://docs.gitlab.com/ee/ci/">GitLab CI</a>),
+conseguimos ter um feedback contínuo que a arquitetura definida nos 
+testes está sendo seguida por todas as pessoas do time
+e que a performace da nossa aplicação está dentro dos critérios
+estabelecidos.
+</p>
+
+<p>
+Mas estes são apenas algumas das tarefas que um time pode automatizar
+através dos testes. O livro <a href="https://evolutionaryarchitecture.com">Building Evolutionary Architectures</a>
+nos trás algumas outras ideias de situações que podemos utilizar os
+testes automatizados a nosso favor.
+</p>
+
+<div id="Feedback-Feedback da cliente"><h2 id="Feedback da cliente" class="header"><a href="#Feedback-Feedback da cliente">Feedback da cliente</a></h2></div>
+
+<p>
+Na XP a cliente faz parte do time. Entre as suas responsabilidade, estão:
+</p>
+<ul>
+<li>
+Estar sempre disponível, preferencialmente no mesmo local para conversas frente a frente;
+
+<li>
+Fazer parte do planejamento, junto com demais integrantes do time;
+
+<li>
+Escrever e priorizar as histórias de usuário;
+
+<li>
+Auxiliar na criação de teste funcionais, ajudando na criação de massa e dos resultados que precisam ser computados, que serão então verificados de forma automatizada;
+
+<li>
+Decidir, baseado no feedback dos testes funcionais, se a aplicação deve ou não ser implantada.
+
+</ul>
+
+<p>
+Ao contrário de um <a href="https://en.wikipedia.org/wiki/Waterfall_model">modelo Watterfall</a>, na Programação Extrema
+(e modelos ágeis em geral) a cliente não perde muito tempo criando
+histórias de usuário detalhadas. Isso faz com que os pormenores da
+solução sejam postergados para o momento mais próximo da
+implementação de fato, quando o time já tem uma visão mais clara do
+que precisa de fato ser feito. 
+</p>
+
+<p>
+E não é incomum que a cliente mude suas necessidades conforme o
+sistema é desenvolvido, já que neste estágio as suas reais
+necessidades ficam mais evidentes. A Programação Extrema abraça
+essas mudanças e as incorpora em seu planejamento.
+</p>
+
+<p>
+Desta forma, a pessoa (ou pessoas) que representam a cliente
+possuem um papel fundamental no feedback constante, ajudando
+a direcionar o desenvolvimento para que ao final de cada iteração
+o time consiga ser o mais produtivo possível, focando nas funcoinalidades
+que realmente agregaram o máximo de valor ao produto.
+</p>
+
+<p>
+E seu trabalho não termina aí. Ela precisa acompanhar como as
+funcionalidades e alterações estão se comportando após
+sua implantação em produção e usar isso como feedback para evolução
+do desenvolvimento do sistema.
+</p>
+
+<div id="Feedback-Feedback das pessoas desenvolvedoras"><h2 id="Feedback das pessoas desenvolvedoras" class="header"><a href="#Feedback-Feedback das pessoas desenvolvedoras">Feedback das pessoas desenvolvedoras</a></h2></div>
+
+<p>
+Como pessoa desenvolvedora integrante de um time XP, suas responsabilidades
+incluem:
+</p>
+<ul>
+<li>
+Realizar simultaneamente e incrementalmente o design, codificação e testes da aplicação;
+
+<li>
+Seguir as práticas de <em>test first</em> (<a href="TDD.html">TDD</a>);
+
+<li>
+Respeitar os prazos e terminar toda iteração com um software funcionando para demonstração;
+
+<li>
+Integrar continuamente (a cada poucas horas) seu código na <em>branch</em> principal do projeto;
+
+<li>
+Praticar <a href="Programação pareada.html">programação pareada</a> ou <a href="Mob programming.html">mob programming</a>.
+
+<li>
+Abraçar mudanças nos requisitos do sistema;
+
+<li>
+Participar do planejamento da iteração;
+
+<li>
+Se candidatar a fazer as tarefas que deseja implementar e estimá-las.
+
+</ul>
+
+<p>
+A estimativa de esforço de uma tarefa deve ser feita pela
+pessoa que escolheu aquela tarefa. E essa informação é crucial
+para que a cliente consiga priorizar melhor as suas necessidades.
+Afinal, se uma determinada tarefa exigir um esforço muito grande
+e a cliente achar que agrega pouco valor naquele momento, provavelmente
+não faz muito sentido priorizá-la.
+</p>
+
+<p>
+O compromisso em entregar um sofware funcionando não significa que
+existe um contrato inflexível. Todo o planejamento deve ser revisto
+diariamente e por isso é importante que a pessoa desenvolvedora
+tenha uma postura transparênte, expondo abertamente para o time
+suas dificuldades e incertezas. Isso normalmente ocorre durante
+a <a href="Reunião diária.html">reunião diária</a> e é preciso ter <a href="Coragem.html">coragem</a>.
+</p>
+
+<p>
+Já a prática de <a href="Integração contínua.html">integração contínua</a> ajuda o time
+a ter uma visão mais clara do código como um todo. Ao
+evitarmos a criação de <a href="Feature branchs.html">feature branchs</a>, temos um feedback
+mais rápido do <em>desgin</em> do nosso sistema. Às vezes pessoas
+diferentes tem soluções distintas para situações similares.
+Ao demorarmos para integrar as soluções, corremos o risco
+de termos dificuldade de integrarmos as 2 visões do sistema em
+um único <em>branch</em>. 
+</p>
+
+<div id="Feedback-Feedback da Tracker"><h2 id="Feedback da Tracker" class="header"><a href="#Feedback-Feedback da Tracker">Feedback da Tracker</a></h2></div>
+
+<p>
+Na Programação Extrema temos um papel chamado <a href="Tracker.html">Tracker</a>, que também
+possui uma funcão importante no contexto de feedback. Mas para
+não alongar demais este artigo, optei por deixar esta discussão
+para outro momento.
+</p>
+
+<div id="Feedback-Conclusão"><h2 id="Conclusão" class="header"><a href="#Feedback-Conclusão">Conclusão</a></h2></div>
+
+<p>
+Feedback é apenas um dos valores fundamentais da <a href="Programação Extrema.html">Programação Extrema</a>,
+junto com <a href="Coragem.html">coragem</a>, comunicação, simplicidade e respeito.
+</p>
+
+<p>
+Aqui citei apenas algumas das várias formas existentes de
+feedback.
+</p>
+
+<p>
+Para entender mais sobre <a href="Programação Extrema.html">Programação Extrema</a> recomendo a leitura
+dos seguintes livros:
+</p>
+<ul>
+<li>
+<a href="Livro Extreme Programming Explained.html">Extreme Programming Explained</a>
+
+<li>
+<a href="Livro Planning Extreme Programming.html">Planning Extreme Programming</a>
+
+<li>
+<a href="Livro Extreme Programming.html">Extreme Programming</a>
+
+</ul>
+
+</body>
+</html>

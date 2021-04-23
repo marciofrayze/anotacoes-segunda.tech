@@ -66,8 +66,9 @@ class Functor f where
 </pre>
 
 <p>
-Onde <span id="_Functor_-Definição-<em>(a -&gt; b)</em>"></span><strong id="<em>(a -&gt; b)</em>"><em>(a -&gt; b)</em></strong> é uma função de transformação que será
-aplicada à cada elemento do <span id="_Functor_-Definição-<em>f a</em>"></span><strong id="<em>f a</em>"><em>f a</em></strong> e o
+<em><span id="_Functor_-Definição-fmap"></span><strong id="fmap">fmap</strong></em> é uma <a href="Função de primeira ordem.html">função de primeira ordem</a> e
+<span id="_Functor_-Definição-<em>(a -&gt; b)</em>"></span><strong id="<em>(a -&gt; b)</em>"><em>(a -&gt; b)</em></strong> representa a função de transformação que será
+aplicada à cada elemento de <span id="_Functor_-Definição-<em>f a</em>"></span><strong id="<em>f a</em>"><em>f a</em></strong> e o
 resultado final será um novo <em>Functor</em>, representado
 por <span id="_Functor_-Definição-<em>f b</em>"></span><strong id="<em>f b</em>"><em>f b</em></strong>.
 </p>
@@ -80,7 +81,7 @@ seja uma instância de <em>Functor</em>.
 
 <p>
 Lembrando que em Haskell, <em><span id="_Functor_-Definição-Class"></span><strong id="Class">Class</strong></em> tem um
-significado bem diferente do usado na orientação a objetos.
+significado diferente do usado na orientação a objetos.
 Para mais informações, leia sobre <a href="Typeclass.html">o que é uma Typeclass</a>.
 </p>
 
@@ -100,8 +101,10 @@ uma lista igual à inicial.
 </p>
 
 <p>
-O primeiro parâmetro de <em><span id="_Functor_-Exemplos-fmap"></span><strong id="fmap">fmap</strong></em> pode ser uma função
-nomeada (que tenha sido declarada anteriormente) ou uma expressão lambda (<a href="Lambda expression.html">Lambda expression</a>).
+Como toda <a href="Função de primeira ordem.html">função de primeira ordem</a>,
+a função que passamos como parâmetro para o <span id="_Functor_-Exemplos-<em>fmap</em>"></span><strong id="<em>fmap</em>"><em>fmap</em></strong> pode
+ser nomeada (que tenha sido declarada anteriormente) ou uma 
+expressão lambda (<a href="Lambda expression.html">Lambda expression</a>).
 </p>
 
 <div id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda"><h3 id="Utilizando _*fmap*_ com uma expressão lambda" class="header"><a href="#_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda">Utilizando <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-fmap"></span><strong id="fmap">fmap</strong></em> com uma expressão lambda</a></h3></div>
@@ -117,11 +120,11 @@ fmap (\n -&gt; n + 1) [1, 2, 3, 4]
 
 <p>
 Para definirmos uma expressão lambda nesta linguagem, 
-usamos o símbolo <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-\"></span><strong id="\">\</strong></em>.
+usamos o caractere <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-\"></span><strong id="\">\</strong> (que lembra um pouco o símbolo lambda: λ).
 </p>
 
 <p>
-No trecho <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-<em>(\n -&gt; n + 1)</em>"></span><strong id="<em>(\n -&gt; n + 1)</em>"><em>(\n -&gt; n + 1)</em></strong>, estamos definindo uma expressão
+No trecho <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-<em>(</em>\<em>n -&gt; n + 1)</em>"></span><strong id="<em>(</em>\<em>n -&gt; n + 1)</em>"><em>(</em>\<em>n -&gt; n + 1)</em></strong>, estamos definindo uma expressão
 lambda que receberá como parametro um número <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-n"></span><strong id="n">n</strong></em> e irá
 retornar <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-<em>n + 1</em>"></span><strong id="<em>n + 1</em>"><em>n + 1</em></strong>. Esta função será executada para
 cada elemento da lista e uma nova lista será criada
@@ -272,7 +275,8 @@ instanciar nossos próprios <em>Functors</em>!
 </p>
 
 <p>
-(...)
+Outros <em>Functors</em> famosos incluem o <a href="Maybe.html">Maybe</a> (conhecido também como <em>Optional</em>
+em algumas linguagens) e o <a href="Either.html">Either</a>.
 </p>
 
 </body>

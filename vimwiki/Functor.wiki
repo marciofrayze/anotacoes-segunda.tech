@@ -21,8 +21,9 @@ class Functor f where
     fmap :: (a -> b) -> f a -> f b  
 }}}
 
-Onde *_(a -> b)_* é uma função de transformação que será
-aplicada à cada elemento do *_f a_* e o
+_*fmap*_ é uma [[Função de primeira ordem|função de primeira ordem]] e
+*_(a -> b)_* representa a função de transformação que será
+aplicada à cada elemento de *_f a_* e o
 resultado final será um novo _Functor_, representado
 por *_f b_*.
 
@@ -31,7 +32,7 @@ possível executar a função _*fmap*_ em qualquer tipo que
 seja uma instância de _Functor_.
 
 Lembrando que em Haskell, _*Class*_ tem um
-significado bem diferente do usado na orientação a objetos.
+significado diferente do usado na orientação a objetos.
 Para mais informações, leia sobre [[Typeclass|o que é uma Typeclass]].
 
 == Exemplos ==
@@ -45,8 +46,10 @@ podendo conter elementos de algum outro tipo ou
 do mesmo tipo mas com outros valores, ou até mesmo
 uma lista igual à inicial.
 
-O primeiro parâmetro de _*fmap*_ pode ser uma função
-nomeada (que tenha sido declarada anteriormente) ou uma expressão lambda ([[Lambda expression]]).
+Como toda [[Função de primeira ordem|função de primeira ordem]],
+a função que passamos como parâmetro para o *_fmap_* pode
+ser nomeada (que tenha sido declarada anteriormente) ou uma 
+expressão lambda ([[Lambda expression]]).
 
 === Utilizando _*fmap*_ com uma expressão lambda ===
 
@@ -58,9 +61,9 @@ fmap (\n -> n + 1) [1, 2, 3, 4]
 }}}
 
 Para definirmos uma expressão lambda nesta linguagem, 
-usamos o símbolo _*\*_.
+usamos o caractere *\* (que lembra um pouco o símbolo lambda: λ).
 
-No trecho *_(\n -> n + 1)_*, estamos definindo uma expressão
+No trecho *_(_\_n -> n + 1)_*, estamos definindo uma expressão
 lambda que receberá como parametro um número _*n*_ e irá
 retornar *_n + 1_*. Esta função será executada para
 cada elemento da lista e uma nova lista será criada
@@ -161,4 +164,5 @@ Este mecânismo é útil em 2 situações:
 existem vários outros tipos de _Functors_ e podemos até mesmo
 instanciar nossos próprios _Functors_!
 
-(...)
+Outros _Functors_ famosos incluem o [[Maybe]] (conhecido também como _Optional_
+em algumas linguagens) e o [[Either]].

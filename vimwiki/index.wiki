@@ -10,7 +10,7 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 
 [[Functor]]
 
-[[Qual a diferença entre fmap e map?]]
+[[fmap vs map|Qual a diferença entre fmap e map?]]
 
 [[Monoid]]
 
@@ -25,6 +25,8 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 === Extreme programming ===
 
 [[Coragem]]
+
+[[Feedback]]
 
 === Gestão ===
 
