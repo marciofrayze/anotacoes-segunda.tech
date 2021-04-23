@@ -125,10 +125,10 @@ usamos o caractere <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expr
 
 <p>
 No trecho <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-<em>(</em>\<em>n -&gt; n + 1)</em>"></span><strong id="<em>(</em>\<em>n -&gt; n + 1)</em>"><em>(</em>\<em>n -&gt; n + 1)</em></strong>, estamos definindo uma expressão
-lambda que receberá como parametro um número <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-n"></span><strong id="n">n</strong></em> e irá
+lambda que receberá como parâmetro um número <em><span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-n"></span><strong id="n">n</strong></em> e irá
 retornar <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-<em>n + 1</em>"></span><strong id="<em>n + 1</em>"><em>n + 1</em></strong>. Esta função será executada para
 cada elemento da lista e uma nova lista será criada
-com o resultado dessas execuções. Para definirmos
+com o resultado dessas execuções.
 </p>
 
 <p>
@@ -159,14 +159,14 @@ Voltando para definição, neste exemplo:
 </ul>
   
 <p>
-Neste exemplo <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-<em>a</em>"></span><strong id="<em>a</em>"><em>a</em></strong> e <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-<em>b</em>"></span><strong id="<em>b</em>"><em>b</em></strong> são da mesma classe, mas
-poderíamos ter como resultado uma lista com elementos
-de outra classe.
+Em Haskell, <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-<em>Num</em>"></span><strong id="<em>Num</em>"><em>Num</em></strong> é uma <em>Typeclass</em> que representa os tipos
+numéricos.
 </p>
 
 <p>
-Em Haskell, <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-<em>Num</em>"></span><strong id="<em>Num</em>"><em>Num</em></strong> é uma <em>Typeclass</em> que representa os tipos
-numéricos.
+Neste exemplo <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-<em>a</em>"></span><strong id="<em>a</em>"><em>a</em></strong> e <span id="_Functor_-Exemplos-Utilizando _*fmap*_ com uma expressão lambda-<em>b</em>"></span><strong id="<em>b</em>"><em>b</em></strong> são da mesma classe, mas
+poderíamos ter como resultado uma lista com elementos
+de outra classe.
 </p>
 
 <p>
@@ -266,17 +266,26 @@ Quando querermos re-aproveitar uma função pré-existente.
 
 </ul>
 
-<div id="_Functor_-Exemplos-Outros Functors"><h3 id="Outros Functors" class="header"><a href="#_Functor_-Exemplos-Outros Functors">Outros Functors</a></h3></div>
+<div id="_Functor_-Outros Functors"><h2 id="Outros Functors" class="header"><a href="#_Functor_-Outros Functors">Outros Functors</a></h2></div>
 
 <p>
-É comum usarmos listas para exemplificarmos o uso do <em><span id="_Functor_-Exemplos-Outros Functors-fmap"></span><strong id="fmap">fmap</strong></em>, mas
-existem vários outros tipos de <em>Functors</em> e podemos até mesmo
+É comum usarmos listas para exemplificar o uso do <em><span id="_Functor_-Outros Functors-fmap"></span><strong id="fmap">fmap</strong></em>, mas
+existem vários outros tipos e podemos até mesmo
 instanciar nossos próprios <em>Functors</em>!
 </p>
 
 <p>
 Outros <em>Functors</em> famosos incluem o <a href="Maybe.html">Maybe</a> (conhecido também como <em>Optional</em>
-em algumas linguagens) e o <a href="Either.html">Either</a>.
+em algumas linguagens) e o <a href="Either.html">Either</a>. Mas este exemplos vão ficar para
+um outro artigo.
+</p>
+
+<div id="_Functor_-Conclusão"><h2 id="Conclusão" class="header"><a href="#_Functor_-Conclusão">Conclusão</a></h2></div>
+
+<p>
+O que foi discutido aqui é apenas uma introdução ao assunto.
+Para aprender mais sobre este e outro temas da Programação Funcional, recomendo
+o excelente (e gratuito) livro <a href="Livro Learn You a Haskell for Great Good!.html">Livro Learn You a Haskell for Great Good!</a>.
 </p>
 
 </body>

@@ -64,10 +64,10 @@ Para definirmos uma expressão lambda nesta linguagem,
 usamos o caractere *\* (que lembra um pouco o símbolo lambda: λ).
 
 No trecho *_(_\_n -> n + 1)_*, estamos definindo uma expressão
-lambda que receberá como parametro um número _*n*_ e irá
+lambda que receberá como parâmetro um número _*n*_ e irá
 retornar *_n + 1_*. Esta função será executada para
 cada elemento da lista e uma nova lista será criada
-com o resultado dessas execuções. Para definirmos
+com o resultado dessas execuções.
 
 Desta forma o resultado deste *_fmap*_ será:
 
@@ -82,12 +82,12 @@ Voltando para definição, neste exemplo:
 - *_b_* também é um *_Num_*, representando o tipo dos elementos da lista que será retornada.  
 - *_(a -> b)_* é uma função de transformação, que irá receber um elemento do tipo *_a_* e retornar um elemento do tipo *_b_*. Neste caso, irá receber um número *_a*_ e retornar um outro número *_b_*.
   
+Em Haskell, *_Num_* é uma _Typeclass_ que representa os tipos
+numéricos.
+
 Neste exemplo *_a_* e *_b_* são da mesma classe, mas
 poderíamos ter como resultado uma lista com elementos
 de outra classe.
-
-Em Haskell, *_Num_* é uma _Typeclass_ que representa os tipos
-numéricos.
 
 Se quiséssemos por exemplo transformar uma lista de números
 em uma lista de Strings (que no Haskell é representado por um
@@ -158,11 +158,18 @@ Este mecânismo é útil em 2 situações:
 - Quando a função é muito complexa, para facilitar o entendimento do código ou;
 - Quando querermos re-aproveitar uma função pré-existente.
 
-=== Outros Functors ===
+== Outros Functors ==
 
-É comum usarmos listas para exemplificarmos o uso do _*fmap*_, mas
-existem vários outros tipos de _Functors_ e podemos até mesmo
+É comum usarmos listas para exemplificar o uso do _*fmap*_, mas
+existem vários outros tipos e podemos até mesmo
 instanciar nossos próprios _Functors_!
 
 Outros _Functors_ famosos incluem o [[Maybe]] (conhecido também como _Optional_
-em algumas linguagens) e o [[Either]].
+em algumas linguagens) e o [[Either]]. Mas este exemplos vão ficar para
+um outro artigo.
+
+== Conclusão ==
+
+O que foi discutido aqui é apenas uma introdução ao assunto.
+Para aprender mais sobre este e outro temas da Programação Funcional, recomendo
+o excelente (e gratuito) livro [[Livro Learn You a Haskell for Great Good!]].
