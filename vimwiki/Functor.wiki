@@ -47,7 +47,7 @@ do mesmo tipo mas com outros valores, ou até mesmo
 uma lista igual à inicial.
 
 Como toda [[Função de primeira ordem|função de primeira ordem]],
-a função que passamos como parâmetro para o *_fmap_* pode
+a função que passamos como argumento para o *_fmap_* pode
 ser nomeada (que tenha sido declarada anteriormente) ou uma 
 expressão lambda ([[Lambda expression]]).
 
@@ -102,7 +102,7 @@ um array de caracteres.
 
 Em nosso código acima, *_fmap_* irá primeiro executar a
 função _*show*_ passando o primeiro elemento da lista
-como parâmetro, que irá retornar o valor "1". 
+como argumento, que irá retornar o valor "1". 
 Em seguida irá percorrer os demais elementos da lista e,
 um por um, irá executar a função _*show*_, passando um
 elemento da lista por vez. Conforme esta operação é feita
@@ -137,10 +137,10 @@ o tipo do _Functor_, representado pela letra
 === Utilizando _*fmap*_ com uma função nomeada (_named function_) ===
 
 Podemos utilizar uma função já existente e passa-lá como
-parâmetro para o _*fmap*_.
+argumento para o _*fmap*_.
 
 No exemplo abaixo definimos uma função chamada _soma1_ e em seguida 
-a passamos como parâmetro para o *_fmap_*:
+a passamos como argumento para o *_fmap_*:
 
 {{{haskell
 soma1 n = n + 1
