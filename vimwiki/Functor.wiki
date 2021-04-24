@@ -91,7 +91,7 @@ de outra classe.
 
 Se quiséssemos por exemplo transformar uma lista de números
 em uma lista de Strings (que no Haskell é representado por um
-[[array]] de char), poderíamos escrever o seguinte código:
+array de char), poderíamos escrever o seguinte código:
 
 {{{haskell
 fmap (\n -> show n) [10, 11, 12, 13] 
@@ -165,7 +165,7 @@ existem vários outros tipos e podemos até mesmo
 instanciar nossos próprios _Functors_!
 
 Outros _Functors_ famosos incluem o [[Maybe]] (conhecido também como _Optional_
-em algumas linguagens) e o [[Either]]. Mas este exemplos vão ficar para
+em algumas linguagens) e o [[Either]]. Mas estes exemplos vão ficar para
 um outro artigo.
 
 == Conclusão ==

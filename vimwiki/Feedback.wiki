@@ -30,10 +30,11 @@ Abaixo discutimos as diversas formas de feedback que ocorrem em diferentes camad
 
 Programação Extrema e TDD tem uma forte relação histórica. Nasceram em
 períodos próximos e foram disseminadas pelo mesmo grupo de pessoas, então
-não é surpresa que a XP incentive o uso de TDD.
+não é surpresa que a XP incentive o uso de TDD, também chamado de 
+_test-first_ (teste primeiro).
 
 E os testes são uma das nossas formas de feedback. Criamos testes para
-que nos guiem em direção a um [[Design Incremental]].
+que nos guiem em direção a um [[Design simples]].
 É através deles também que garantimos que um [[Bug de regressão]] não
 voltará a acontecer. Além disso, nos ajudam a manter o sistema integro, 
 especialmente quando praticados em conjunto com outra prática importante 
@@ -52,7 +53,8 @@ nosso sistema.
 
 O uso de testes automatizados não se limita ao uso clássico
 que encontramos nos livros de TDD. Com ferramentas como [[https://www.archunit.org/|ArchUnit]],
-conseguimos até mesmo criar uma [[Teste sua arquitetura de forma automatizada|definição testável da arquitetura]]
+conseguimos até mesmo criar uma 
+[[Teste sua arquitetura de forma automatizada|definição testável da arquitetura]]
 de nosso sistema.
 
 Outro contexto interessante que podemos utilizá-los é para testar
@@ -65,7 +67,7 @@ testes está sendo seguida por todas as pessoas do time
 e que a performace da nossa aplicação está dentro dos critérios
 estabelecidos.
 
-Mas estes são apenas algumas das tarefas que um time pode automatizar
+Mas estas são apenas algumas das tarefas que um time pode automatizar
 através dos testes. O livro [[https://evolutionaryarchitecture.com|Building Evolutionary Architectures]]
 nos trás algumas outras ideias de situações que podemos utilizar os
 testes automatizados a nosso favor.
@@ -83,8 +85,8 @@ Ao contrário de um [[https://en.wikipedia.org/wiki/Waterfall_model|modelo Watte
 (e modelos ágeis em geral) a cliente não perde muito tempo criando
 histórias de usuário detalhadas. Isso faz com que os pormenores da
 solução sejam postergados para o momento mais próximo da
-implementação de fato, quando o time já tem uma visão mais clara do
-que precisa de fato ser feito. 
+implementação da funcionalidade em questão, quando o time já tem
+uma visão mais clara do que precisa de fato ser feito. 
 
 E não é incomum que a cliente mude suas necessidades conforme o
 sistema é desenvolvido, já que neste estágio as suas reais
@@ -107,7 +109,7 @@ do desenvolvimento do sistema.
 Como pessoa desenvolvedora integrante de um time XP, suas responsabilidades
 incluem:
 - Realizar simultaneamente e incrementalmente o design, codificação e testes da aplicação;
-- Seguir as práticas de _test first_ ([[TDD]]);
+- Seguir as práticas de _test-first_ ([[TDD]]);
 - Respeitar os prazos e terminar toda iteração com um software funcionando para demonstração;
 - Integrar continuamente (a cada poucas horas) seu código na _branch_ principal do projeto;
 - Praticar [[Programação pareada|programação pareada]] ou [[Mob programming|mob programming]].
@@ -125,7 +127,7 @@ não faz muito sentido priorizá-la.
 O compromisso em entregar um sofware funcionando não significa que
 existe um contrato inflexível. Todo o planejamento deve ser revisto
 diariamente e por isso é importante que a pessoa desenvolvedora
-tenha uma postura transparênte, expondo abertamente para o time
+tenha uma postura transparente, expondo abertamente para o time
 suas dificuldades e incertezas. Isso normalmente ocorre durante
 a [[Reunião diária|reunião diária]] e é preciso ter [[Coragem|coragem]].
 
