@@ -1,0 +1,42 @@
+= Frase básicas =
+
+¿Cómo te llamas?
+
+Me llamo Marcio. ¿Y tú? ¿Cómo te llamas? 
+
+---
+
+Soy un alumno nuevo. 
+
+Mucho gusto.
+
+---
+
+¿Cómo estás hoy?
+
+¿De dónde eres?
+
+Soy de Brasil.
+
+yo          soy
+tú          eres
+é/ella      es
+nosotros    somos
+vosotros    sois
+ellos/ellas son
+
+--- 
+
+(a mí) me gusta... (similar ao verbo agradar do português)
+
+Me gusta Barcelona.
+
+A mí me gusta Barcelona.
+
+(a mí) me encanta... (similar ao adorar do português)
+
+A mí me encanta Barcelona.
+
+¡A mí me gusta mucho Barcelona!
+
+¡Y a mí me encanta Brasil! 

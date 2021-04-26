@@ -1,0 +1,8 @@
+= Verbo estar =
+
+yo          estoy
+tu          estás
+él/ella     está
+nosotros    estamos
+vosotros    estáis
+ellos/ellas están
