@@ -24,7 +24,7 @@ Para atingir estas metas precisamos constantemente revisar se estamos
 caminhando para direção correta, afinal, para adaptar
 nosso processo de forma contínua precisamos também avaliá-lo continuamente.
 
-Abaixo discutimos as diversas formas de feedback que ocorrem em diferentes camadas.
+Abaixo descrevo as diversas formas de feedback que ocorrem em diferentes camadas.
 
 == Feedback através de testes automatizados ==
 
@@ -94,9 +94,9 @@ necessidades ficam mais evidentes. A Programação Extrema abraça
 essas mudanças e as incorpora em seu planejamento.
 
 Desta forma, a pessoa (ou pessoas) que representam a cliente
-possuem um papel fundamental no feedback constante, ajudando
+têm um papel fundamental no feedback constante, ajudando
 a direcionar o desenvolvimento para que ao final de cada iteração
-o time consiga ser o mais produtivo possível, focando nas funcoinalidades
+o time consiga ser o mais produtivo possível, focando nas funcionalidades
 que realmente agregaram o máximo de valor ao produto.
 
 E seu trabalho não termina aí. Ela precisa acompanhar como as
@@ -118,13 +118,13 @@ incluem:
 - Se candidatar a fazer as tarefas que deseja implementar e estimá-las.
 
 A estimativa de esforço de uma tarefa deve ser feita pela
-pessoa que escolheu aquela tarefa. E essa informação é crucial
+pessoa desenvolvedora que escolheu aquela tarefa e essa informação é crucial
 para que a cliente consiga priorizar melhor as suas necessidades.
 Afinal, se uma determinada tarefa exigir um esforço muito grande
 e a cliente achar que agrega pouco valor naquele momento, provavelmente
 não faz muito sentido priorizá-la.
 
-O compromisso em entregar um sofware funcionando não significa que
+O compromisso em entregar um software funcionando não significa que
 existe um contrato inflexível. Todo o planejamento deve ser revisto
 diariamente e por isso é importante que a pessoa desenvolvedora
 tenha uma postura transparente, expondo abertamente para o time
@@ -133,17 +133,17 @@ a [[Reunião diária|reunião diária]] e é preciso ter [[Coragem|coragem]].
 
 Já a prática de [[Integração contínua|integração contínua]] ajuda o time
 a ter uma visão mais clara do código como um todo. Ao
-evitarmos a criação de [[Feature branchs|feature branchs]], temos um feedback
-mais rápido do _desgin_ do nosso sistema. Às vezes pessoas
+evitar a criação de [[Feature branchs|feature branchs]], temos um feedback
+mais rápido do _design_ do nosso sistema. Às vezes pessoas
 diferentes tem soluções distintas para situações similares.
-Ao demorarmos para integrar as soluções, corremos o risco
+Ao demorar para integrar as soluções, corremos o risco
 de termos dificuldade de integrarmos as 2 visões do sistema em
 um único _branch_. 
 
 == Feedback da Tracker ==
 
 Na Programação Extrema temos um papel chamado [[Tracker]], que também
-possui uma funcão importante no contexto de feedback. Mas para
+possui uma função importante no contexto de feedback. Mas para
 não alongar demais este artigo, optei por deixar esta discussão
 para outro momento.
 
