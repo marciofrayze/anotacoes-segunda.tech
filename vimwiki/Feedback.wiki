@@ -64,12 +64,12 @@ Criando este tipos de testes e configurando nossa _pipeline_ de build
 (com tecnologias como [[https://www.jenkins.io/|Jenkins]] ou [[https://docs.gitlab.com/ee/ci/|GitLab CI]]),
 conseguimos ter um feedback contínuo que a arquitetura definida nos 
 testes está sendo seguida por todas as pessoas do time
-e que a performace da nossa aplicação está dentro dos critérios
+e que a performance da nossa aplicação está dentro dos critérios
 estabelecidos.
 
 Mas estas são apenas algumas das tarefas que um time pode automatizar
 através dos testes. O livro [[https://evolutionaryarchitecture.com|Building Evolutionary Architectures]]
-nos trás algumas outras ideias de situações que podemos utilizar os
+nos traz algumas outras ideias de situações que podemos utilizar os
 testes automatizados a nosso favor.
 
 == Feedback da cliente ==
