@@ -2,7 +2,7 @@
 
 ref: http://www.learnyouahaskell.com/types-and-typeclasses
 
-Uma Typeclass é similar às interfaces no mundo da programação orientada a objetos (mas melhor!).
+Uma Typeclass é similar às interfaces no mundo da programação orientada a objetos.
 
 A Typeclass define um conjunto de comportamentos esperados.
 

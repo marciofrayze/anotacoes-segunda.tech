@@ -2,7 +2,7 @@
 
 refs: 
 * [[Livro Extreme Programming Explained]]
-  * página xpto. 
+  * Capítulo 4: Values, página 20. 
 * [[Livro Planning Extreme Programming]]
   * Capítulo 2: Fear, página 7.
 * [[Livro Extreme Programming]]
@@ -11,71 +11,53 @@ refs:
   * https://www.desenvolvimentoagil.com.br/xp/valores/coragem
 
 Coragem é um dos valores fundamentais da [[Programação Extrema]],
-junto com comunicação, simplicidade, feedback e respeito.
+junto com comunicação, simplicidade, [[Feedback|feedback]] e respeito.
 
 Ter coragem, neste contexto, não é sobre a coragem necessária
 para que um soldado consiga enfrentar uma guerra. Também não é 
-sobre agir de forma irresponśavel, pulando do avião sem paraquedas.
+sobre agir de forma irresponsável, pulando do avião sem paraquedas.
 
 A questão é que ao desenvolvermos softwares vamos encarar 
-situações que vão causar medo, tanto nas pessoas desenvolvedoras
+situações que vão causar medo tanto em nós, pessoas desenvolvedoras,
 quanto em nossas clientes.
 
-Em um ambiente em que os valores fundamentais da Programação Extrema
-ainda não foram internalizados, aplicar essas mudanças pode
-ser assustador para ambas as partes.
+== Gestão ==
 
-Embora a história nos mostre que é muito comum as necessidades
-da cliente mudarem ao longo do desenvolvimento de um produto,
-ainda é comum ambos os lados (desenvolvedoras e clientes) 
-tentarem criar barreiras para se proteger.
+Entre os medos comuns das clientes estão:
 
-A cliente tem medo de ser enganada. Tem receio de ter
-que entregar o futuro do projeto nas mãos de pessoas técnicas
-que não necessariamente estarão engajadas. 
-Tem medo de perder controle e não ter suas expectativas
-atendidas.
+* Medo de ser enganada.
+* Medo de ter que entregar o futuro de seu produto nas mãos de pessoas técnicas, que não necessariamente estarão tão engajadas quanto ela.
+* Medo de perder controle do projeto.
+* Medo de não ter suas expectativas atendidas.
 
-O time de desenvolvimento por sua vez tem medo de ficar
-sobrecarregado, não ter informações necessárias para
-finalizar seu trabalho ou ter que se sujeitar a um cronograma
-que torna viável implementar o software com a qualidade que
-gostariam.
+Já as pessoas desenvolvedoras enfrentam:
 
-Estes são apenas alguns dos medos que temos que encarar
-quando decidimos implementar um software. Em um ambiente
-assim, é comum que ambos os lados tentem levantar um muro,
-tentando se proteger. Mas, claro,
+* Medo de ficar sobrecarregada.
+* Medo de expressar opiniões.
+* Medo de informar que cometeu um erro.
+* Medo de não conseguir cumprir os prazos acordados.
+* Medo de não atingir as expectativas geradas por outras pessoas.
+* Medo de não ter as informações necessárias para finalizar o trabalho.
+* Medo de ter que se sujeitar a um cronograma em que é inviável implementar um código com a qualidade que gostaria.
 
+Em um ambiente assim é comum que ambos os lados tentem levantar 
+um muro para se proteger, e o resultado tende a ser a elaboração 
+de um processo longo, complexo e ineficiente, já que cada lado
+parece desconfiar das intenções do outro. 
 
+== Dia a dia da pessoa desenvolvedora ==
 
-Por isso exige que o time de desenvolvimento
-se comprometa com grandes entregas e um cronograma extremamente
-detalhado e inflexível. Uma vez assinado o contrato, espera que
-seja entregue por completo na data acordada.
+As práticas da [[Programação Extrema|XP]] se expandem por todo processo de desenvolvimento.
 
-Já as desenvoledoras vão tentar 
+Ela também nos auxilia com alguns outros tipos de medos recorrentes que estão mais
+ligado com as práticas de implementação, como por exemplo:
 
-
-
-
-
-
-
-
-
-
-Por exemplo:
 * Medo de fazer uma nova publicação em produção. 
 * Medo de refatorar um trecho do código. 
 * Medo de apagar um trecho de código morto.
 * Medo de atualizar a versão de uma biblioteca ou framework.
-* Medo de expressar nossas opiniões.
-* Medo de informar que cometemos um erro.
-* Medo de não conseguir cumprir prazos acordados.
-* Medo de não atingir as expectativas geradas por outras pessoas.
 
-Muitas vezes o medo causa uma reação paralisante e não agimos quando
+Este sentimento pode causa uma reação paralisante e não agimos quando
 deveríamos. Mas existem momentos em que o medo pode nos levar
 a realizar ações inconsequentes. Em situações adversas é preciso ter
 coragem para *não* agir até entender melhor o que está
@@ -102,10 +84,10 @@ momento. Assim evitamos aqueles diálogos do tipo:
 - Não sei...
 }}}
 
-Já presenciei várias vezes eventos onde as pessoas estavam fazendo
-várias alterações arriscadas direto em produção, sem saber se aquilo 
-tinha chances de corrigir o problema, já que não não haviam ainda
-idenfitificado a causa. E no fim descobriam que era uma problema
+Já presenciei situações onde as desenvolvedoras estavam
+fazendo várias alterações arriscadas direto em produção, sem saber 
+se aquilo tinha chances de corrigir o problema, já que não não haviam
+ainda identificado a causa. E no fim descobriam que era uma falha 
 na infraestrutura ou em outro sistema ou qualquer outra coisa que
 estava fora da visão do time e que nenhuma das ações realizadas
 tinham relação com a origem do problema.
@@ -113,11 +95,12 @@ tinham relação com a origem do problema.
 Precisamos de paciência e coragem para analisar com calma a
 situação antes de tomar alguma ação. 
 
-Uma boa forma de minimizar estes medos é utilizar as práticas da 
-[[Programação Extrema]]. Elas vão nos ajudar a minimizar as causas 
-destes medos, permitindo que tenhamos mais coragem de refatorar 
-o código do sistema, melhorar o design, expressar nossas 
-opiniões mais abertamente, etc.
+== Conclusões ==
+
+Uma boa forma de combater estes medos é utilizar as práticas da 
+[[Programação Extrema]]. Elas vão permitir que tenhamos mais coragem
+para refatorar o código do sistema, melhorar o design, expressar nossas 
+opiniões abertamente, etc.
 
 Outro momento em que o uso da coragem pode nos ajudar é
 quando estamos enfrentando um [[Schedule chicken]].
@@ -126,3 +109,4 @@ Para entender mais sobre Programação Extrema recomendo a leitura
 dos seguintes livros:
 * [[Livro Extreme Programming Explained|Extreme Programming Explained]]
 * [[Livro Planning Extreme Programming|Planning Extreme Programming]]
+* [[Livro Extreme Programming|Extreme Programming]]

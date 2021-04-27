@@ -1,0 +1,14 @@
+= Buildable =
+
+É uma type class. Útil para representar coisas na tela.
+
+Ex:
+
+{{{Haskell
+instance Buildable Directions
+where
+  build North = "N"
+  build East = "E"
+  build South = "S"
+  build West = "W"
+}}}

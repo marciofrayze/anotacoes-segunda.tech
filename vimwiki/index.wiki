@@ -6,9 +6,15 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 
 === Programação Funcional ===
 
-[[Typeclass]]
+[[Type class]]
 
 [[Functor]]
+
+[[Semigroup]]
+
+[[Monoid]]
+
+[[fmap vs map|Qual a diferença entre fmap e map?]]
 
 [[Monoid]]
 
@@ -20,9 +26,18 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 
 [[Integer não é um Monoid]]
 
+[[GHC OverloadedString]]
+
+[[GHC StandaloneDeriving]]
+
+
+[[Buildable]]
+
 === Extreme programming ===
 
 [[Coragem]]
+
+[[Feedback]]
 
 === Gestão ===
 

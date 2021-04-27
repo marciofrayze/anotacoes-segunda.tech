@@ -1,0 +1,8 @@
+= GHC OverloadedString =
+
+ref.
+* [[Livro Haskell in Depth]], Semigroup and Monoid
+  * Capítulo X, página Y.
+...
+
+mconcat vs sconcat

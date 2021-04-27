@@ -1,0 +1,3 @@
+= Reunião diária =
+
+http://www.extremeprogramming.org/rules/standupmeeting.html

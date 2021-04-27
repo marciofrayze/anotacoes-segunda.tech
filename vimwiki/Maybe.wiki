@@ -1,0 +1,15 @@
+= Maybe =
+
+ref:
+* Wiki Haskell
+  * https://wiki.haskell.org/Maybe
+* Artigo Variáveis opcionais
+  * https://marciofrayze.medium.com/vari%C3%A1veis-opcionais-eb546e4630ab
+* Artigo A história do null
+  * https://marciofrayze.medium.com/a-hist%C3%B3ria-do-null-781de8a0aa77
+
+O _Maybe_ é um [[Functor]] e, portanto, podemos passá-lo como
+parâmetro para a função _*fmap*_. 
+
+== Mas o que o _Maybe_ representa? ==
+

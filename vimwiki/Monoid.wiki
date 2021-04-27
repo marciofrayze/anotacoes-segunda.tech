@@ -2,28 +2,31 @@
 
 refs: http://blog.sigfpe.com/2009/01/haskell-monoids-and-their-uses.html
 
-Em [[Haskell]], Monoid é uma [[Typeclass]].
+Em [[Haskell]], Monoid é uma extensão da [[Type class]] [[Semigroup]].
 
 A sua principal característica é a capacidade de combinar valores, criando
-um novo valor da mesma typeclass. Podemos encará-la como sendo um acumulador.
+um novo valor da mesma type class. Podemos encará-la como sendo um acumulador.
 
-Todo Monoid precisa obedecer à duas leis:
+Além da operação **<>** (declarada na Type class [[Semigroup]]), um
+Monoid precisa ter também a operação _*mempty(_.
+
+E todo Monoid precisa obedecer à duas leis:
 
 == Primeira: lei de identidade ==
 
 === Deve possuir um valor identidade === 
 
 Precisa sempre ter um valor identidade, que quando combinado
-com qualquer outro Monoid m, resulta no próprio Monoid m.
+com qualquer outro *Monoid m*, resulta no próprio *Monoid m*.
 
 === Deve possuir uma operação mappend ===
 
 A operação mappend combina 2 Monoids e tem como resultado um
-Monoid da mesma typeclass.
+Monoid da mesma type class.
 
-A forma infixa de se usar mappend é usando <> que é sinônimo de mappend.
+A forma infixa de se usar *mappend* é usando *<>* que é sinônimo de *mappend*.
 
-Obs: A função mappend deve ser removida da typeclass Monoid em versões
+Obs: A função mappend deve ser removida da type class Monoid em versões
 futuras do Haskell.
 
 Fonte: https://hackage.haskell.org/package/base-4.14.1.0/docs/Data-Monoid.html
@@ -54,7 +57,7 @@ E o resultado de [ 1, 2 ] <> ([ 3, 4 ] <> [ 5, 6 ]) é o mesmo de
 ([1, 2] <> [3, 4]) <> [5, 6]
 
 Embora a lista seja um exemplo clássico e ilustra bem o que é
-um Monoid, na verdade essa [[Typeclass]] é bem mais robusta e
+um Monoid, na verdade essa [[Type class]] é bem mais robusta e
 poderosa que isso.
 
 E no caso das listas, embora seja associativa, a alteração da ordem
