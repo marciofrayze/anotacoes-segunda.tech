@@ -14,7 +14,7 @@ refs:
 == Definição ==
 
 Em [[Haskell]], um _Functor_ representa uma [[Type class]] capaz de 
-realizar uma transformação, e é definida por:
+realizar uma transformação, e é definido por:
 
 {{{Haskell
 class Functor f where  
@@ -49,7 +49,8 @@ uma lista igual à inicial.
 Como toda [[Função de primeira ordem|função de primeira ordem]],
 a função que passamos como argumento para o *_fmap_* pode
 ser nomeada (que tenha sido declarada anteriormente) ou uma 
-expressão lambda ([[Lambda expression]]).
+expressão lambda ([[Lambda expression|lambda expression]], também conhecida como
+função anônima).
 
 === Utilizando _*fmap*_ com uma expressão lambda ===
 
@@ -64,10 +65,10 @@ Para definirmos uma expressão lambda nesta linguagem,
 usamos o caractere *\* (que lembra um pouco o símbolo lambda: λ).
 
 No trecho *_(_\_n -> n + 1)_*, estamos definindo uma expressão
-lambda que receberá como parâmetro um número _*n*_ e irá
+lambda com um parâmetro numérico _*n*_ que irá
 retornar *_n + 1_*. Esta função será executada para
 cada elemento da lista e uma nova lista será criada
-com o resultado dessas execuções.
+ao final dessas execuções.
 
 Desta forma o resultado deste *_fmap*_ será:
 
@@ -78,7 +79,7 @@ Desta forma o resultado deste *_fmap*_ será:
 Voltando para definição, neste exemplo:
 
 - *_f_* é um _Functor_ do tipo Lista, que em Haskell é representando pelo símbolo *[]*.  
-- *_a_* é um *_Num_*, representando o tipo dos elementos contidos na lista de entrada.  
+- *_a_* neste caso é um *_Num_*, representando o tipo dos elementos contidos na lista de entrada.  
 - *_b_* também é um *_Num_*, representando o tipo dos elementos da lista que será retornada.  
 - *_(a -> b)_* é uma função de transformação, que irá receber um elemento do tipo *_a_* e retornar um elemento do tipo *_b_*. Neste caso, irá receber um número *_a_* e retornar um outro número *_b_*.
   
