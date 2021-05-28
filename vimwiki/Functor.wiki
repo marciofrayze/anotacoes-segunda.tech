@@ -23,7 +23,7 @@ class Functor f where
 
 _*fmap*_ é uma [[Função de primeira ordem|função de primeira ordem]] e
 *_(a -> b)_* representa a função de transformação que será
-aplicada à cada elemento de *_f a_* e o
+aplicada à cada elemento de *_f a_*. O
 resultado final será um novo _Functor_, representado
 por *_f b_*.
 
@@ -34,6 +34,9 @@ seja uma instância de _Functor_.
 Lembrando que em Haskell, _*Class*_ tem um
 significado diferente do usado na orientação a objetos.
 Para mais informações, leia sobre [[Type class|o que é uma Type class]].
+
+Se estiver confusa, não se preocupe. Vamos analisar alguns exemplos e
+é mais simples do que parece. 
 
 == Exemplos ==
 
@@ -49,8 +52,7 @@ uma lista igual à inicial.
 Como toda [[Função de primeira ordem|função de primeira ordem]],
 a função que passamos como argumento para o *_fmap_* pode
 ser nomeada (que tenha sido declarada anteriormente) ou uma 
-expressão lambda ([[Lambda expression|lambda expression]], também conhecida como
-função anônima).
+[[lambda expression|expressão lambda]] (também conhecida como função anônima).
 
 === Utilizando _*fmap*_ com uma expressão lambda ===
 
@@ -61,11 +63,12 @@ de números, podemos escrever o seguinte código em Haskell:
 fmap (\n -> n + 1) [1, 2, 3, 4] 
 }}}
 
-Para definirmos uma expressão lambda nesta linguagem, 
-usamos o caractere *\* (que lembra um pouco o símbolo lambda: λ).
+Para definir uma expressão lambda nesta linguagem, 
+utilizamos o caractere *\* (que lembra um pouco o letra lambda do
+alfabeto grego: λ).
 
-No trecho *_(_\_n -> n + 1)_*, estamos definindo uma expressão
-lambda com um parâmetro numérico _*n*_ que irá
+No trecho *_(_\_n -> n + 1)_* estamos definindo uma expressão
+lambda com um parâmetro numérico _*n*_, que irá
 retornar *_n + 1_*. Esta função será executada para
 cada elemento da lista e uma nova lista será criada
 ao final dessas execuções.
@@ -76,22 +79,25 @@ Desta forma o resultado deste *_fmap*_ será:
 [2, 3, 4, 5]
 }}}
 
-Voltando para definição, neste exemplo:
+Voltando para a definição, neste exemplo:
 
 - *_f_* é um _Functor_ do tipo Lista, que em Haskell é representando pelo símbolo *[]*.  
-- *_a_* neste caso é um *_Num_*, representando o tipo dos elementos contidos na lista de entrada.  
+- *_a_* neste caso é um *_Num_*, representando o tipo dos elementos
+  contidos na lista de entrada.  
 - *_b_* também é um *_Num_*, representando o tipo dos elementos da lista que será retornada.  
 - *_(a -> b)_* é uma função de transformação, que irá receber um elemento do tipo *_a_* e retornar um elemento do tipo *_b_*. Neste caso, irá receber um número *_a_* e retornar um outro número *_b_*.
   
-Em Haskell, *_Num_* é uma _Type class_ que representa os tipos
+Em Haskell *_Num_* é uma _Type class_ que representa os tipos
 numéricos.
 
-Neste exemplo *_a_* e *_b_* são da mesma classe, mas
+Neste exemplo, *_a_* e *_b_* são da mesma classe, mas
 poderíamos ter como resultado uma lista com elementos
 de outra classe.
 
+==== Transformando o tipo dos elementos de uma lista  ====
+
 Se quiséssemos por exemplo transformar uma lista de números
-em uma lista de Strings (que no Haskell é representado por um
+em uma lista de strings (que no Haskell é representado por um
 array de char), poderíamos escrever o seguinte código:
 
 {{{haskell
@@ -104,14 +110,14 @@ um array de caracteres.
 Em nosso código acima, *_fmap_* irá primeiro executar a
 função _*show*_ passando o primeiro elemento da lista
 como argumento, que irá retornar o valor "1". 
-Em seguida irá percorrer os demais elementos da lista e,
+Em seguida percorrerá os demais elementos da lista e,
 um por um, irá executar a função _*show*_, passando um
-elemento da lista por vez. Conforme esta operação é feita
+elemento da lista por vez. Conforme esta operação é realizada, 
 o resultado de cada executação é armazenado em uma nova lista.
 
 Após percorrer por todos os elementos e terminar
 de criar a lista com o resultado de todas as
-operações, *_fmap_* irá retornar a nova lista:
+operações, *_fmap_* irá retornar uma nova lista contendo:
 
 {{{haskell
 ["10", "11", "12", "13"]
@@ -119,8 +125,8 @@ operações, *_fmap_* irá retornar a nova lista:
 
 Dizemos que *_fmap_* é uma função de *transformação*. Mas, embora
 seja possível mudar o tipo dos elementos contidos dentro do
-_Functor_ (neste caso, a Lista) através do _*fmap*_, não é
-possível mudar o tipo do _Functor_ nem seu tamanho.
+_Functor_ (neste caso, a Lista), através do _*fmap*_ não é
+possível mudar o tipo do _Functor_ e nem seu tamanho.
 Ou seja, dada uma lista com 4 elementos, o _*fmap*_ sempre
 retornará uma lista contendo 4 elementos.
 
@@ -140,7 +146,7 @@ o tipo do _Functor_, representado pela letra
 Podemos utilizar uma função já existente e passa-lá como
 argumento para o _*fmap*_.
 
-No exemplo abaixo definimos uma função chamada _soma1_ e em seguida 
+No exemplo abaixo definimos uma função chamada **soma1** e em seguida 
 a passamos como argumento para o *_fmap_*:
 
 {{{haskell
@@ -155,23 +161,36 @@ expressão lambda:
 [2, 3, 4, 5]
 }}}
 
-Este mecânismo é útil em 2 situações:
+Este mecanismo é útil em 2 situações:
 - Quando a função é muito complexa, para facilitar o entendimento do código ou;
-- Quando querermos re-aproveitar uma função pré-existente.
+- Quando queremos re-aproveitar uma função pré-existente.
+
+== Processamento preguiçoso ==
+
+Na verdade eu menti um pouquinho para você! Em Haskell o processamento
+da função _*fmap*_ é preguiçoso ([[lazy evaluation]]). Por isso,
+simpliquei um pouco quando disse que _*fmap*_ retorna uma nova lista.
+O que ocorre na verdade nesta linguagem de programação (e algumas
+outras também) é que este processamento é postergado até o último momento
+possível. A execução fica pendente e, quando o próximo valor da
+lista é requisitado, a operação é realizada para aquele elemento
+específico e retornado para o chamador.
+
+Mas este já é um assunto para um outro artigo.
 
 == Outros Functors ==
 
 É comum usarmos listas para exemplificar o uso do _*fmap*_, mas
-existem *vários* outros tipos e podemos até mesmo
+existem *vários* outros exemplos muito importantes e podemos até mesmo
 instanciar nossos próprios _Functors_!
 
 Outros _Functors_ famosos incluem o [[Maybe]] (conhecido também como _Optional_
-em algumas linguagens) e o [[Either]]. Mas estes exemplos vão ficar para
+em algumas linguagens) e o [[Either]]. Mas este assunto também vai ficar para
 um outro artigo.
 
 == Conclusão ==
 
-O que foi discutido aqui é apenas uma introdução ao assunto.
-Para aprender mais sobre este e outro temas da Programação Funcional, recomendo
+O que foi discutido aqui é apenas uma introdução ao tema.
+Para aprender mais sobre este e outro conceitos da Programação Funcional, recomendo
 o excelente (e gratuito) livro [[Livro Learn You a Haskell for Great Good!]]
-e se quiser se aprofundar em Haskell, pode ler também o [[Haskell in Dept]].
+e se quiser se aprofundar em Haskell recomendo ler também o [[Haskell in Dept]].

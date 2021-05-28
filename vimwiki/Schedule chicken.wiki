@@ -4,31 +4,52 @@ refs:
 * https://en.wikipedia.org/wiki/Schedule_chicken  
 * https://www.goodreads.com/book/show/67839.Planning_Extreme_Programming (página 33)
 
-Às vezes nos deparamos com uma situação onde duas ou mais
-pessoas/times estão trabalhando com um objetivo em comum e
-todas as pessoas envolvidas sabem que o prazo original acordado não
-será cumprido.
+Às vezes nos deparamos com situações em que duas ou mais
+pessoas estão atuando com um objetivo em comum e existe uma
+dependência mútua para a entrega: o trabalho de uma pessoa
+não poderá ser implantado sem que a outra cumpra o acordado
+e vice versa. Neste cenário, se uma das pessoas atrasar sua parte, toda
+a entrega fica comprometida. 
 
-Mas por medo (falta de [[Coragem]]?), ninguém quer ser a
-primeira pessoa a dar a notícia.
+Dependendo da cultura da empresa, essa pessoa que atrasou poderá
+sofrer algum tipo de punição. Vai ter que se explicar em detalhes,
+sofrerá pressão para entregar o mais rápido possível, e em
+situações mais extremas corre o risco de não ser promovida ou 
+até mesmo demitida. 
 
-O resultado é um impasse. As pessoas ficam esperando que alguma
-outra seja a primeira a dizer que não será capaz de cumprir
-o prazo.
+Mas o que acontece quando todas as pessoas envolvidas
+sabem que o prazo acordado não será cumprido?
 
-Isso pode se prolongar até que chegue o prazo final, o que
-piora toda situação, já que neste momento os times serão 
-obrigados a confrontar a realidade em um momento em que
-já não podem ter nenhuma ação para enfrentar o problema.
-O projeto irá atrasar e a cliente só vai ser informada no dia
-que deveria ser a entrega.
+Por medo (falta de [[Coragem]]?), ninguém quer ser a primeira pessoa
+a dar a notícia e entram em uma situação de impasse, conhecida como _Schedule chicken_.
+Todas ficam aguardando, na expectativa de que outra pessoa seja a primeira
+a dizer que não será capaz de entregar o que foi acordado, fazendo
+com que seja prorrogada a data de entrega de todas, deixando com que a pessoa que 
+trouxe a informação a tona seja responsabilizada e eventualmente penalizada
+pelo atraso sozinha.
 
-Se tivessem sido mais transparentes e honestos antes, poderiam ter
-tentando resolver de outra forma (aumentando prazo, revendo
-escopo, etc). Ou, no mínimo, controlado a expectativa da cliente,
-avisando que o prazo acordado não será viável.
+Este impasse pode se prolongar até o prazo final, o que
+piora toda situação, já que neste momento as pessoas envolvidas serão 
+obrigadas a enfrentar a realidade em uma situação em que
+já não podem ter nenhuma ação para contornar o problema. O resultado
+só pode ser um: o projeto irá atrasar e a cliente só vai ser 
+informada disso no mesmo dia que esperava receber a entrega. 
 
-Normalmente isso acontece em um ambiente onde a cultura de
-transparência não é incentivada.
+Caso este tipo de situação seja recorrente, um efeito comum a longo prazo 
+é a cliente perder a confiança no time. A consequencia pode ser
+a imposição de contratos mais rígidos, microgenciamento ou outras
+práticas que são prejudiciais para ambas as partes.
 
-Uma forma de mitigar isso são as práticas da [[Programação Extrema]].
+== Conclusão ==
+
+É muito importante sempre darmos [[Feedback]] para a cliente o mais
+rápido possível, controlando suas expectativas. Quando somos mais 
+transparentes e corajosas, podemos resolver este tipo de situação
+descritas neste artigo de outras formas, sendo a mais óbvia diminuir o
+escopo da entrega e revendo as prioridade da cliente. Ou, em outras palavras,
+trabalhando de uma forma ágil, nos adaptando às inevitáveis mudanças
+que encontramos ao longo do processo de desenvolvimento de software.
+
+Normalmente o _Schedule chicken_ acontece em um ambiente onde a cultura de
+transparência não é incentivada e uma forma eficiênte de mitigar isso 
+é aplicando as práticas da [[Programação Extrema]].

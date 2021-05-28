@@ -6,6 +6,8 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 
 === Programação Funcional ===
 
+[[Função de primeira ordem]]
+
 [[Type class]]
 
 [[Functor]]
@@ -15,8 +17,6 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 [[Monoid]]
 
 [[fmap vs map|Qual a diferença entre fmap e map?]]
-
-[[Monoid]]
 
 [[Monoids comutativos]]
 
