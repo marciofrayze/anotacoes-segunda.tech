@@ -1,0 +1,11 @@
+= O que é e como definir um name space =
+
+- Similar ao conceito de _packages_ em outras linguagens, como Java
+
+- Serve para agrupar um conjunto de funções.
+
+- Ajuda na organização do código.
+
+- Permite que existam 2 funções com nomes iguais mas com implementações diferentes.
+
+- No REPL, para "entrar" em um name space você digita: (use 'nome.do.namespace) - Não esquecer o '

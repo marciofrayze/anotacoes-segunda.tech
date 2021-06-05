@@ -1,0 +1,19 @@
+= Formas de sair do vim =
+
+Existem várias formas de sair do vim. Aqui vou mostrar
+algumas delas e suas diferenças.
+
+Quando abrimos o vim sem nenhum parâmetro aparece um menu de
+ajuda e, entre elas, temos um dica de como sair do editor: o
+famoso **:q<Enter>**
+
+```
+digite  :q<Enter>             para sair
+```
+
+Quando pressionamos o dois pontos, entramos no **modo de
+comando** deste editor e nosso cursor é automaticamente
+deslocado para o canto inferior esquerdo da tela. 
+
+Neste modo, podemos digitar uma série de comandos, entre eles
+**quit** ou sua versão abreviada, **q**.

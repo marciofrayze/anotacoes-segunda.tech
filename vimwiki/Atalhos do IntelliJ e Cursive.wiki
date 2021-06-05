@@ -1,0 +1,11 @@
+= Atalhos do IntelliJ/Cursive =
+
+- Recarregar arquivo: Command + Shift + l (Tools -> REPL -> Load file in REPL)
+- Slurp e Barf. Mostrar como usar os atalhos para incluir algo para dentro do parenteses e para fora.
+  - Command + Shift + j ou k (Edit -> Structural Editing -> Slurp ou Barf)
+- Mostrar atalho para executar uma função (já dentro do scopo correto).
+  - Command + Shift + p
+- Exibir/esconder arvore de arquivos.
+  - Command 1
+- Reformatando código
+  - Command + alt + l (Code -> Reformat code)

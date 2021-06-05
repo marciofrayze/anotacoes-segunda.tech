@@ -1,0 +1,21 @@
+= Binding de símbolos com let =
+
+https://clojuredocs.org/clojure.core/let
+
+{{{clojure
+(defn valor-multa 
+  "Calcula valor da multa"
+  [valor]
+  (let [percentual-multa 0.1]
+    (* valor percentual-multa)))
+}}}
+
+{{{clojure
+(defn valor-total
+  "Calcula valor total incluindo multa"
+  [valor]
+  (let [percentual-multa 0.1
+        valor-multa (* valor percentual-multa)]
+    (+ valor valor-multa)))
+}}}
+

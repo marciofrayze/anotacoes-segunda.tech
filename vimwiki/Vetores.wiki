@@ -1,0 +1,11 @@
+= Vetores =
+
+- [1 2 3 4] ["acabaxi" "abobrinha" "limao"]  
+- (println [1 2 3 4]) - vírgula é opcional  
+- (count [1 2 3 4])  
+- (println (count [1 2 3 4]))  
+- Podemos misturar tipos: [1 2 3 "limao" "laranja" "abacate"]. Clojure é uma linguagem dinâmica
+- "Adicionando" um elemento: (conj [1 2 3] 4)  
+- Vetores são imutáveis  
+- "Removendo" o último elento: (pop [1 2 3])  
+

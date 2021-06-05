@@ -1,0 +1,179 @@
+= Clojure: Introdução à Programação Funcional =
+
+== Objetivo ==
+
+Aprender os fundamentos de programação em Clojure e os conceitos básicos do paradigma funcional.
+
+Ao final do curso você deve ser capaz de:
+- implementar programas básicos e executá-los dentro de sua IDE;
+- construir suas próprias funções com e sem parâmetros;
+- imprimir dados na tela;
+- criar condicionais;
+- entender o conceito básico de funções de primeira ordem;
+- trabalhar com vetores e mapas;
+- transformar elementos de vetores e mapas utizando _filter_, _map_ e _reduce_;
+- entender como é possível desenvolver softwares usando estruturas de dados imutáveis;
+- e criar testes automatizados para validar o funcionamento de suas funções.
+
+== Módulo 1: Introdução ==
+
+Objetivos:
+
+Conseguir implementar e executar programas básicos através do REPL/clj e dentro da IDE. Aprender a construir suas próprias funções, imprimir textos, condicionais e criar vetores utilizando o paradigma funcional e a linguagem Clojure.
+
+[[Clojure-Introducao]]   
+
+Objetivos:  
+- Conhecer a proposta do curso, objetivos, metodologia e ferramentas.
+- Conhecer a os princípios da linguagem Clojure.
+- Ser capaz de instalar o Clojure, entrar no REPL (clj) e executar as primeiras linhas de código.
+  - Entender a função _println_.
+  - Ser capaz de realizar operações matemáticas simples através do REPL.
+
+[[Vetores]]  
+- Ser capaz de criar vetores com elementos do mesmo tipo e de tipos diferentes.
+- Conseguir contar o número de elementos de um vetor.
+- Conseguir incluir um elemento em um vetor.
+- Conseguir remover um elemento em um vetor.
+- Entender que vetores são imutáveis (persistentes).
+
+[[Criando nossas próprias funções]]  
+- Entender a estrutura da uma função (nome / parâmetros / corpo).
+- Ser capaz de criar uma função sem parâmetros.
+- Ser capaz de criar funções parametrizadas.
+- Aprender a consultar o código fonte de outras funções através da IDE.
+
+[[Imutabilidade]]
+- Entender as diferenças filosoficas entre Programação Funcional e Programação Orientada a Objetos.
+- Entender o problema da mutabilidade através de exemplos em JavaScript.
+- Entender o impacto da mutabilidade em códigos executados de forma concorrente.
+
+[[Funções puras]]
+- Entender o que são funções puras e efeitos colaterais.
+- Conseguir identificar funções puras e impuras.
+- Compreender que funções puras podem ser executadas paralelamente de forma segura.
+
+[[Binding de símbolos com let]]
+- Entender a definição básica de símbolo e _binding_.
+- Aprender a fazer um _binding_ de um símbolo para um valor.
+- Perceber as vantagens de um código mais limpo quando extraímos constantes e damos nomes para elas através de símbolos.
+
+[[Condicionais]]
+- Entender a estrutura do if.
+- Aprender as diferentes formas de se fazer condicionais simples utilizando o _if_.
+  - Utilizando _if_ e _else_.
+  - Apenas com _if_ sem o _else_.
+  - Retornando diretamente um booleano.
+- Compreender que o _if_ funciona de forma similar a uma função (embora seja uma _special form_).
+- Conhecer o conceito de _predicate_.
+- Começar a compreender que o _nil_ pode ser visto como um _falsey_.
+- Aprender a criar condicionais usando o _when_.
+
+[[Statements versus Expressions]]
+- Compreender as diferenças entre uma _conditional statement_ e uma _conditional expression_.
+- Ser capaz de perceber as diferenças através de exemplos em JavaScript.
+- Entender as vantagens da _conditional expression_.
+
+[[Testes Automatizados e Asserts]]
+- Entender a importância de automatiazar os testes.
+- Criar seus primeiros testes automatizados.
+- Compreender para que servem e como utilizar os _asserts_.
+
+[[True, False, Thuthy, Falsey]]
+- Compreender a relação entre True, False e as semelhanças e diferenças com Thuthy e Falsey.
+- Perceber porque existe o conceito de Thuthy e Falsey em Clojure e como podemos nos beneficiar deles.
+- Ser capaz de identificar se trata-se de um True/False ou um Thuthy/Falsey.
+ 
+[[Mais sobre Vetores]]  
+- Relembrar os conceitos de _conj_ e _pop_.
+- Conseguir recuperar um elemento que está em uma determinada posição/index.
+- Entender as diferenças entre utilizar a função _get_ e o nome do vetor como função.
+- Entender os problemas possíveis de IndexOutOfBoundsException.
+- Ser capaz de atribuir um valor padrão caso elemento que está sendo recuperado não exista.
+- Conseguir "atualizar" um elemento de um vetor.
+
+[[Tipos dos dados]]
+- Entender que Clojure é uma linguagem Dinâmica e com inferência de tipos.
+- Aprender a consultar os tipos.
+
+== Parte 2: Utilizando uma IDE ==
+
+[[Instalando o IntelliJ e o plugin Cursive]]
+- Entender as vantagens de se utilizar uma IDE.
+- Quais opções temos disponíveis de IDE/Editores.
+- Instalar a IDE IntelliJ Community e o plugin Cursive.
+- Criar o primeiro projeto pela IDE.
+- Abrir o REPL dentro da IDE.
+- Carregar as funções do arquivo que está sendo editado.
+- Executar uma função dentro do REPL.
+
+[[Atalhos do IntelliJ e Cursive]]
+- Ser capaz de executar através de atalhos do teclado os comandos que vamos usar com mais frequencia. 
+
+== Parte 3: ?? ==
+
+[[O que é e como definir um name space]]
+
+...
+
+== Parte 4: Higher order functions ==
+- Compreender que é possível passar a referência de uma função como parâmetro de outra função.
+- Entender as vantagens e desvantagens das funções anônimas.
+- Aprender a criar funções anônimas (lambda):
+  - usando o _fn_.
+  - usando # e %, %1, %2...
+
+== Parte 5: Map, Filter, Reduce ==
+- Compreender que na programação funcional trabalhamos com o conceito de transformação.
+- Conseguir perceber as vantagens de solucionar problemas de forma menos imperativa.
+- Entender a diferença entre um laço explícito e um implícito.
+- Conseguir filtrar os elementos de um vetor de acordo com um predicado.
+- Ser capaz de transformar (reduzir) todos os elementos de um vetor em um único dado.
+- Conseguir mesclar o uso de maps, filters e reduce.
+
+== Parte 6: Maps ==
+- Compreender as limitações dos vetores.
+- Aprender a construir um mapa.
+- Conhecer o conceito de _keyword_.
+- Compreender porque é interessante usar uma _keyword_ como chave do mapa.
+- Entender quando usar um vetor e quando utilizar um mapa.
+- Conseguir contar a quantidade de elementos de um mapa.
+- Aprender a listar as chaves e os valores de um mapa.
+- Conhecer que existem outros tipos, como por exemplo o tipo ValSeq.
+- Ser capaz de associar um novo valor em um mapa.
+- Ser capaz de atualizar um valor de um mapa (usando _assoc_ e _update_).
+- Ser capaz de remover um valor de um mapa (_dessoc_).
+ 
+== Parte 7: Mais sobre os Maps ==
+- Compreender que maps podem ser mais complexos e conter mais níveis.
+- Conseguir criar e manipular maps que contenham um vetor como valor de uma de suas chaves.
+- Conseguir criar e manipular maps que contenham um outro map como valor de uma de suas chaves.
+- Ser capaz de recuperar um elemento do mapa usando:
+  - _get_.
+  - o mapa como se fosse uma função.
+  - e a forma mais comum: invertendo a ordem e usando a chave como se fosse uma função.
+- Entender que é perigoso usar a opção de mapa como se fosse uma função já que ela pode ser nula.
+- Aprender a obter um elemento do mapa com um valor padrão caso não encontre.
+- Aprender a obter um elemento do mapa com um valor padrão caso não encontre.
+- Conseguir obter o valor de uma chave que está aninhada dentro de um mapa (:chave1 (:chave2 mapa)).
+- Conseguir atualizar o valor de uma chave que está aninhada dentro de um mapa (usando _update-in_).
+ 
+== Parte 8: Explorando mais o map, filter e reduce ==
+- Compreender que maps podem ser mais complexos e conter mais níveis.
+- Conseguir criar e manipular maps que contenham um vetor como valor de uma de suas chaves.
+- Conseguir criar e manipular maps que contenham um outro map como valor de uma de suas chaves.
+- Ser capaz de recuperar um elemento do mapa usando:
+  - _get_.
+  - o mapa como se fosse uma função.
+  - e a forma mais comum: invertendo a ordem e usando a chave como se fosse uma função.
+- Entender que é perigoso usar a opção de mapa como se fosse uma função já que ela pode ser nula.
+- Aprender a obter um elemento do mapa com um valor padrão caso não encontre.
+- Aprender a obter um elemento do mapa com um valor padrão caso não encontre.
+- Conseguir obter o valor de uma chave que está aninhada dentro de um mapa (:chave1 (:chave2 mapa)).
+- Conseguir atualizar o valor de uma chave que está aninhada dentro de um mapa (usando _update-in_).
+ 
+== Parte 9: Threading: uma forma mais elegante de encadear várias funções ==
+
+== Parte 10: Conclusões ==
+- Conhecer e ser capaz de procurar informações no clojuredocs.org
+- Conhecer livros onde pode dar continuidade de seus estudos.

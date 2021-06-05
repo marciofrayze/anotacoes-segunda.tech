@@ -1,0 +1,8 @@
+= Funções puras =
+
+- O que são
+- Exemplos
+- Por que são importantes?
+- Exemplo em js com mutabilidade (passando um objeto como parametro e alterando ele)
+- Discutir concorrência
+
