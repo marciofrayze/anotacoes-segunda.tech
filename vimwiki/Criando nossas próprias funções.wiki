@@ -1,0 +1,39 @@
+= Criando nossas proprias funções =
+
+https://clojure.org/guides/learn/functions
+
+;;    nome função   parâmetros  corpo
+;;    ------------  ------      -------------------
+(defn cumprimentar  [nome]      (str "Olá, " nome2) )
+
+{{{clojure
+(defn imprimir-ola []  
+  (println "Olá mundo!"))  
+
+(defn parabenizar [nome]   
+  (println "Parabéns" nome "!"))  
+  
+(defn parabenizar [nome]   
+  (println "Parabéns" (str nome "!")))  
+  
+(defn parabenizar [nome]  
+  (println "Seja bem-vinda ao curso de Clojure!")
+  (println "Parabéns" nome)
+  (println "Você fez uma ótima escolha!"))
+  
+(defn parabenizar [nome] 
+  (println "Seja bem-vinda ao curso de Clojure!")
+  (println "Parabéns" nome)
+  (println "Você fez uma ótima escolha!")
+  [1 2 3])
+  
+(defn inverter-ordem-dois-elementos [a b] 
+  "Inverte a ordem de dois elementos"
+  [b a])
+  
+(defn valor-multa 
+  "Calcula valor da multa"
+  [valor]
+  (* valor 0.1))
+}}}
+

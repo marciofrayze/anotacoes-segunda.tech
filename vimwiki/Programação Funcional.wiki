@@ -1,0 +1,82 @@
+= Programação Funcional =
+
+- Declarativa (...)
+
+A pessoa desenvolvedora observa 3 coisas:
+- Dados
+- Cáculos
+- Ações
+
+== Ações ==
+
+Representa as partes do código em que o momento ou a quantidade de
+vezes que é executado é relevante.
+
+Ex: uma função que envia um e-mail. A hora em que é enviado é
+importante e a quantiade de vezes que executamos esta rotina também
+(ou corremos o risco de enviar o mesmo e-mail várias vezes).
+
+Criar testes automatizados para este tipo de código pode ser
+desafiador.
+
+== Cálculos ==
+
+São trechos de código que ao receberem uma determinada devolvem um
+resultado, sendo que para uma mesma entrada, o resultado deve ser
+sempre o mesmo.  
+E você pode executar este código a qualquer momento e quantas vezes
+quiser, sem que ocorra nenhum efeito colateral fora de seu escopo.  
+Ou seja, em outras palavras, são [[https://marciofrayze.medium.com/fun%C3%A7%C3%B5es-puras-1ed312f75763|funções puras]].  
+Criar testes automatizados para este tipo de código é bastante
+simples.
+
+== Dados ==
+
+Separamos os dados em uma outra categoria pois são menos complexas que
+os cálculos e possuem um significado por si só, sem precisarem ser
+executados.
+
+== Exemplos ==
+
+{{{JavaScript
+email-address = "marcio@segunda.tech"
+is-valid = valid-email-addres?(email-address)
+send-mail!(email)
+}}}
+
+Nas 3 linhas acima conseguimos facilmente separar este 3
+cenários. Na primeira temos a declaração de um dado: meu endereço de
+e-mail.   
+Na segunda temos um exemplo de *cálculo* (ou *função pura*),
+onde _valid_email-address?_ é uma função que recebe um endereço de e-mail 
+como entrada e retorna uma valor booleano indicando se é ou não um 
+endereço válido (que, neste exemplo, é uma informação que
+não é mais utilizada).  
+Por último temos um exemplo de uma ação (ou *função
+impura*), responsável por enviar um e-mail.
+
+Um outro exemplo de pseudo-código seria:
+
+{{{JavaScript
+pessoa = { altura: "1.76m", peso: "68Kg" }
+imc = calcule_imc(pessoa)
+salve-no-banco-de-dados!(pessoa, imc)
+}}}
+
+Neste pseudo-código, na primeira linha temos a representação de um
+dado. Na segunda, a execução de um cálculo. E na terceira, uma ação.
+Das três linhas, apenas a terceira contêm um *efeito
+colateral*.
+
+== Evite efeitos colaterais ==
+
+Durante o desenvolvimento de um sofware, em geral vamos
+tentar enconrar formas de transformar as ações em cálculos e
+os cálculos em dados. Claro que qualquer software que
+que faça qualquer coisa útil precisa ter efeitos colaterais:
+exibir algo na tela, enviar um e-mail, salvar dados, acionar
+integrações, ... tudo isso representa alguma forma de efeito
+colateral. Mas ao desenvolver sofware utilizando o paradigma
+funional, vamos tentar minimizar ao máximo estes tipos de
+funções e vamos isola-las das demais.
+demais.

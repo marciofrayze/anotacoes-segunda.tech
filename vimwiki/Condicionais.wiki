@@ -1,0 +1,82 @@
+== Condicionais ==
+
+{{{clojure
+(10 > 20)  ;; class java.lang.Long cannot be cast to class clojure.lang.IFn
+(> 10 20)  ;; false
+(< 10 20)  ;; true
+}}}
+
+- If é uma função e recebe 3 parâmetros.
+
+{{{clojure
+(defn calcular-imposto ;; Pensar em um nome melhor
+  "Abaixo ou igual a 10 reais não tem imposto. Acima de 10 e abaixo de 100 reais tem 10% de imposto e acima ou igual a 100, imposto deve ser de 20%."
+  [valor]
+  (if (< valor 10)
+     0 
+     (if (< valor 100)
+       (* valor 0.1)
+       (* valor 0.2))))
+}}}
+
+- If junto com let:
+
+{{{clojure
+(defn calcular-imposto
+  "Abaixo ou igual a 10 reais não tem imposto. Acima de 10 e abaixo de 100 reais tem 10% de imposto e acima ou igual a 100, imposto deve ser de 20%."
+  [valor]
+  (let [imposto-primeira-faixa 0
+        imposto-segunda-faixa  0.1
+        imposto-terceira-faixa 0.2
+        ]
+  (if (< valor 10)
+     imposto-primeira-faixa 
+     (if (< valor 100)
+       (* valor imposto-segunda-faixa)
+       (* valor imposto-terceira-faixa)))))
+}}}
+
+- Ao fazer isso conseguimos perceber melhor um padrão, que eventualmente poderia ser refatorado (mas não vamos fazer isso agora).
+- Também percebemos que testar essa lógica começa a ser um pouco chato. E se automatizarmos isso? Nas próximas aulas vamos voltar a esse tema (e mostrar como fazer isso usando TDD).
+
+- Retornando diretamente.
+
+{{{clojure
+(defn isento-de-imposto?
+  [valor]
+  (if (< valor 10)
+    true
+    false))
+}}}
+
+- Explicar que o ? é usado em função _predicate_.
+
+- O parâmetro else é opcional.
+ 
+{{{clojure
+(defn isento-de-imposto?
+  [valor]
+  (if (< valor 10)
+    true))
+}}}
+
+(Vamos falar mais sobre isso no próximo vídeo!)
+
+- Mas este caso poderíamos simplificar ainda mais:
+        
+{{{clojure
+(defn isento-de-imposto?
+  "Se valor for menor que 10, não deve pagar imposto"
+  [valor]
+  (< valor 10)
+}}}
+
+== When ==
+
+Ao contrário do If, possui apenas o bloco true, que é executado por completo caso a condição seja atendida.
+
+{{{clojure
+(defn 
+...
+}}}
+}}}

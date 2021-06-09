@@ -1,0 +1,14 @@
+= Imutabilidade =
+
+- https://twitter.com/mfeathers/status/29581296216
+- "Orientação a Objetos torna o código compreensível ao encapsular as partes moveis. Programação Funcional torna o código compreensível minimizando as partes móveis" - Michael Feathers.
+- Não só os vetores são imutáveis. 
+- Precisamos ter algum tipo de mutação em algum momento, mas só quando necessário e de forma muito bem controlada (vamos ver em outras aulas como fazer isso).
+- "Mas não fica lento?" - sim e não.
+{{{clojure 
+(pop (pop (conj [1 2 3] 4)))
+}}}
+Este é um dos motivos de ser comum utilizarmos estruturas parecidas com listas ligadas na programação funcional, principalemente em dialetos do Lisp, que é o caso do Clojure. Lembre que LISP significa LISt Processor.
+- Achou o código feio? Não se preocupe, vamos ver outras formas de escrever este código mais pra frente.
+- Você percebeu que todo código fonte que escrevemos em Clojure/Lisp é uma grande Lista?
+- Linguagem homoicônica: https://en.wikipedia.org/wiki/Homoiconicity

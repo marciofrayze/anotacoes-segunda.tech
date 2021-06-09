@@ -8,6 +8,8 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 
 [[Função de primeira ordem]]
 
+[[Programação Funcional]]
+
 [[Type class]]
 
 [[Functor]]
@@ -57,3 +59,10 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 [[Frases básicas]]
 
 
+=== Vim ===
+
+[[Formas de sair do vim]]
+
+=== Clojure ===
+
+[[Curso clojure dev br]]

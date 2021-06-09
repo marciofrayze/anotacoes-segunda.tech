@@ -1,0 +1,53 @@
+{{{clojure
+(ns tech.segunda.imc.core)
+
+(defn imc
+  "Dado um peso e altura de uma pessoa, retorna o seu IMC (índice de massa corporea)."
+  [peso, altura]
+  (let [resultado-calculo (/ peso (* altura altura))]
+    (if (< resultado-calculo 18.5)
+      :baixo-peso
+      (if (< resultado-calculo 24.9)
+        :peso-ideal
+        :acima-peso))))
+
+(defn resultado-imc-formatado
+  "Dado o resultado de um IMC, formata em uma string"
+  [resultado-imc]
+  (let [texto-formatado {:baixo-peso "Peso está abaixo do ideal"
+                         :peso-ideal "Peso está ideal"
+                         :acima-peso  "Peso está acima do ideal"
+                         }]
+    (get texto-formatado resultado-imc)))
+
+(resultado-imc-formatado (imc 70 1.68))
+
+(-> (imc 70 1.68)
+   resultado-imc-formatado)
+   
+   
+   
+   
+(ns tech.segunda.imc.core-test
+  (:require [clojure.test :refer :all]
+            [teste.core :refer :all]))
+
+(deftest testando-imc
+  (testing "Uma pessoa muito magra deve ter IMC baixo"
+    (is (= :baixo-peso (imc 1 1))))
+  (testing "Uma pessoa com peso ideal deve ter IMC ideal"
+    (is (= :peso-ideal (imc 70 1.70))))
+  (testing "Uma pessoa acima do peso deve ter IMC acima do peso")
+  (is (= :acima-peso (imc 100 1.7))))
+
+(deftest testando-formatacao-do-imc
+  (testing "Formatação do imc baixo"
+    (is (= "Peso está abaixo do ideal" (resultado-imc-formatado :baixo-peso))))
+  (testing "Formatação do imc ideal"
+    (is (= "Peso está ideal" (resultado-imc-formatado :peso-ideal))))
+  (testing "Formatação do imc acima do peso"
+    (is (= "Peso está acima do ideal" (resultado-imc-formatado :acima-peso))))
+  (testing "Formatação do imc nil"
+    (is (= nil (resultado-imc-formatado :simbolo-desconhecido-qualquer)))))
+    
+}}}

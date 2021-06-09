@@ -1,0 +1,11 @@
+= Instalando o IntelliJ e o plugin Cursive =
+
+Apenas mostrar como instalar e criar um novo projeto usando o Leiningen para automatizar algumas coisas do projeto.
+
+Criar um projeto e abrir o REPL e rodar a função foo.
+
+https://leiningen.org/
+
+https://www.jetbrains.com/idea/
+
+https://cursive-ide.com/userguide/
