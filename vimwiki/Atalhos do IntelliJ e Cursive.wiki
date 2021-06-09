@@ -1,5 +1,6 @@
 = Atalhos do IntelliJ/Cursive =
 
+- Structural editing (https://cursive-ide.com/userguide/paredit.html)
 - Recarregar arquivo: Command + Shift + l (Tools -> REPL -> Load file in REPL)
 - Slurp e Barf. Mostrar como usar os atalhos para incluir algo para dentro do parenteses e para fora.
   - Command + Shift + j ou k (Edit -> Structural Editing -> Slurp ou Barf)

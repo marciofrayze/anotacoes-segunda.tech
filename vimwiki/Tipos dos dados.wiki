@@ -6,7 +6,7 @@ https://clojuredocs.org/clojure.core/type
 
 - Os tipos de dados serão automaticamente definidos e, quando necessário, convertidos.
 
-- Para sabermos o tipo, podemos utilizar a função type:
+- Para sabermos o tipo, podemos utilizar a função type (ou class):
 
 {{{clojure
 

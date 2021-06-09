@@ -1,11 +1,19 @@
 = Clojure: Introdução à Programação Funcional =
 
-== Objetivo ==
+Você está a fim de aprender Clojure e programação funcional *de graça*?? Tenho mais de uma década de experiência com desenvolvimento de software e estou criando uma série de cursos sobre Clojure e Programação Funcional. O primeiro deles já está quase pronto!
+
+Preencha seu e-mail no formulário abaixo para eu saber que você tem interesse e irei te avisar assim que estiver disponível!
+
+incluir_aqui_formulario_inscricao
+
+Ficou na dúvida?? Confira abaixo o conteúdo programático só do primeiro curso que estou finalizando!
+
+== Objetivo do primeiro módulo do curso ==
 
 Aprender os fundamentos de programação em Clojure e os conceitos básicos do paradigma funcional.
 
 Ao final do curso você deve ser capaz de:
-- implementar programas básicos e executá-los dentro de sua IDE;
+- implementar programas básicos e executá-los através do REPL e dentro de sua IDE;
 - construir suas próprias funções com e sem parâmetros;
 - imprimir dados na tela;
 - criar condicionais;
@@ -15,20 +23,23 @@ Ao final do curso você deve ser capaz de:
 - entender como é possível desenvolver softwares usando estruturas de dados imutáveis;
 - e criar testes automatizados para validar o funcionamento de suas funções.
 
-== Módulo 1: Introdução ==
+== Parte 1: Introdução ==
 
 Objetivos:
 
-Conseguir implementar e executar programas básicos através do REPL/clj e dentro da IDE. Aprender a construir suas próprias funções, imprimir textos, condicionais e criar vetores utilizando o paradigma funcional e a linguagem Clojure.
+Conseguir implementar e executar programas básicos através do REPL/clj. Aprender a construir suas próprias funções, imprimir textos, condicionais e criar vetores utilizando o paradigma funcional e a linguagem Clojure.
 
 [[Clojure-Introducao]]   
-
 Objetivos:  
 - Conhecer a proposta do curso, objetivos, metodologia e ferramentas.
+- Conhecer um breve histórico do paradigma funcional.
+  - Conhecer a origem do LISP.
+  - Conhecer a origem do Cálculo Lambda.
 - Conhecer a os princípios da linguagem Clojure.
 - Ser capaz de instalar o Clojure, entrar no REPL (clj) e executar as primeiras linhas de código.
-  - Entender a função _println_.
   - Ser capaz de realizar operações matemáticas simples através do REPL.
+  - Entender a função _println_.
+    - Saber utilizar a função _str_ para concatenar strings.
 
 [[Vetores]]  
 - Ser capaz de criar vetores com elementos do mesmo tipo e de tipos diferentes.
@@ -54,12 +65,11 @@ Objetivos:
 - Compreender que funções puras podem ser executadas paralelamente de forma segura.
 
 [[Binding de símbolos com let]]
-- Entender a definição básica de símbolo e _binding_.
 - Aprender a fazer um _binding_ de um símbolo para um valor.
 - Perceber as vantagens de um código mais limpo quando extraímos constantes e damos nomes para elas através de símbolos.
 
 [[Condicionais]]
-- Entender a estrutura do if.
+- Entender a estrutura do _if_.
 - Aprender as diferentes formas de se fazer condicionais simples utilizando o _if_.
   - Utilizando _if_ e _else_.
   - Apenas com _if_ sem o _else_.
@@ -73,6 +83,7 @@ Objetivos:
 - Compreender as diferenças entre uma _conditional statement_ e uma _conditional expression_.
 - Ser capaz de perceber as diferenças através de exemplos em JavaScript.
 - Entender as vantagens da _conditional expression_.
+- Ter noções das diferenças entre um código imperativo versus declarativo.
 
 [[Testes Automatizados e Asserts]]
 - Entender a importância de automatiazar os testes.
@@ -80,15 +91,15 @@ Objetivos:
 - Compreender para que servem e como utilizar os _asserts_.
 
 [[True, False, Thuthy, Falsey]]
-- Compreender a relação entre True, False e as semelhanças e diferenças com Thuthy e Falsey.
-- Perceber porque existe o conceito de Thuthy e Falsey em Clojure e como podemos nos beneficiar deles.
-- Ser capaz de identificar se trata-se de um True/False ou um Thuthy/Falsey.
+- Compreender a relação entre _True_, _False_ e as semelhanças e diferenças com _Thuthy_ e _Falsey_.
+- Perceber porque existe o conceito de _Thuthy_ e _Falsey_ em Clojure e como podemos nos beneficiar deles.
+- Ser capaz de identificar se trata-se de um _True/False_ ou um _Thuthy/Falsey_.
  
 [[Mais sobre Vetores]]  
 - Relembrar os conceitos de _conj_ e _pop_.
 - Conseguir recuperar um elemento que está em uma determinada posição/index.
 - Entender as diferenças entre utilizar a função _get_ e o nome do vetor como função.
-- Entender os problemas possíveis de IndexOutOfBoundsException.
+- Entender os problemas possíveis de _IndexOutOfBoundsException_.
 - Ser capaz de atribuir um valor padrão caso elemento que está sendo recuperado não exista.
 - Conseguir "atualizar" um elemento de um vetor.
 
@@ -97,6 +108,10 @@ Objetivos:
 - Aprender a consultar os tipos.
 
 == Parte 2: Utilizando uma IDE ==
+
+Objetivos:  
+
+Conseguir instalar e configurar a IDE IntelliJ e o plugin Curvice e conhecer os prinpais atalhos e se tornar capaz de navegar pela IDE, incluindo criar novos projetos, escrever códigos e executá-los através do REPL integrado à IDE.
 
 [[Instalando o IntelliJ e o plugin Cursive]]
 - Entender as vantagens de se utilizar uma IDE.
@@ -109,14 +124,29 @@ Objetivos:
 
 [[Atalhos do IntelliJ e Cursive]]
 - Ser capaz de executar através de atalhos do teclado os comandos que vamos usar com mais frequencia. 
+- Entender pra que serve o _Structural edit_ (também conhecido como _paredit_).
+- Aprender a desabilitar o _Structurla edit_ quando necessário.
 
-== Parte 3: ?? ==
+== Parte 3: Namespaces, símbolos e funções privadas ==
 
-[[O que é e como definir um name space]]
+Objetivos:
 
-...
+Começar a compreender a importância de estruturar o código, separando as funções em arquivos e _namespaces_ diferentes.
+
+[[O que é e como definir um namespace]]
+- Entender a importância de separarmos nossas funções em _namespaces_ diferentes.
+- Ser capaz de definir um _namespace_.
+- Conhecer o tipo _Symbol_.
+- Entender as diferenças entre os tipos _Symbol_ e _Keyword_.
+- Conseguir importar uma funções de um outro _namespace_.
+- Conseguir mudar de _namespace_ no REPL dentro da IDE.
 
 == Parte 4: Higher order functions ==
+
+Objetivos:
+
+Começar a ter contato com funções de primeira ordem: entender o que são e como criá-las e a sua importância no desenvolvimento de software utilizando o paradigma funcional.
+
 - Compreender que é possível passar a referência de uma função como parâmetro de outra função.
 - Entender as vantagens e desvantagens das funções anônimas.
 - Aprender a criar funções anônimas (lambda):
@@ -124,6 +154,11 @@ Objetivos:
   - usando # e %, %1, %2...
 
 == Parte 5: Map, Filter, Reduce ==
+
+Objetivos:
+
+Ter os primeiros contatos com 3 funções fundamentais para o desenvolvimento de software no paradigma funcional: _map_, _filter_ e _reduce_.
+
 - Compreender que na programação funcional trabalhamos com o conceito de transformação.
 - Conseguir perceber as vantagens de solucionar problemas de forma menos imperativa.
 - Entender a diferença entre um laço explícito e um implícito.
@@ -131,7 +166,12 @@ Objetivos:
 - Ser capaz de transformar (reduzir) todos os elementos de um vetor em um único dado.
 - Conseguir mesclar o uso de maps, filters e reduce.
 
-== Parte 6: Maps ==
+== Parte 6: Mapas ==
+
+Objetivos:
+
+Conhecer e saber como e quando utilizar uma das principais estruturas de dados do Clojure: os mapas. 
+
 - Compreender as limitações dos vetores.
 - Aprender a construir um mapa.
 - Conhecer o conceito de _keyword_.
@@ -144,36 +184,84 @@ Objetivos:
 - Ser capaz de atualizar um valor de um mapa (usando _assoc_ e _update_).
 - Ser capaz de remover um valor de um mapa (_dessoc_).
  
-== Parte 7: Mais sobre os Maps ==
-- Compreender que maps podem ser mais complexos e conter mais níveis.
-- Conseguir criar e manipular maps que contenham um vetor como valor de uma de suas chaves.
-- Conseguir criar e manipular maps que contenham um outro map como valor de uma de suas chaves.
-- Ser capaz de recuperar um elemento do mapa usando:
-  - _get_.
-  - o mapa como se fosse uma função.
-  - e a forma mais comum: invertendo a ordem e usando a chave como se fosse uma função.
-- Entender que é perigoso usar a opção de mapa como se fosse uma função já que ela pode ser nula.
-- Aprender a obter um elemento do mapa com um valor padrão caso não encontre.
-- Aprender a obter um elemento do mapa com um valor padrão caso não encontre.
-- Conseguir obter o valor de uma chave que está aninhada dentro de um mapa (:chave1 (:chave2 mapa)).
-- Conseguir atualizar o valor de uma chave que está aninhada dentro de um mapa (usando _update-in_).
- 
-== Parte 8: Explorando mais o map, filter e reduce ==
-- Compreender que maps podem ser mais complexos e conter mais níveis.
-- Conseguir criar e manipular maps que contenham um vetor como valor de uma de suas chaves.
-- Conseguir criar e manipular maps que contenham um outro map como valor de uma de suas chaves.
-- Ser capaz de recuperar um elemento do mapa usando:
-  - _get_.
-  - o mapa como se fosse uma função.
-  - e a forma mais comum: invertendo a ordem e usando a chave como se fosse uma função.
-- Entender que é perigoso usar a opção de mapa como se fosse uma função já que ela pode ser nula.
-- Aprender a obter um elemento do mapa com um valor padrão caso não encontre.
-- Aprender a obter um elemento do mapa com um valor padrão caso não encontre.
-- Conseguir obter o valor de uma chave que está aninhada dentro de um mapa (:chave1 (:chave2 mapa)).
-- Conseguir atualizar o valor de uma chave que está aninhada dentro de um mapa (usando _update-in_).
- 
-== Parte 9: Threading: uma forma mais elegante de encadear várias funções ==
+== Parte 7: Mais sobre os Mapas ==
 
-== Parte 10: Conclusões ==
+Objetivos:
+
+Explorar mais a fundo esta que é uma das estruturas de dados mais utilizadas durante o desenvolvimento de softwares quando estamos utilizando a linguagem Clojure.
+
+- Compreender que mapas podem ser complexos e conter vários níveis.
+- Conseguir criar e manipular mapas que contenham um vetor como valor de uma de suas chaves.
+- Conseguir criar e manipular mapas que contenham um outro mapa como valor de uma de suas chaves.
+- Ser capaz de recuperar um elemento do mapa usando:
+  - _get_.
+  - o mapa como se fosse uma função.
+  - e a forma mais comum: invertendo a ordem e usando a chave como se fosse uma função.
+- Entender que é perigoso usar a opção de mapa como se fosse uma função já que ela pode ser nula.
+- Aprender a obter um elemento do mapa com um valor padrão caso não encontre.
+- Aprender a obter um elemento do mapa com um valor padrão caso não encontre.
+- Conseguir obter o valor de uma chave que está aninhada dentro de um mapa (:chave1 (:chave2 mapa)).
+- Conseguir atualizar o valor de uma chave que está aninhada dentro de um mapa, utilizando _update-in_.
+ 
+== Parte 8: Threading: uma outra forma de encadear funções ==
+
+Objetivos:
+
+Perceber que a composição de muitas funções pode tornar a leitura do código muito complicada e saber aplicar o conceito de _Threading first_ para compor funções de uma forma mais simples.
+
+- Perceber as situações onde a legibilidade do código fica comprometida pelo volume de composições de chamadas de muitas funções.
+- Ser capaz de executar composição de funções usando _Threading first_.
+
+== Parte 9: Calculo IMC ==
+
+Objetivos:
+
+Ser capaz de acompanhar o desenvolvimento de um software simples utilizando as técnicos como TDD e REPL Driven Development.
+
+[[Exemplo IMC com Clojure]]
+- Conhecer um código de uma funcionalidade real e criada usando TDD e REPL driven development.
+
+== Parte 10: Funções públicas e privadas ==
+
+Objetivos:
+
+Aprender noções de boas práticas de visibilidade das funções e compreender quando uma funções deve ser definida como pública e quando pode ser privada.
+
+- Entender os potencias problemas de deixar todas as funções como públicas.
+- Aprender a criar funções privadas.
+
+== Parte 11: Mais sobre maps, map, filter e reduce: Loja de brinquedos ==
+
+Objetivos:
+
+Ser capaz de acompanhar o desenvolvimento de um outro software explorando mais o uso de estrutura de dados mapa e as funções _map_, _filter_ e _reduce_.
+
+[[Exemplo Calculo preço total da compra em uma loja de brinquedos]]
+- Conhecer outro exemplo mais próximo do real: dado uma estrutura de dados com os brinquedos que estamos comprando, queremos calcular o preço total da compra.
+- Praticar mais o uso de Threading, trabalhar com mapas e utilizar o filter, map e reduce.
+
+== Parte 12: Conclusões ==
+
+Objetivos:
+
+Conhecer os possíveis caminhos para continuar os estudos da linguagem Clojure e do Paradigma Funcional.
+
 - Conhecer e ser capaz de procurar informações no clojuredocs.org
 - Conhecer livros onde pode dar continuidade de seus estudos.
+
+= Sobre o autor =
+
+Meu nome é Marcio Frayze David e sou autor deste curso.
+  
+Desenvolvo softwares há mais de uma década. Desde 2009 trabalho como
+analista de sistemas no Serviço Federal de Processamento de Dados
+(SERPRO), onde ajudo diversas equipes a
+implementar soluções para clientes como a Receita Federal do Brasil e
+o Departamento Nacional de Trânsito (DENATRAN). Nesta empresa atuei
+em muitas soluções, incluindo o desenvolvimento do aplicativo
+Carteira Digital de Trânsito (CDT).  
+Embora durante a maior parte do meu trabalho passe desenvolvendo softwares
+no *backend*, também desenvolvo *frontends* e aplicativos móveis (para iOS e
+Android).
+
+Você pode conhecer mais sobre mim em: https://segunda.tech/sobre
