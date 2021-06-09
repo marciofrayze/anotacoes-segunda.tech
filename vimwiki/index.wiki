@@ -32,6 +32,10 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 
 [[Buildable]]
 
+[[Wholemeal]]
+
+[[If expression versus if statement]]
+
 === Extreme programming ===
 
 [[Coragem]]
