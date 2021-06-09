@@ -1,0 +1,10 @@
+= Função de primeira ordem =
+
+refs.
+* [[Livro Learn You a Haskell for Great Good!]], capítulo
+  [[http://learnyouahaskell.com/higher-order-functions|Higher order function]].
+ 
+Em programação, uma função é considerada de primeira ordem (_higher order
+function_) quando se enquadra em pelo menos um dos seguintes cenários:
+ 
+
