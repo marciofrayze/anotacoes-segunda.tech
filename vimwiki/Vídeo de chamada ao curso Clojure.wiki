@@ -1,0 +1,58 @@
+== Roteiro vídeo chamada do curso Clojure ==
+
+Tá a fim de aprender Clojure e Programação Funcional??
+
+Se você ainda não conhece Clojure, ela é uma linguagem dinânica de uso
+geral e utiliza a famosa JVM, a máquina virtual do Java.
+
+Ela é um dialeto da linguem LISP e usa predominantemente o paradigma funcional.
+
+E é usada por empresas como Nubank, Walmart, Netflix, a consultoria ThougthWorks e
+muitas outras.
+
+Se você tem interesse em programaço funcional, essa é uma ótima forma de aprender
+este paradigma e 
+
+o conhecimento adquirido neste curso com certeza não vai ficar restrito à linguagem Clojure.
+
+Hoje muitas linguagens utilizam vários dos conceitos que vou te ensinar ao longo do curso.
+
+Você vai aprender a usar as estruturas de dados básicas do Clojure, como vetores
+
+e mapas, 
+
+irá entender como trabalhar com estruturas de dados imutáveis,
+
+criar funções e compreender o que são e quando utilizar funções de primeira ordem,
+
+as formas de fazer condicionais e o conceito de predicado,
+
+vai compreender como e quando utilizar as famosas funções map, filter e reduce.
+
+Você vai aprender também como criar testes automatizados e trabalhar com
+
+TDD ou desenvolvimento guiado por testes. 
+
+E também o famoso REPL driven development.
+
+Eu vou criar, junto com você, alguns pequenos projetos usando todos esses conceitos.
+
+E além disso, vamos conversar sobre os fundamentos do paradigma funcional.
+
+Este não vai ser um daqueles cursos onde você só copia e cola código.
+
+Eu vou explicar todos os conceitos e inclusive vou contar um pouco do
+
+histórico da programação funcional, a origem do LISP e do
+cálculo lambda,
+
+pra que você conheça mais sobre este paradigma de programação.
+
+Bom, é isso aí. Se você tem interesse nisso tudo, deixa seu e-mail registrado aqui
+
+no site que eu vou te avisar assim que o material estiver disponível.
+
+E se você quiser, você também pode ver toda a 
+
+
+

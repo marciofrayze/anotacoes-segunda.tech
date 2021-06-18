@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>fmap vs map</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Diferença entre fmap e map"><h1 id="Diferença entre fmap e map" class="header"><a href="#Diferença entre fmap e map">Diferença entre fmap e map</a></h1></div>
+
+<p>
+Ref.
+</p>
+<ul>
+<li>
+Site Stack overflow: What's the point of map in Haskell, when there is fmap?
+
+<ul>
+<li>
+<a href="https://stackoverflow.com/questions/6824255/whats-the-point-of-map-in-haskell-when-there-is-fmap">https://stackoverflow.com/questions/6824255/whats-the-point-of-map-in-haskell-when-there-is-fmap</a>
+
+</ul>
+<li>
+Discussões na lista de e-mails do Haskell.org
+
+<ul>
+<li>
+<a href="https://mail.haskell.org/pipermail/haskell-prime/2006-August/thread.html">https://mail.haskell.org/pipermail/haskell-prime/2006-August/thread.html</a>
+
+</ul>
+</ul>
+  
+<p>
+Em <a href="Haskell.html">Haskell</a>, temos as funções <em><span id="Diferença entre fmap e map-fmap"></span><strong id="fmap">fmap</strong></em> e <span id="Diferença entre fmap e map-<em>map</em>"></span><strong id="<em>map</em>"><em>map</em></strong>. Em teoria poderíamos ter
+apenas uma, e isso foi discutido na <a href="https://mail.haskell.org/pipermail/haskell-prime/2006-August/thread.html">lista de e-mails do Haskell.org</a>.
+</p>
+
+<p>
+O tipo da função <span id="Diferença entre fmap e map-<em>fmap</em>"></span><strong id="<em>fmap</em>"><em>fmap</em></strong> é:
+</p>
+<pre haskell>
+fmap :: Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
+</pre>
+
+<p>
+E a de <em><span id="Diferença entre fmap e map-map"></span><strong id="map">map</strong></em> é:
+</p>
+<pre haskell>
+map :: (a -&gt; b) -&gt; [a] -&gt; [b]
+</pre>
+
+<p>
+As duas são muito parecidas, mas <em><span id="Diferença entre fmap e map-fmap"></span><strong id="fmap">fmap</strong></em> espera que <em><span id="Diferença entre fmap e map-a"></span><strong id="a">a</strong></em> e <span id="Diferença entre fmap e map-<em>b</em>"></span><strong id="<em>b</em>"><em>b</em></strong>
+sejam <a href="Functor.html">Functors</a>, enquanto <em><span id="Diferença entre fmap e map-map"></span><strong id="map">map</strong></em> espera que <em><span id="Diferença entre fmap e map-a"></span><strong id="a">a</strong></em> e <em><span id="Diferença entre fmap e map-b"></span><strong id="b">b</strong></em> sejam
+listas.
+</p>
+
+<p>
+Como sabemos que a <em>Lista</em> é um <a href="Functor.html">Functor</a>, também podemos
+passa-la como parâmetro para a função <em><span id="Diferença entre fmap e map-fmap"></span><strong id="fmap">fmap</strong></em>, mas o inverso
+não é verdade: a função <em><span id="Diferença entre fmap e map-map"></span><strong id="map">map</strong></em> é restrita para o tipo Lista.
+Isso porque embora <em>Lista</em> seja um <em>Functor</em>, nem todo <em>Functor</em>
+é uma <em>Lista</em>.
+</p>
+
+<p>
+O histórico é um pouco confuso, mas o estado atual da
+linguaguem é o seguinte: poderíamos ter apenas uma função
+que tratasse <em>Functors</em>, mas as mensagens de erro disparadas
+pelo compilador em casos de erros poderiam ser um pouco
+confusas para as pessoas desenvolvedoras mais novatas. Por
+isso, o time do <a href="Haskell.html">Haskell</a> optou por manter estas duas
+função: uma especializada em <em>Listas</em> e uma mais genéricas,
+capaz de tratar quaisquer tipos de <em>Functors</em>.
+</p>
+
+</body>
+</html>

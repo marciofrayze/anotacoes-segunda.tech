@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Semigroup</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Semigroup"><h1 id="Semigroup" class="header"><a href="#Semigroup">Semigroup</a></h1></div>
+
+<p>
+ref.
+</p>
+<ul>
+<li>
+Livro <a href="Haskell in Depth.html">Haskell in Depth</a>, Semigroup and Monoid
+
+<ul>
+<li>
+Capítulo X, página Y. 
+
+</ul>
+</ul>
+
+<p>
+<em>Semigoroup</em> é uma <a href="Type class.html">Type class</a> que declara a seguinte operação:
+</p>
+
+<dl>
+<dt>(&lt;&gt;) </dt>
+<dd>Semigroup a =&gt; a -&gt; a -&gt; a</dd>
+</dl>
+
+<div id="Semigroup-Exemplos"><h2 id="Exemplos" class="header"><a href="#Semigroup-Exemplos">Exemplos</a></h2></div>
+
+<pre Haskell>
+import Data.Semigroup
+
+[1, 2, 3] &lt;&gt; [4, 5, 6] 
+-- resultado: [1, 2, 3, 4, 5, 6]
+
+"Hello " &lt;&gt; "World"
+-- resultado: "Hello World"
+
+Sum 2 &lt;&gt; Sum 3
+-- resultado: Sum {getSum = 5}
+
+Product 2 &lt;&gt; Product 3
+-- resultado: Product {getProduct = 6}
+</pre>
+
+</body>
+</html>

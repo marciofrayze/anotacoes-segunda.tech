@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Condicionais</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Condicionais"><h2 id="Condicionais" class="header"><a href="#Condicionais">Condicionais</a></h2></div>
+
+<p>
+;; É muito parecido com uma função. Na verdade é uma <em>special form</em>, mas na prática, pelo menos por enquanto, você pode pensar como sendo uma função mesmo.
+</p>
+<pre clojure>
+(10 &gt; 20)  ; class java.lang.Long cannot be cast to class clojure.lang.IFn
+(&gt; 10 20)  ; false
+(&lt; 10 20)  ; true
+</pre>
+
+<ul>
+<li>
+If é uma função e recebe 3 parâmetros.
+
+<li>
+Discutir sobre o nome da função:
+
+<ul>
+<li>
+valor-imposto-retido
+
+<li>
+valor-imposto-retido-para-salario
+
+<li>
+calcular-imposto-retido
+
+<li>
+calcular-imposto-retido-para-salario
+<pre clojure>
+(defn imposto-retido
+  "Se salario abaixo ou igual a 1000 reais não tem imposto. Acima de 1000 e abaixo de 2000 reais tem 10% de imposto e acima ou igual a 2000, imposto deve ser de 20%."
+  [salario]
+  (if (&lt; salario 1000)
+     0 
+     (if (&lt; salario 2000)
+       (* salario 0.1)
+       (* salario 0.2))))
+</pre>
+
+</ul>
+</ul>
+
+<ul>
+<li>
+If junto com let:
+
+</ul>
+
+<pre clojure>
+(defn imposto-retido
+  "Se salario abaixo ou igual a 1000 reais não tem imposto. Acima de 1000 e abaixo de 2000 reais tem 10% de imposto e acima ou igual a 2000, imposto deve ser de 20%."
+  [salario]
+  (let [imposto-primeira-faixa 0
+        imposto-segunda-faixa  0.1
+        imposto-terceira-faixa 0.2
+        ]
+  (if (&lt; salario 1000)
+     imposto-primeira-faixa 
+     (if (&lt; salario 2000)
+       (* salario imposto-segunda-faixa)
+       (* salario imposto-terceira-faixa)))))
+</pre>
+
+<ul>
+<li>
+Ao fazer isso conseguimos perceber melhor um padrão, que eventualmente poderia ser refatorado (mas não vamos fazer isso agora).
+
+<li>
+Também percebemos que testar essa lógica começa a ser um pouco chato. E se automatizarmos isso? Nas próximas aulas vamos voltar a esse tema (e mostrar como fazer isso usando TDD).
+
+</ul>
+
+<ul>
+<li>
+Retornando diretamente.
+
+</ul>
+
+<pre clojure>
+(defn isento-de-imposto?
+  [valor]
+  (if (&lt; valor 1000)
+    true
+    false))
+</pre>
+
+<ul>
+<li>
+Explicar que o ? é usado em função <em>predicate</em>.
+
+</ul>
+
+<ul>
+<li>
+O parâmetro else é opcional.
+
+</ul>
+ 
+<pre clojure>
+(defn isento-de-imposto?
+  [valor]
+  (if (&lt; valor 1000)
+    true))
+</pre>
+
+<p>
+(Vamos falar mais sobre isso no próximo vídeo!)
+</p>
+
+<ul>
+<li>
+Mas este caso poderíamos simplificar ainda mais:
+
+</ul>
+        
+<pre clojure>
+(defn sento-de-imposto?
+  "Se valor for menor que 1000, não deve pagar imposto"
+  [valor]
+  (&lt; valor 1000)
+</pre>
+
+<div id="When"><h2 id="When" class="header"><a href="#When">When</a></h2></div>
+
+<p>
+Ao contrário do If, possui apenas o bloco true, que é executado por completo caso a condição seja atendida.
+</p>
+
+<pre clojure>
+(defn mensagem
+  [idade]
+  (when (&gt; idade 18)
+    (println "Esta expressão será avaliada caso seja true")
+    (println "Esta outra expressão também será avaliada caso seja true")
+    "maior de idade")) ; retorno caso seja true
+</pre>
+<p>
+}}}
+</p>
+
+</body>
+</html>

@@ -1,25 +1,39 @@
-= Criando nossas proprias funções =
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Criando nossas próprias funções</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
 
-https://clojure.org/guides/learn/functions
+<div id="Criando nossas proprias funções"><h1 id="Criando nossas proprias funções" class="header"><a href="#Criando nossas proprias funções">Criando nossas proprias funções</a></h1></div>
 
+<p>
+<a href="https://clojure.org/guides/learn/functions">https://clojure.org/guides/learn/functions</a>
+</p>
+
+<p>
 ;;    nome função   parâmetros  corpo
 ;;    ------------  ------      -------------------
 (defn cumprimentar  [nome]      (str "Olá, " nome2) )
+</p>
 
 
-{{{clojure
+<pre clojure>
 (defn cumprimentar[] (println "Olá mundo!"))  
-}}}
+</pre>
 
-{{{clojure
+<pre clojure>
 imprimirOla   ; camelCase       
 ImprirOla     ; Pascal Case
 imprimir_ola  ; Snake case
 imprimir-ola  ; kebab-case
 Entre outros
-}}}
+</pre>
 
-{{{clojure
+<pre clojure>
 (defn imprimir-ola [] (println "Olá mundo!"))  
   
 (defn imprimir-ola 
@@ -55,5 +69,7 @@ Entre outros
   "Calcula valor da multa"
   [valor]
   (* valor 0.1))
-}}}
+</pre>
 
+</body>
+</html>

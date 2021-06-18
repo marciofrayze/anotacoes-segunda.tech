@@ -3,12 +3,75 @@
 - https://twitter.com/mfeathers/status/29581296216
 - "Orientação a Objetos torna o código compreensível ao encapsular as partes moveis. Programação Funcional torna o código compreensível minimizando as partes móveis" - Michael Feathers.
 - Não só os vetores são imutáveis. 
-- Precisamos ter algum tipo de mutação em algum momento, mas só quando necessário e de forma muito bem controlada (vamos ver em outras aulas como fazer isso).
-- "Mas não fica lento?" - sim e não.
+- Exemplo em JavaScript
+{{{
+let compras = [
+  {
+    "produto": "arroz",
+    "preco": 5,
+  },
+  {
+    "produto": "feijao",
+    "preco": 10,
+  }
+]
+
+// Implementação feita por outra pessoa.
+function precoTotalComFor(compras) {
+    var total = 0;
+    for (index = 0; index < compras.length; index++) {
+        total = total + compras[index].preco
+    }
+        
+    return total
+}
+
+// Implementação feita por outra pessoa.
+function precoTotalComPop(compras) {
+    var total = 0;
+    while (compras.length > 0) {
+        total = total + compras.pop().preco
+    }
+        
+    return total
+}
+
+// Implementação feita por outra pessoa.
+function precoTotalComForEAuditoria(compras) {
+    var total = 0;
+    for (index = 0; index < compras.length; index++) {
+        total = total + compras[index].preco
+    }
+    
+    auditarConsulta(compras)
+    return total
+}
+
+// Código simulando uma biblioteca de auditoria
+function auditarConsulta(compras) {
+    setTimeout(() => { 
+                        // aciona serviço de auditoria (posta em uma fila, etc)
+                        compras = compras.pop();
+                     }
+    , 1)
+}
+
+alert("Preço total da compra: " + precoTotalComForEAuditoria(compras))
+setTimeout(() => { 
+                    alert("Preço total da compra: " + precoTotalComForEAuditoria(compras)) 
+                 }
+, 1000)
+}}}
+
+- E em Clojure?
 {{{clojure 
 (pop (pop (conj [1 2 3] 4)))
 }}}
-Este é um dos motivos de ser comum utilizarmos estruturas parecidas com listas ligadas na programação funcional, principalemente em dialetos do Lisp, que é o caso do Clojure. Lembre que LISP significa LISt Processor.
 - Achou o código feio? Não se preocupe, vamos ver outras formas de escrever este código mais pra frente.
-- Você percebeu que todo código fonte que escrevemos em Clojure/Lisp é uma grande Lista?
+ 
+- Precisamos ter algum tipo de mutação em algum momento, mas só quando necessário e de forma muito bem controlada (vamos ver em outras aulas como fazer isso).
+- "Mas não fica lento?" - sim e não.
+Este é um dos motivos de ser comum utilizarmos estruturas parecidas com listas ligadas na programação funcional, principalemente em dialetos do Lisp, que é o caso do Clojure. Lembre que LISP significa LISt Processor.
+- Você percebeu que todo código fonte que escrevemos em Clojure/Lisp é formado por Listas?
 - Linguagem homoicônica: https://en.wikipedia.org/wiki/Homoiconicity
+

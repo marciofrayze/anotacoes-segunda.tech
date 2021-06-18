@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Tipos dos dados</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Tipos dos dados"><h1 id="Tipos dos dados" class="header"><a href="#Tipos dos dados">Tipos dos dados</a></h1></div>
+
+<p>
+<a href="https://clojuredocs.org/clojure.core/type">https://clojuredocs.org/clojure.core/type</a>
+</p>
+
+<ul>
+<li>
+Clojure é uma linguagem dinâmica.
+
+</ul>
+
+<ul>
+<li>
+Os tipos de dados serão automaticamente definidos e, quando necessário, convertidos.
+
+</ul>
+
+<ul>
+<li>
+Para sabermos o tipo, podemos utilizar a função type (ou class):
+
+</ul>
+
+<pre clojure>
+
+(type 10)             ; java.lang.Long
+
+(type 1.0)            ; java.lang.Double
+
+(/ 10 3)              ; 10 / 3
+
+(type (/ 10 3))       ; clojure.lang.Ratio
+
+(* 3 (/ 10 3))        ; 10N
+
+(type 10N)            ; clojure.lang.BigInt
+
+(type 10M)            ; java.math.BigDecimal
+
+(type (* 3 (/ 10 3))) ; BigInt
+
+(type "Marcio")       ; java.lang.String
+
+(type nil)            ; nil
+
+(type [1 2 3])        ; clojure.lang.PersistentVector
+
+</pre>
+
+</body>
+</html>

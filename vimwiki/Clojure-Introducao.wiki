@@ -2,13 +2,6 @@
 
 ==== 1.1 Bem-vinda / Por que estudar Clojure/LISP?  ====
 
-- JVM. 
-- Imutabilidade.
-- Paradigma Funcional.
-- Dinâmica.
-- LISP.
-- REPL Driven Development.
-
 ==== 1.2: Preparando ambiente  ====
 - https://clojure.org/guides/getting_started  
 
@@ -22,6 +15,7 @@
 - (+ 2 2) - print "O valor de 2+2 é:" (+ 2 2) - infixa  
 - E como a gente faz 2 + 3 + 4 ? (+ (+ 2 3) 4) ou (+ 2 3 4)  
 - Outras operações: / *  
+- Utilizar a função _str_ para concatenar strings.
 
 ==== 1.4: Vetores ====
 - [1 2 3 4] ["acabaxi" "abobrinha" "limao"]  
@@ -32,4 +26,5 @@
 - "Adicionando" um elemento: (conj [1 2 3] 4)  
 - Vetores são imutáveis  
 - "Removendo" o último elento: (pop [1 2 3])  
+
 

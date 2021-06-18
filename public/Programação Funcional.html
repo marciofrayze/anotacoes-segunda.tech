@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Programação Funcional</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Programação Funcional"><h1 id="Programação Funcional" class="header"><a href="#Programação Funcional">Programação Funcional</a></h1></div>
+
+<ul>
+<li>
+Declarativa (...)
+
+</ul>
+
+<p>
+A pessoa desenvolvedora observa 3 coisas:
+</p>
+<ul>
+<li>
+Dados
+
+<li>
+Cáculos
+
+<li>
+Ações
+
+</ul>
+
+<div id="Programação Funcional-Ações"><h2 id="Ações" class="header"><a href="#Programação Funcional-Ações">Ações</a></h2></div>
+
+<p>
+Representa as partes do código em que o momento ou a quantidade de
+vezes que é executado é relevante.
+</p>
+
+<p>
+Ex: uma função que envia um e-mail. A hora em que é enviado é
+importante e a quantiade de vezes que executamos esta rotina também
+(ou corremos o risco de enviar o mesmo e-mail várias vezes).
+</p>
+
+<p>
+Criar testes automatizados para este tipo de código pode ser
+desafiador.
+</p>
+
+<div id="Programação Funcional-Cálculos"><h2 id="Cálculos" class="header"><a href="#Programação Funcional-Cálculos">Cálculos</a></h2></div>
+
+<p>
+São trechos de código que ao receberem uma determinada devolvem um
+resultado, sendo que para uma mesma entrada, o resultado deve ser
+sempre o mesmo.  
+E você pode executar este código a qualquer momento e quantas vezes
+quiser, sem que ocorra nenhum efeito colateral fora de seu escopo.  
+Ou seja, em outras palavras, são <a href="https://marciofrayze.medium.com/fun%C3%A7%C3%B5es-puras-1ed312f75763">funções puras</a>.  
+Criar testes automatizados para este tipo de código é bastante
+simples.
+</p>
+
+<div id="Programação Funcional-Dados"><h2 id="Dados" class="header"><a href="#Programação Funcional-Dados">Dados</a></h2></div>
+
+<p>
+Separamos os dados em uma outra categoria pois são menos complexas que
+os cálculos e possuem um significado por si só, sem precisarem ser
+executados.
+</p>
+
+<div id="Programação Funcional-Exemplos"><h2 id="Exemplos" class="header"><a href="#Programação Funcional-Exemplos">Exemplos</a></h2></div>
+
+<pre JavaScript>
+email-address = "marcio@segunda.tech"
+is-valid = valid-email-addres?(email-address)
+send-mail!(email)
+</pre>
+
+<p>
+Nas 3 linhas acima conseguimos facilmente separar este 3
+cenários. Na primeira temos a declaração de um dado: meu endereço de
+e-mail.   
+Na segunda temos um exemplo de <span id="Programação Funcional-Exemplos-cálculo"></span><strong id="cálculo">cálculo</strong> (ou <span id="Programação Funcional-Exemplos-função pura"></span><strong id="função pura">função pura</strong>),
+onde _valid_email-address?_ é uma função que recebe um endereço de e-mail 
+como entrada e retorna uma valor booleano indicando se é ou não um 
+endereço válido (que, neste exemplo, é uma informação que
+não é mais utilizada).  
+Por último temos um exemplo de uma ação (ou *função
+impura*), responsável por enviar um e-mail.
+</p>
+
+<p>
+Um outro exemplo de pseudo-código seria:
+</p>
+
+<pre JavaScript>
+pessoa = { altura: "1.76m", peso: "68Kg" }
+imc = calcule_imc(pessoa)
+salve-no-banco-de-dados!(pessoa, imc)
+</pre>
+
+<p>
+Neste pseudo-código, na primeira linha temos a representação de um
+dado. Na segunda, a execução de um cálculo. E na terceira, uma ação.
+Das três linhas, apenas a terceira contêm um *efeito
+colateral*.
+</p>
+
+<div id="Programação Funcional-Evite efeitos colaterais"><h2 id="Evite efeitos colaterais" class="header"><a href="#Programação Funcional-Evite efeitos colaterais">Evite efeitos colaterais</a></h2></div>
+
+<p>
+Durante o desenvolvimento de um sofware, em geral vamos
+tentar enconrar formas de transformar as ações em cálculos e
+os cálculos em dados. Claro que qualquer software que
+que faça qualquer coisa útil precisa ter efeitos colaterais:
+exibir algo na tela, enviar um e-mail, salvar dados, acionar
+integrações, ... tudo isso representa alguma forma de efeito
+colateral. Mas ao desenvolver sofware utilizando o paradigma
+funional, vamos tentar minimizar ao máximo estes tipos de
+funções e vamos isola-las das demais.
+demais.
+</p>
+
+</body>
+</html>

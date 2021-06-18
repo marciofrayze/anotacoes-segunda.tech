@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Binding de símbolos com let</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Binding de símbolos com let"><h1 id="Binding de símbolos com let" class="header"><a href="#Binding de símbolos com let">Binding de símbolos com let</a></h1></div>
+
+<p>
+<a href="https://clojuredocs.org/clojure.core/let">https://clojuredocs.org/clojure.core/let</a>
+</p>
+
+<p>
+;; Sem uso do let
+;; O que é esse 0.1?
+</p>
+<pre clojure>
+(defn valor-multa 
+  "calcula valor da multa"
+  [valor]
+  (* valor 0.1))
+</pre>
+
+<pre clojure>
+(defn valor-multa 
+  "calcula valor da multa"
+  [valor]
+  (let [percentual-multa 0.1]
+    (* valor percentual-multa)))
+</pre>
+
+<p>
+;; O let é um vetor, podendo declarar vários símbolos e
+;; o valor de um símbolo pode depender de um outro símbolo definido anteriormente.
+</p>
+<pre clojure>
+(defn valor-total
+  "Calcula valor total incluindo multa"
+  [valor]
+  (let [percentual-multa 0.1
+        valor-multa (* valor percentual-multa)]
+    (+ valor valor-multa)))
+</pre>
+
+</body>
+</html>

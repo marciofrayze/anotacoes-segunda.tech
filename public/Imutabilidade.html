@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Imutabilidade</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Imutabilidade"><h1 id="Imutabilidade" class="header"><a href="#Imutabilidade">Imutabilidade</a></h1></div>
+
+<ul>
+<li>
+<a href="https://twitter.com/mfeathers/status/29581296216">https://twitter.com/mfeathers/status/29581296216</a>
+
+<li>
+"Orientação a Objetos torna o código compreensível ao encapsular as partes moveis. Programação Funcional torna o código compreensível minimizando as partes móveis" - Michael Feathers.
+
+<li>
+Não só os vetores são imutáveis. 
+
+<li>
+Exemplo em JavaScript
+<pre>
+let compras = [
+  {
+    "produto": "arroz",
+    "preco": 5,
+  },
+  {
+    "produto": "feijao",
+    "preco": 10,
+  }
+]
+
+// Implementação feita por outra pessoa.
+function precoTotalComFor(compras) {
+    var total = 0;
+    for (index = 0; index &lt; compras.length; index++) {
+        total = total + compras[index].preco
+    }
+        
+    return total
+}
+
+// Implementação feita por outra pessoa.
+function precoTotalComPop(compras) {
+    var total = 0;
+    while (compras.length &gt; 0) {
+        total = total + compras.pop().preco
+    }
+        
+    return total
+}
+
+// Implementação feita por outra pessoa.
+function precoTotalComForEAuditoria(compras) {
+    var total = 0;
+    for (index = 0; index &lt; compras.length; index++) {
+        total = total + compras[index].preco
+    }
+    
+    auditarConsulta(compras)
+    return total
+}
+
+// Código simulando uma biblioteca de auditoria
+function auditarConsulta(compras) {
+    setTimeout(() =&gt; { 
+                        // aciona serviço de auditoria (posta em uma fila, etc)
+                        compras = compras.pop();
+                     }
+    , 1)
+}
+
+alert("Preço total da compra: " + precoTotalComForEAuditoria(compras))
+setTimeout(() =&gt; { 
+                    alert("Preço total da compra: " + precoTotalComForEAuditoria(compras)) 
+                 }
+, 1000)
+</pre>
+
+</ul>
+
+<ul>
+<li>
+E em Clojure?
+<pre clojure>
+(pop (pop (conj [1 2 3] 4)))
+</pre>
+
+<li>
+Achou o código feio? Não se preocupe, vamos ver outras formas de escrever este código mais pra frente.
+
+</ul>
+ 
+<ul>
+<li>
+Precisamos ter algum tipo de mutação em algum momento, mas só quando necessário e de forma muito bem controlada (vamos ver em outras aulas como fazer isso).
+
+<li>
+"Mas não fica lento?" - sim e não.
+
+</ul>
+<p>
+Este é um dos motivos de ser comum utilizarmos estruturas parecidas com listas ligadas na programação funcional, principalemente em dialetos do Lisp, que é o caso do Clojure. Lembre que LISP significa LISt Processor.
+</p>
+<ul>
+<li>
+Você percebeu que todo código fonte que escrevemos em Clojure/Lisp é formado por Listas?
+
+<li>
+Linguagem homoicônica: <a href="https://en.wikipedia.org/wiki/Homoiconicity">https://en.wikipedia.org/wiki/Homoiconicity</a>
+
+</ul>
+
+</body>
+</html>

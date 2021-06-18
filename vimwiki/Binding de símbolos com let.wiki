@@ -2,14 +2,25 @@
 
 https://clojuredocs.org/clojure.core/let
 
+;; Sem uso do let
+;; O que é esse 0.1?
 {{{clojure
 (defn valor-multa 
-  "Calcula valor da multa"
+  "calcula valor da multa"
+  [valor]
+  (* valor 0.1))
+}}}
+
+{{{clojure
+(defn valor-multa 
+  "calcula valor da multa"
   [valor]
   (let [percentual-multa 0.1]
     (* valor percentual-multa)))
 }}}
 
+;; O let é um vetor, podendo declarar vários símbolos e
+;; o valor de um símbolo pode depender de um outro símbolo definido anteriormente.
 {{{clojure
 (defn valor-total
   "Calcula valor total incluindo multa"
