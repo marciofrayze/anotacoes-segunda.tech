@@ -1,0 +1,6 @@
+O que ficou faltando:
+
+- Explicar o ->>
+- Explicar o some->
+- Tratamento de exceptions (e thrown? nos testes)
+- 

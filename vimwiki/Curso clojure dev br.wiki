@@ -104,58 +104,8 @@ Aprender a criar expressões condicinais em duas diversas formas em Clojure e en
 - Começar a compreender que o _nil_ pode ser visto como um _falsey_.
 - Aprender a criar condicionais usando o _when_.
 - Compreender que existem dois tipos de condicionais: _conditional statement_ e _conditional expression_.
-
-== Parte 6: Introdução aos testes automatizados ==
-
-Objetivos:
-
-Entender a importância de se criar testes, como criá-los utilizando Clojure e noções de TDD (Desenvolvimento Guiado por Testes).
-
-[[Testes Automatizados e Asserts]]
-- Entender a importância de automatiazar os testes.
-- Criar seus primeiros testes automatizados.
-- Compreender para que servem e como utilizar os _asserts_.
-- Aprender as noções sobre o processo de Desenvolvimento Guiado por Testes.
-
-== Parte 7: Thuthy e Falsey ==
-
-Objetivos:
-
-Entender que em Clojure existe o tipo boleano (true/false) mas existem muitas ocasiões onde a interepretação do que é _true_ e o que é _false_ é um pouco mais abrangente e nessas situações, ao invés de utilizarmos os termos _true_ e _false_ usando o _thuthy_ e _falsey_.
-
-[[True, False, Thuthy, Falsey]]
-- Compreender a relação entre _True_, _False_ e as semelhanças e diferenças com _Thuthy_ e _Falsey_.
-- Perceber porque existe o conceito de _Thuthy_ e _Falsey_ em Clojure e como podemos nos beneficiar deles.
-- Ser capaz de identificar se trata-se de um _True/False_ ou um _Thuthy/Falsey_.
  
-== Parte 8: Conhecendo mais sobre os vetores ==
-
-Objetivos:
-
-Ser capaz de realizar mais operações utilizando vetores e conhecer a ideia da abordagem _wholemeal_ (refeição completa).
-
-[[Mais sobre Vetores]]  
-- Relembrar os conceitos de _conj_ e _pop_.
-- Conseguir recuperar um elemento que está em uma determinada posição/index.
-- Entender as diferenças entre utilizar a função _get_ e o nome do vetor como função.
-- Entender os problemas possíveis de _IndexOutOfBoundsException_.
-- Ser capaz de atribuir um valor padrão caso elemento que está sendo recuperado não exista.
-- Conseguir "atualizar" um elemento de um vetor.
-
-[[Wholemeal]]
-- Entender que é ótimo podermos acessar elementos de uma estrutura de dados, mas que na maior parte do tempo (no paradigma funcional) queremos trabalhar com uma visão um pouco mais ampla, enchergando e operando sobre a estrutura de dados como um todo.
-
-== Parte 9: Linguagem dinâmica e consulta de tipos ==
-
-Objetivos:
-
-Conhecer as vantagens e desvantagens de Clojure ser uma linguagem dinâmica e ser capaz de consultar os tipos através do REPL.
-
-[[Tipos dos dados]]
-- Entender que Clojure é uma linguagem Dinâmica e com inferência de tipos.
-- Aprender a consultar os tipos.
-
-== Parte 10: Utilizando uma IDE ==
+== Parte 6: Utilizando uma IDE ==
 
 Objetivos:  
 
@@ -175,6 +125,56 @@ Conseguir instalar e configurar a IDE IntelliJ e o plugin Curvice e conhecer os 
 - Ser capaz de executar através de atalhos do teclado os comandos que vamos usar com mais frequencia. 
 - Entender pra que serve o _Structural edit_ (também conhecido como _paredit_).
 - Aprender a desabilitar o _Structurla edit_ quando necessário.
+
+== Parte 7: Introdução aos testes automatizados ==
+
+Objetivos:
+
+Entender a importância de se criar testes, como criá-los utilizando Clojure e noções de TDD (Desenvolvimento Guiado por Testes).
+
+[[Testes Automatizados e Asserts]]
+- Entender a importância de automatiazar os testes.
+- Criar seus primeiros testes automatizados.
+- Compreender para que servem e como utilizar os _asserts_.
+- Aprender as noções sobre o processo de Desenvolvimento Guiado por Testes.
+
+== Parte 8: Thuthy e Falsey ==
+
+Objetivos:
+
+Entender que em Clojure existe o tipo boleano (true/false) mas existem muitas ocasiões onde a interepretação do que é _true_ e o que é _false_ é um pouco mais abrangente e nessas situações, ao invés de utilizarmos os termos _true_ e _false_ usando o _thuthy_ e _falsey_.
+
+[[True, False, Thuthy, Falsey]]
+- Compreender a relação entre _True_, _False_ e as semelhanças e diferenças com _Thuthy_ e _Falsey_.
+- Perceber porque existe o conceito de _Thuthy_ e _Falsey_ em Clojure e como podemos nos beneficiar deles.
+- Ser capaz de identificar se trata-se de um _True/False_ ou um _Thuthy/Falsey_.
+ 
+== Parte 9: Conhecendo mais sobre os vetores ==
+
+Objetivos:
+
+Ser capaz de realizar mais operações utilizando vetores e conhecer a ideia da abordagem _wholemeal_ (refeição completa).
+
+[[Mais sobre Vetores]]  
+- Relembrar os conceitos de _conj_ e _pop_.
+- Conseguir recuperar um elemento que está em uma determinada posição/index.
+- Entender as diferenças entre utilizar a função _get_ e o nome do vetor como função.
+- Entender os problemas possíveis de _IndexOutOfBoundsException_.
+- Ser capaz de atribuir um valor padrão caso elemento que está sendo recuperado não exista.
+- Conseguir substituir um elemento de um vetor utilizando a função _assoc_.
+
+[[Wholemeal]]
+- Entender que é ótimo podermos acessar elementos de uma estrutura de dados, mas que na maior parte do tempo (no paradigma funcional) queremos trabalhar com uma visão um pouco mais ampla, enchergando e operando sobre a estrutura de dados como um todo.
+
+== Parte 10: Linguagem dinâmica e consulta de tipos ==
+
+Objetivos:
+
+Conhecer as vantagens e desvantagens de Clojure ser uma linguagem dinâmica e ser capaz de consultar os tipos através do REPL.
+
+[[Tipos dos dados]]
+- Entender que Clojure é uma linguagem Dinâmica e com inferência de tipos.
+- Aprender a consultar os tipos.
 
 == Parte 11: Namespaces, símbolos e funções privadas ==
 

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Mais sobre Vetores</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="Conhecendo mais sobre os vetores"><h1 id="Conhecendo mais sobre os vetores" class="header"><a href="#Conhecendo mais sobre os vetores">Conhecendo mais sobre os vetores</a></h1></div>
+
+<div id="Conhecendo mais sobre os vetores-Relembrando conj e pop"><h2 id="Relembrando conj e pop" class="header"><a href="#Conhecendo mais sobre os vetores-Relembrando conj e pop">Relembrando conj e pop</a></h2></div>
+
+<pre clojure>
+["Batata" "Arroz" "Feijão"]
+(conj ["Batata" "Arroz" "Feijão"] "Banana")
+(pop ["Batata" "Arroz" "Feijão"])
+</pre>
+
+<p>
+Podemos criar uma função para dar um nome melhor, explicitando nossa intenção:
+</p>
+
+<pre clojure>
+(defn excluir-ultima-compra
+  [compras]
+  (pop compras))
+</pre>
+
+<p>
+E se os vetores forem vazio ou nil?
+</p>
+
+<pre clojure>
+(conj [] "Banana")  ; retorna novo array com ["Banana"]
+(conj nil "Banana") ; retorna nova LISTA contendo ("Banana")
+(type (conj nil "Banana")) ; clojure.lang.PersistentList
+(type (conj [] "Banana"))  ; clojure.lang.PersistentVector
+</pre>
+
+<p>
+A função conj funciona com mais um tipo. Como passmos nil, não tinha como ela saber que queríamos um vector e não uma lista. E neste caso ela optou por inferir o tipo e retornar uma lista pra gente.  
+</p>
+
+<p>
+Embora lista e vector sejam de tipos diferentes, nesse momento não precisamos nos preocupar muito com isso.
+</p>
+
+<pre clojure>
+(conj (conj nil "Banana") "Arroz") ; retorna uma LISTA ("Banana" "Arroz")
+</pre>
+
+<p>
+Note que mesmo agora sendo um outro tipo, PersistentList, conseguimos chamar a função conj.
+</p>
+
+<pre clojure>
+(pop nil)          ; retorna nil 
+(pop [])           ; IllegalStateException Can't pop empty vector
+</pre>
+
+<p>
+Então precisamos usar algumas boas práticas pra não recebermos uma exception.
+</p>
+
+<p>
+E vamos ver algumas delas ao longo deste curso.
+</p>
+
+<div id="Conhecendo mais sobre os vetores-Recuperando elemento de uma determinada posição/index"><h2 id="Recuperando elemento de uma determinada posição/index" class="header"><a href="#Conhecendo mais sobre os vetores-Recuperando elemento de uma determinada posição/index">Recuperando elemento de uma determinada posição/index</a></h2></div>
+
+<pre clojure>
+(defn imprime-primeiro-nome 
+  [nomes]
+  (println (nomes 0)))
+</pre>
+
+<pre clojure>
+(imprime-primeiro-nome ["Marcio" "Maria"])
+
+(imprime-primeiro-nome [])  ; IndexOutOfBoundsException
+
+(imprime-primeiro-nome nil) ; NullPointerException
+
+(defn imprime-terceiro-nome 
+  [nomes]
+  (println (nomes 2)))
+  
+(imprime-terceiro-nome ["Marcio" "Maria" "João"]) ; imprime "João" na tela
+
+(imprime-terceiro-nome ["Marcio" "Maria"]) ; IndexOutOfBoundsException
+</pre>
+
+<p>
+Existem formas de capturar essa exception, mas em geral vamos optar por outras abordagens.
+</p>
+
+<pre clojure>
+(defn imprime-primeiro-nome 
+  [nomes]
+  (println (get nomes 0)))
+  
+(imprime-primeiro-nome nil) ; imprime nil na tela
+
+(imprime-primeiro-nome [])  ; imprime nil na tela
+
+(imprime-primeiro-nome [])  ; imprime nil na tela
+</pre>
+
+<p>
+Outra opção é usando um valor padrão. Caso não exista o campo, definimos um valor a ser retornado.
+</p>
+
+<pre clojure>
+(defn imprime-terceiro-nome 
+  [nomes]
+  (println (get nomes 2 "Desconhecida")))
+  
+(imprime-terceiro-nome nil)         ; imprime nil na tela
+
+(imprime-terceiro-nome [])          ; imprime nil na tela
+
+(imprime-terceiro-nome ["Marcio"])  ; imprime nil na tela
+
+(imprime-terceiro-nome ["Marcio" "João" "Maria"])  ; imprime Maria
+</pre>
+
+<div id="Conhecendo mais sobre os vetores-Como &quot;atualizar&quot; um elemento de um vetor"><h2 id="Como &quot;atualizar&quot; um elemento de um vetor" class="header"><a href="#Conhecendo mais sobre os vetores-Como &quot;atualizar&quot; um elemento de um vetor">Como "atualizar" um elemento de um vetor</a></h2></div>
+
+<p>
+Para atualizar um elemento de um vetor, precisamos aprender a usar a função assoc.
+</p>
+
+<p>
+O nome assoc vem de <em>associate</em> ou associar em inglês.
+</p>
+
+<pre clojure>
+(defn substituir-primeiro-nome 
+  [nomes novo-primeiro-nome]
+  (assoc nomes 0 novo-primeiro-nome))
+  
+(substituir-primeiro-nome ["Marcio" "João"] "Maria") ; retornará ["Maria" "João"]
+</pre>
+
+</body>
+</html>

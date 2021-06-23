@@ -1,0 +1,114 @@
+= Conhecendo mais sobre os vetores =
+
+== Relembrando conj e pop ==
+
+{{{clojure
+["Batata" "Arroz" "Feijão"]
+(conj ["Batata" "Arroz" "Feijão"] "Banana")
+(pop ["Batata" "Arroz" "Feijão"])
+}}}
+
+Podemos criar uma função para dar um nome melhor, explicitando nossa intenção:
+
+{{{clojure
+(defn excluir-ultima-compra
+  [compras]
+  (pop compras))
+}}}
+
+E se os vetores forem vazio ou nil?
+
+{{{clojure
+(conj [] "Banana")  ; retorna novo array com ["Banana"]
+(conj nil "Banana") ; retorna nova LISTA contendo ("Banana")
+(type (conj nil "Banana")) ; clojure.lang.PersistentList
+(type (conj [] "Banana"))  ; clojure.lang.PersistentVector
+}}}
+
+A função conj funciona com mais um tipo. Como passmos nil, não tinha como ela saber que queríamos um vector e não uma lista. E neste caso ela optou por inferir o tipo e retornar uma lista pra gente.  
+
+Embora lista e vector sejam de tipos diferentes, nesse momento não precisamos nos preocupar muito com isso.
+
+{{{clojure
+(conj (conj nil "Banana") "Arroz") ; retorna uma LISTA ("Banana" "Arroz")
+}}}
+
+Note que mesmo agora sendo um outro tipo, PersistentList, conseguimos chamar a função conj.
+
+{{{clojure
+(pop nil)          ; retorna nil 
+(pop [])           ; IllegalStateException Can't pop empty vector
+}}}
+
+Então precisamos usar algumas boas práticas pra não recebermos uma exception.
+
+E vamos ver algumas delas ao longo deste curso.
+
+== Recuperando elemento de uma determinada posição/index ==
+
+{{{clojure
+(defn imprime-primeiro-nome 
+  [nomes]
+  (println (nomes 0)))
+}}}
+
+{{{clojure
+(imprime-primeiro-nome ["Marcio" "Maria"])
+
+(imprime-primeiro-nome [])  ; IndexOutOfBoundsException
+
+(imprime-primeiro-nome nil) ; NullPointerException
+
+(defn imprime-terceiro-nome 
+  [nomes]
+  (println (nomes 2)))
+  
+(imprime-terceiro-nome ["Marcio" "Maria" "João"]) ; imprime "João" na tela
+
+(imprime-terceiro-nome ["Marcio" "Maria"]) ; IndexOutOfBoundsException
+}}}
+
+Existem formas de capturar essa exception, mas em geral vamos optar por outras abordagens.
+
+{{{clojure
+(defn imprime-primeiro-nome 
+  [nomes]
+  (println (get nomes 0)))
+  
+(imprime-primeiro-nome nil) ; imprime nil na tela
+
+(imprime-primeiro-nome [])  ; imprime nil na tela
+
+(imprime-primeiro-nome [])  ; imprime nil na tela
+}}}
+
+Outra opção é usando um valor padrão. Caso não exista o campo, definimos um valor a ser retornado.
+
+{{{clojure
+(defn imprime-terceiro-nome 
+  [nomes]
+  (println (get nomes 2 "Desconhecida")))
+  
+(imprime-terceiro-nome nil)         ; imprime nil na tela
+
+(imprime-terceiro-nome [])          ; imprime nil na tela
+
+(imprime-terceiro-nome ["Marcio"])  ; imprime nil na tela
+
+(imprime-terceiro-nome ["Marcio" "João" "Maria"])  ; imprime Maria
+}}}
+
+== Como "atualizar" um elemento de um vetor ==
+
+Para atualizar um elemento de um vetor, precisamos aprender a usar a função assoc.
+
+O nome assoc vem de _associate_ ou associar em inglês.
+
+{{{clojure
+(defn substituir-primeiro-nome 
+  [nomes novo-primeiro-nome]
+  (assoc nomes 0 novo-primeiro-nome))
+  
+(substituir-primeiro-nome ["Marcio" "João"] "Maria") ; retornará ["Maria" "João"]
+}}}
+
