@@ -190,9 +190,15 @@ Começar a compreender a importância de estruturar o código, separando as fun�
 - Conseguir importar uma funções de um outro _namespace_.
 - Conseguir mudar de _namespace_ no REPL dentro da IDE.
 
+[[Funções privadas]]
+- Entender os potenciais problemas de deixar todas as funções como públicas.
+- Aprender como criar uma funcões privada.
+
 == Parte 12: Higher order functions ==
 
 Objetivos:
+
+[[Funções de primeira ordem]]
 
 Começar a ter contato com funções de primeira ordem: entender o que são e como criá-las e a sua importância no desenvolvimento de software utilizando o paradigma funcional.
 

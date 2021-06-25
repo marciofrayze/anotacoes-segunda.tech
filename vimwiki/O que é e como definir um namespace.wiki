@@ -11,3 +11,15 @@ https://clojure.org/reference/data_structures#Keywords
 - Permite que existam 2 funções com nomes iguais mas com implementações diferentes.
 
 - No REPL, para "entrar" em um name space você digita: (use 'nome.do.namespace) - Não esquecer o '
+
+{{{clojure
+(ns tech.segunda.selftestingcode.operacoes-aritmeticas)
+
+(defn soma
+  [x y]
+  (+ x y))
+
+(clojure.core/println "Ola mundo")
+
+(type soma)
+}}}

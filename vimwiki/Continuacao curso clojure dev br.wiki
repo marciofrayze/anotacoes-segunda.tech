@@ -1,5 +1,6 @@
 O que ficou faltando:
 
+- Explicar os padrões de nomes de namespaces, símbolos, etc.
 - Explicar o ->>
 - Explicar o some->
 - Tratamento de exceptions (e thrown? nos testes)
