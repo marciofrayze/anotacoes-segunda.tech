@@ -4,6 +4,7 @@
 
 ==== 1.2: Preparando ambiente  ====
 - https://clojure.org/guides/getting_started  
+- Adicionando suporte a pt-br indo em Preferences... -> Editor -> Proofreading
 
 ==== 1.3: Usando linha de comando  ====
 - clj - REPL (Read-Eval-Print-Loop)  

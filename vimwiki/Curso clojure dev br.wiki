@@ -210,6 +210,8 @@ Começar a ter contato com funções de primeira ordem: entender o que são e co
 
 == Parte 13: Map, Filter, Reduce ==
 
+[[Map Filter Reduce]]
+
 Objetivos:
 
 Ter os primeiros contatos com 3 funções fundamentais para o desenvolvimento de software no paradigma funcional: _map_, _filter_ e _reduce_.

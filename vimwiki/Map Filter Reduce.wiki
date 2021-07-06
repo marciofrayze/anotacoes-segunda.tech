@@ -1,0 +1,5 @@
+
+estudantesSexoAno = []
+for (x; x < estudates.size(); x++) {
+  
+}
