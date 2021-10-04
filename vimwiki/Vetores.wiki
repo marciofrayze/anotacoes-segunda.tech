@@ -1,11 +1,63 @@
 = Vetores =
 
-- [1 2 3 4] ["acabaxi" "abobrinha" "limao"]  
-- (println [1 2 3 4]) - explicar que a vírgula é opcional  
+- Entre colchetes
+- [1 2 3 4]
+- ["acabaxi" "abobrinha" "limao"]  
+- explicar que a vírgula é opcional  
 - (count [1 2 3 4])  
-- (println (count [1 2 3 4]))  
-- Podemos misturar tipos: [1 2 3 "limao" "laranja" "abacate"]. Clojure é uma linguagem dinâmica
 - "Adicionando" um elemento: (conj [1 2 3] 4)  
-- Vetores são imutáveis  
 - "Removendo" o último elento: (pop [1 2 3])  
+- Consultado ultimo elemento: (peek [1 2 3])
+- Podemos misturar tipos: [1 2 3 "limao" "laranja" "abacate"]. Clojure é uma linguagem dinâmica
+- Vetores são imutáveis  
+- Podemos compor funções:
+- (peek (conj [1 2 3] 4))
+- Por enquanto então aprendemos a usar as funções:
+        - println
+        - count
+        - conj
+        - pop
+        - peek
+- Então fica o desafio: crie alguns vetores e use
+- essas funções que você aprendeu
+- Componha novas funções com 2, 3, 4 dessas funções.
+- Use a sua criatividade.
 
+{{{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}}}

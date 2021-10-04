@@ -1,0 +1,95 @@
+= Por que decidi aprender (e ensinar) Clojure em 2021 =
+
+Em 2017 comecei a me aprofundar no universo da Programação Funcional. Este
+paradigma já ganhava bastante popularidade e cada vez mais as
+principais linguagens de programação orientadas a objetos incluiam recursos
+inspirados neste paradigma, inclusive a linguagem que eu mais utilizava: Java.
+
+Principalmente após o lançamento da versão 8 da JDK, em março de 2014,
+ficava cada vez mais comum ouvir as pessoas desenvolvedoras Java usando termos como programação funcional, streams, optional, map, flat map,
+etc. Mas muitas pessoas em meu entorno ainda ignoravam estes novos recurso e, confesso, demorei para adotar essas novidades e, quando
+decidi adotá-las, tive bastante dificuldade. As ideias pareciam muito
+interessantes, mas colocar em prática se mostrou mais difícil do que eu esperava.
+
+Depois de muita tentativa e erro resolvi me aprofundar nos conceitos. O livro [Functional Thinking](http://nealford.com/books/functionalthinking.html) me ajudou a dar os primeiros passos na direção correta.
+
+Em paralelo decidi que iria aprender uma linguagem funcional ao invés de tentar
+misturar o paradigma funcional com o orientado a objetos. Pesquisei várias
+linguagens e optei por aprender [Elm](https://elm-lang.org). O fato de ser uma linguagem funcional pura e imutável me chamou muito atenção. Alem disso, ela é focada no desenvolvimento de webapps e até então eu não havia encontrado nenhuma solução para desenvolvimento de páginas web que me agradasse. 
+
+Depois de passar por todo [guia de introdução à linguagem Elm](https://guide.elm-lang.org) e ler o livro [Elm in action](https://www.manning.com/books/elm-in-action), já me sentia bastante confortável em desenvolver webapps. Gostei tanto desta linguagem que iniciei um projeto para ensinar programação para iniciantes usando esta linguagem e disponibilizei as primeiras aulas [neste site](https://elm.dev.br/). 
+
+Mas havia um problema sério que ainda precisava encarar: Elm é uma linguagem concebida para desenvolvimento de webapps e funciona muito bem para isso, mas eu buscava uma solução que pudesse ser utilizada no desenvolvimento de backends. Por isso voltei a pesquisar as alternativas.
+
+Elm é uma linguagem estaticamente tipada e inspirada em Haskell. O passo natural
+seria utilizar Haskell em meus backends. E foi o que tentei fazer. Li com certa
+dificuldade o livro Learn You a Haskell for Great Good! (disponível
+gratuitamente aqui http://learnyouahaskell.com) e aprendi muita coisa, mas criar
+um backend completo usando Haskell mostrou-se ser um passo um pouco maior do que
+eu conseguiria dar naquele momento. Resolvi então procurar outras alternativas...
+
+Durante todo esse processo a palavra "Lisp" não saia da minha cabeça! De tempos
+em tempos esbarrava em algum vídeo de alguma pessoa influente na comunidade,
+como [este
+vídeo](https://www.youtube.com/watch?v=Uooh0Y9fC_M#t=4876&ab_channel=IGN) ou
+[este twit](https://twitter.com/ID_AA_Carmack/status/577877590070919168) do John
+Carmack (fundador da id Software) falando sobre ela. Parecia algo místico. E o
+fato do [Nubank ter adotado
+Clojure](https://building.nubank.com.br/working-with-clojure-at-nubank/) trouxe
+um estudo de caso bastante real e pragmatico do uso de um dialéto do Lisp no
+Brasil. Até então eu estava postergando estudá-la pois estava priorizando linguagems estaticamente tipadas e os dialétos mais famosos de Lisp, como Scheme e Clojure, são linguagens dinâmicas.
+
+Mas no começo de 2021 resolvi finalmente dar uma chance a um dos dialétos de
+Lisp. Escolhi a linguagem Clojure e comecei a ler o livro [Getting Clojure](https://pragprog.com/titles/roclojure/getting-clojure/). Ao contrários dos livros de Haskell, consegui ler este livro em poucos dias. Em paralelo comecei a fazer as aulas da [Formação Clojure da Alura](https://www.alura.com.br/formacao-clojure), que me ajudaram a ver mais na prática como programar nesta linguagem. Achei que foi uma boa combinação: no livro eu aprendia mais a fundo os conceitos da linguagem e no curso revisava estes conceitos e aprendia a parte um pouco mais prática.
+
+== Principais características do Clojure ==
+
+Lisp é uma linguagem de programação, mas sim uma família de linguagens que possue diversos dialetos. Os dialétos mais famosos incluem a Common Lisp, Clojure, Scheme e Racket. Desta forma, após decidir que iria aprender Lisp, precisaria escolher um de seus dialétos.
+
+Dentre as opções mais famosas Clojure se destacou para mim por duas razões:  
+- ela utiliza a máquina virtual do Java, possibilitando interoperabilidade com aplicações Java (que como disse no início do artigo, é a linguagem que costumo utilizar para o backend).
+- ela utiliza predominantemente o paradigma funcional. Alguns dialétos de Lisp
+  (como o Common Lisp, por exemplo) são multi-paradigmas, mas como minha intenção era me aprofundar no universo da programação funcional, fazia mais sentido adotar um dialéto que desse preferência para este paradigma.
+
+A experiência de programar em Clojure foi bastante libertadora. Podia usar TDD
+junto com o REPL Driven Development (tecnica bastante difundida dentro da
+comunidade Clojure) e o ciclo de feedback era muito rápido, isso em parte também
+pelo fato de Clojure ser uma linguagem dinâmica.
+
+Outra caracterísitca de Clojure é ser uma linguagem impura, ou seja, podemos
+efetuar efeitos colaterias a qualquer momento. A principal vantagem disso é que
+torna a linguagem muito mais fácil de aprender (embora traga junto uma série de
+outros problemas que não acontecem em linguagens mais puras, como Elm ou
+Haskell). Escrevi [um artigo sobre Funções
+puras](https://segunda.tech/posts/2019-08-26-funcoes-puras/)onde explico melhor este tema.
+
+== Como dar os primeiros passos em Clojure ==
+
+Todas essas caracterísicas fazem com que, embora Clojure tenha uma aparência um
+pouco intimidadora no começo, na verdade depois de entender alguns fundamentos
+básicos se torna uma linguagem bastante fácil de utilizar. Por isso a escolhi
+também para compartilhar com outras pessoas desenvolvedoras os fundamentos
+básicos da programação funcional. 
+
+Para quem gosta de livros, recomendo iniciar ou pelo [Getting
+Clojure](https://pragprog.com/titles/roclojure/getting-clojure/), que como disse
+é uma ótima forma de entender os princípios básicos por trás do Clojure ou, se
+preferir uma opção gratuita, pode optar pela versão online do livro [Clojure for the Brave and
+True](https://www.braveclojure.com/). Outra opção, mais focada nos fundamentos
+do paradigma e que aborda outras linguagens além de Clojure, é o livro
+[Functional Thinking](http://nealford.com/books/functionalthinking.html) do Neal
+Ford. Este 3 livros são em inglês. Se preferir
+uma leitura em português, a editora Casa do Código tem disponível o livro
+[Programação Funcional: Uma introdução em
+Clojure](https://www.casadocodigo.com.br/products/livro-programacao-funcional-clojure).
+
+E se optar por estudar através de cursos em formato de vídeo, recomendo a [Formação Clojure da
+Alura](https://www.alura.com.br/formacao-clojure) ou se increver no curso
+[Clojure: Introdução à Programação Funcional](https://segunda.tech/clojure/) que
+eu estou finalizando e que estará disponível gratuitamente nas próximas semanas.
+
+===
+
+E você, já tentou programar utilizando o paradigma funcional?? Quais foram suas
+principais dificuldades?
+

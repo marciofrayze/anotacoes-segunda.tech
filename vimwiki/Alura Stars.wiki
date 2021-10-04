@@ -1,0 +1,48 @@
+= Encontro 26/08/2021 =
+
+- Sempre termine com uma pergunta: e você? Como faz o seu PWA?
+
+- Outbound (ou Outgoing) links - coloque vários links. Google usa isso como critério. Se alguém acessou seu site e depois foi para outro, o Google considera que a pessoa encontrou o que queria (não voltou para página de pesquisa).
+        - Adicione eferências. Veja esse vídeo de X, esse artigo de Y, ...
+
+- Adicione videos, podcasts, etc "embedados" (mesmo que não sejam seus).
+        - Google ranqueia melhor.
+        - Maior retenção (a pessoa fica mais tempo na página).
+        - Adicione foto para ao compartilhar aparecer.
+        - Google faz scrap e entende/interpreta as imagens.
+
+- Divulgue de forma faseada. Um dia no twitter, outro no facebook, linkedin, ..
+        - Linkedin é um bom lugar pra compartilhar. Coloquei um ou dois paragrafos. Marque algumas pessoas, empresas, tecnologias, ... não só # mas @. Existem @ de tecnologias.
+
+- Ao criar novo conteudo de um artigo, pegue os artigos antigos e inclua links/pontes para os novos.
+
+- Escrever texto na primeira pessoa gera empatia.
+
+- Faça textos resumindo/comentando algum video/conteudo (peça autorização pra pessoa ou se for da Alura fique a vontade).
+
+- Use bold nos textos.
+
+
+Gist do Paulo:
+
+https://gist.github.com/peas/3e70ae6081289951be90f1ea28bfd521
+
+A principal é ideia é criar um artigo unificando outras medias e sites. E colocamos na Alura.
+
+Pontos imporntates:
+
+    escolher um tema que voce ja tenha mais de 1 conteudo. nao importa onde.
+    criar um texto que possibilite linkar ou embedar esses conteudos
+    sempre terminar com uma pergunta ou provocacao. Voce quer gerar discussao.
+
+O que nao pode faltar nesse artigo:
+
+    nunca deixar de ter um video (nao precisa ser seu)
+    nunca deixar de ter uma imagem (em especial og:image)
+    outbounds links interessantes. FUNDAMENTAL. pessoas querem continuar a navegacao. e o "juice" nao se perde, pois quem googlou nao da backspace (explicar ao vivo)
+
+Com o artigo publicado na alura:
+
+    colocar no linkedin um dia depois (sempre cedo, nunca sexta/sabado/domingo)
+    pedir para seus amigos compartilharem
+

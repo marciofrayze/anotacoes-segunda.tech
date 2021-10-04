@@ -22,53 +22,90 @@
 
 
 <pre clojure>
-(defn cumprimentar[] (println "Olá mundo!"))  
-</pre>
-
-<pre clojure>
-imprimirOla   ; camelCase       
-ImprirOla     ; Pascal Case
-imprimir_ola  ; Snake case
-imprimir-ola  ; kebab-case
-Entre outros
-</pre>
-
-<pre clojure>
 (defn imprimir-ola [] (println "Olá mundo!"))  
-  
-(defn imprimir-ola 
-  [] 
-  (println "Olá mundo!"))  
-  
-(defn imprimir-ola 
-  [] 
-  (println "Olá mundo!"))  
 
-(defn parabenizar [nome]   
+[] significa que não possui parâmetros
+Mas precisamos coloca-lo. Senão da erro. Mostrar o erro.
+  
+(defn imprimir-ola 
+  [] 
+  (println "Olá mundo!"))  
+  
+(defn parabenizar 
+  [nome]   
   (println "Parabéns" nome "!"))  
   
-(defn parabenizar [nome]   
+(str "Marcio" "!")
+  
+(defn parabenizar
+  [nome]   
   (println "Parabéns" (str nome "!")))  
   
-(defn parabenizar [nome]  
+(defn parabenizar 
+  [nome]  
   (println "Seja bem-vinda ao curso de Clojure!")
   (println "Parabéns" nome)
   (println "Você fez uma ótima escolha!"))
+ 
+Podemos ter mais de um parâmetro:
+
+(defn parabenizar 
+  [nome sobrenome]  
+  (println "Parabéns" nome sobre))
   
-(defn parabenizar [nome] 
-  (println "Seja bem-vinda ao curso de Clojure!")
-  (println "Parabéns" nome)
-  (println "Você fez uma ótima escolha!")
-  [1 2 3])
-  
-(defn inverter-ordem-dois-elementos [a b] 
-  "Inverte a ordem de dois elementos"
-  [b a])
-  
+Vamos criar nossa primeira regra de negócio:
+
 (defn valor-multa 
-  "Calcula valor da multa"
   [valor]
   (* valor 0.1))
+  
+ Tente pensar em mais algumas regras simples,
+ algumas contas matematicas mais complexas.
+ Experimente criar mais algumas funções e
+ até o próximo vídeo.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </pre>
 
 </body>

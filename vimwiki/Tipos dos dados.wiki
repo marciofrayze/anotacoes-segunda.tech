@@ -1,5 +1,46 @@
 = Tipos dos dados =
 
+Clojure é uma linguagem de programação dinâmica e de uso geral,   
+;; Comentar dinamica vs estática  
+;; Comentar de linguagens de uso geral vs dominio específico  
+  
+combinando a capacidade de uma abordagem de desenvolvimento interativo de uma linguagem de script com uma infraestrutura eficiente e robusta para programação multithread.   
+
+Clojure é uma linguagem compilada, mas permanece completamente dinâmica – cada recurso suportado por Clojure é suportado em tempo de execução.   
+
+;; Compilada vs Interpretada  
+  
+Clojure fornece fácil acesso às estruturas Java, com dicas de tipo opcionais e inferência de tipo, para garantir que as chamadas para Java possam evitar reflexão.   
+  
+;; Reflections tem performance ruim  
+  
+Clojure é um dialeto de Lisp, e compartilha com Lisp a filosofia código-como-dados e um poderoso sistema de macro.   
+
+;; Linguagem homoicônica  
+;; As chamdas de funções em Clojure não parecem Listas, são Listas.  
+;; Por isso tem os parenteses.  
+;; Ignore essa parte de Macro.  
+  
+Clojure é predominantemente uma linguagem de programação funcional, e apresenta um rico conjunto de estruturas de dados imutáveis e persistentes.  
+  
+;; Já falamos sobre imutabilidade.   
+;; E já já a gente vai ver essa questão de ser persistentes.  
+  
+;; Imutável a gente já sabe o que significa:  
+;; Os valores não podem ser alterados.  
+;; Persistente significa que, o caminho para um valor é copiado caso aquele valor já exista em algum lugar do programa.  
+;; Então se um valor não existe ainda em nenhum lugar do nosso programa, ele é criado. Se o valor existe, a nova estrutura é criada apontando para a estrutura antiga, sem altera-la ou remove-la.  
+;; Tem a ver com performance.  
+  
+Quando o estado mutável é necessário, o Clojure oferece um sistema de memória transacional de software e sistema agente reativo que garante designs limpos, corretos e multithread.  
+  
+;; Existe mutabilidade, mas só quando necessário.   
+  
+Espero que você ache esta combinação de funcionalidades elegante, poderosas, práticas e divertidas de usar de Clojure.  
+  
+
+  
+
 https://clojuredocs.org/clojure.core/type
 
 - Clojure é uma linguagem dinâmica.
@@ -12,6 +53,8 @@ https://clojuredocs.org/clojure.core/type
 
 (type 10)             ; java.lang.Long
 
+(class 10)            ; java.lang.Long
+
 (type 1.0)            ; java.lang.Double
 
 (/ 10 3)              ; 10 / 3
@@ -20,16 +63,32 @@ https://clojuredocs.org/clojure.core/type
 
 (* 3 (/ 10 3))        ; 10N
 
+(type (* 3 (/ 10 3))) ; BigInt
+
+(* 3.0 (/ 10 3))        ; 10N
+
+(type (* 3.0 (/ 10 3)))
+
 (type 10N)            ; clojure.lang.BigInt
 
 (type 10M)            ; java.math.BigDecimal
 
-(type (* 3 (/ 10 3))) ; BigInt
+(type 10)             ; java.lang.Long
 
 (type "Marcio")       ; java.lang.String
 
 (type nil)            ; nil
 
+(type [])             ; clojure.lang.PersistentVector
+
 (type [1 2 3])        ; clojure.lang.PersistentVector
+
+(type ())             ; clojure.lang.PersistentList$EmptyList
+
+(type (1 2 3))        ; class java.lang.Long cannot be cast to class clojure.lang.IFn 
+
+(type '(1 2 3))       ; clojure.lang.PersistentList
+
+(type println)        ; clojure.core$println
 
 }}}

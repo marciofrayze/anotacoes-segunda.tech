@@ -14,6 +14,15 @@ O que ficou faltando:
 
 <ul>
 <li>
+Uso do Reduce usando 3 parâmetros
+
+<li>
+explicar melhor a ideia de composicao: a-b b-c entao existe um a-c
+
+<li>
+def versus defn
+
+<li>
 Explicar os padrões de nomes de namespaces, símbolos, etc.
 
 <li>
@@ -26,8 +35,20 @@ Explicar o some-&gt;
 Tratamento de exceptions (e thrown? nos testes)
 
 <li>
+Desconstrução de estruturas de dados
+
+<li>
+recursividade
 
 </ul>
+
+<p>
+;; Explicar listas vs vetores:
+(type '())                                                  ; PersistentList
+(type [])                                                   ; PersistentVector
+(= '() [])                                                  ; true
+(= '("Marcio") ["Marcio"])                                  ; true
+</p>
 
 </body>
 </html>

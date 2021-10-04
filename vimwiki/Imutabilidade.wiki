@@ -26,6 +26,10 @@ function precoTotalComFor(compras) {
     return total
 }
 
+alert(precoTotal(compras))
+alert(compras)
+alert(JSON.stringify(compras))
+
 // Implementação feita por outra pessoa.
 function precoTotalComPop(compras) {
     var total = 0;
@@ -51,7 +55,9 @@ function precoTotalComForEAuditoria(compras) {
 function auditarConsulta(compras) {
     setTimeout(() => { 
                         // aciona serviço de auditoria (posta em uma fila, etc)
-                        compras = compras.pop();
+                        compras = compras.pop()
+                        // ou
+                        // compras[1].preco = -100
                      }
     , 1)
 }
@@ -68,10 +74,6 @@ setTimeout(() => {
 (pop (pop (conj [1 2 3] 4)))
 }}}
 - Achou o código feio? Não se preocupe, vamos ver outras formas de escrever este código mais pra frente.
- 
-- Precisamos ter algum tipo de mutação em algum momento, mas só quando necessário e de forma muito bem controlada (vamos ver em outras aulas como fazer isso).
-- "Mas não fica lento?" - sim e não.
-Este é um dos motivos de ser comum utilizarmos estruturas parecidas com listas ligadas na programação funcional, principalemente em dialetos do Lisp, que é o caso do Clojure. Lembre que LISP significa LISt Processor.
-- Você percebeu que todo código fonte que escrevemos em Clojure/Lisp é formado por Listas?
-- Linguagem homoicônica: https://en.wikipedia.org/wiki/Homoiconicity
+
+;; Voltar para os slides
 

@@ -11,6 +11,75 @@
 <div id="Tipos dos dados"><h1 id="Tipos dos dados" class="header"><a href="#Tipos dos dados">Tipos dos dados</a></h1></div>
 
 <p>
+Clojure é uma linguagem de programação dinâmica e de uso geral,   
+;; Comentar dinamica vs estática  
+;; Comentar de linguagens de uso geral vs dominio específico  
+</p>
+  
+<p>
+combinando a capacidade de uma abordagem de desenvolvimento interativo de uma linguagem de script com uma infraestrutura eficiente e robusta para programação multithread.   
+</p>
+
+<p>
+Clojure é uma linguagem compilada, mas permanece completamente dinâmica – cada recurso suportado por Clojure é suportado em tempo de execução.   
+</p>
+
+<p>
+;; Compilada vs Interpretada  
+</p>
+  
+<p>
+Clojure fornece fácil acesso às estruturas Java, com dicas de tipo opcionais e inferência de tipo, para garantir que as chamadas para Java possam evitar reflexão.   
+</p>
+  
+<p>
+;; Reflections tem performance ruim  
+</p>
+  
+<p>
+Clojure é um dialeto de Lisp, e compartilha com Lisp a filosofia código-como-dados e um poderoso sistema de macro.   
+</p>
+
+<p>
+;; Linguagem homoicônica  
+;; As chamdas de funções em Clojure não parecem Listas, são Listas.  
+;; Por isso tem os parenteses.  
+;; Ignore essa parte de Macro.  
+</p>
+  
+<p>
+Clojure é predominantemente uma linguagem de programação funcional, e apresenta um rico conjunto de estruturas de dados imutáveis e persistentes.  
+</p>
+  
+<p>
+;; Já falamos sobre imutabilidade.   
+;; E já já a gente vai ver essa questão de ser persistentes.  
+</p>
+  
+<p>
+;; Imutável a gente já sabe o que significa:  
+;; Os valores não podem ser alterados.  
+;; Persistente significa que, o caminho para um valor é copiado caso aquele valor já exista em algum lugar do programa.  
+;; Então se um valor não existe ainda em nenhum lugar do nosso programa, ele é criado. Se o valor existe, a nova estrutura é criada apontando para a estrutura antiga, sem altera-la ou remove-la.  
+;; Tem a ver com performance.  
+</p>
+  
+<p>
+Quando o estado mutável é necessário, o Clojure oferece um sistema de memória transacional de software e sistema agente reativo que garante designs limpos, corretos e multithread.  
+</p>
+  
+<p>
+;; Existe mutabilidade, mas só quando necessário.   
+</p>
+  
+<p>
+Espero que você ache esta combinação de funcionalidades elegante, poderosas, práticas e divertidas de usar de Clojure.  
+</p>
+  
+
+  
+
+<p>
 <a href="https://clojuredocs.org/clojure.core/type">https://clojuredocs.org/clojure.core/type</a>
 </p>
 
@@ -36,6 +105,8 @@ Para sabermos o tipo, podemos utilizar a função type (ou class):
 
 (type 10)             ; java.lang.Long
 
+(class 10)            ; java.lang.Long
+
 (type 1.0)            ; java.lang.Double
 
 (/ 10 3)              ; 10 / 3
@@ -44,17 +115,33 @@ Para sabermos o tipo, podemos utilizar a função type (ou class):
 
 (* 3 (/ 10 3))        ; 10N
 
+(type (* 3 (/ 10 3))) ; BigInt
+
+(* 3.0 (/ 10 3))        ; 10N
+
+(type (* 3.0 (/ 10 3)))
+
 (type 10N)            ; clojure.lang.BigInt
 
 (type 10M)            ; java.math.BigDecimal
 
-(type (* 3 (/ 10 3))) ; BigInt
+(type 10)             ; java.lang.Long
 
 (type "Marcio")       ; java.lang.String
 
 (type nil)            ; nil
 
+(type [])             ; clojure.lang.PersistentVector
+
 (type [1 2 3])        ; clojure.lang.PersistentVector
+
+(type ())             ; clojure.lang.PersistentList$EmptyList
+
+(type (1 2 3))        ; class java.lang.Long cannot be cast to class clojure.lang.IFn 
+
+(type '(1 2 3))       ; clojure.lang.PersistentList
+
+(type println)        ; clojure.core$println
 
 </pre>
 

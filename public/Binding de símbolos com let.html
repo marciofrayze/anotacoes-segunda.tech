@@ -20,17 +20,30 @@
 </p>
 <pre clojure>
 (defn valor-multa 
-  "calcula valor da multa"
   [valor]
   (* valor 0.1))
 </pre>
 
+<p>
+;; Poderíamos colocar um comentário
+; 0.1 representa o percentual da multa
+</p>
+
 <pre clojure>
 (defn valor-multa 
-  "calcula valor da multa"
   [valor]
   (let [percentual-multa 0.1]
     (* valor percentual-multa)))
+</pre>
+
+<p>
+;; Calculando o valor total, sem o let
+</p>
+<pre clojure>
+(defn valor-total
+  "Calcula valor total incluindo multa"
+  [valor]
+    (+ valor (* valor 0.1))) ; valor + valor da multa com percentual de 10%
 </pre>
 
 <p>

@@ -1,7 +1,17 @@
 O que ficou faltando:
 
+- Uso do Reduce usando 3 parâmetros
+- explicar melhor a ideia de composicao: a-b b-c entao existe um a-c
+- def versus defn
 - Explicar os padrões de nomes de namespaces, símbolos, etc.
 - Explicar o ->>
 - Explicar o some->
 - Tratamento de exceptions (e thrown? nos testes)
 - Desconstrução de estruturas de dados
+- recursividade
+
+;; Explicar listas vs vetores:
+(type '())                                                  ; PersistentList
+(type [])                                                   ; PersistentVector
+(= '() [])                                                  ; true
+(= '("Marcio") ["Marcio"])                                  ; true

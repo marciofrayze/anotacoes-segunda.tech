@@ -23,7 +23,7 @@ Podemos criar uma função para dar um nome melhor, explicitando nossa intençã
 </p>
 
 <pre clojure>
-(defn excluir-ultima-compra
+(defn desistir-ultima-compra
   [compras]
   (pop compras))
 </pre>
@@ -36,11 +36,12 @@ E se os vetores forem vazio ou nil?
 (conj [] "Banana")  ; retorna novo array com ["Banana"]
 (conj nil "Banana") ; retorna nova LISTA contendo ("Banana")
 (type (conj nil "Banana")) ; clojure.lang.PersistentList
+(conj () "Banana")
 (type (conj [] "Banana"))  ; clojure.lang.PersistentVector
 </pre>
 
 <p>
-A função conj funciona com mais um tipo. Como passmos nil, não tinha como ela saber que queríamos um vector e não uma lista. E neste caso ela optou por inferir o tipo e retornar uma lista pra gente.  
+A função conj funciona com mais um tipo. Como passamos nil, não tinha como ela saber que queríamos um vector e não uma lista. E neste caso ela optou por inferir o tipo e retornar uma lista pra gente.  
 </p>
 
 <p>
@@ -49,6 +50,14 @@ Embora lista e vector sejam de tipos diferentes, nesse momento não precisamos n
 
 <pre clojure>
 (conj (conj nil "Banana") "Arroz") ; retorna uma LISTA ("Banana" "Arroz")
+</pre>
+
+<p>
+E se tentar adicionar um nil?
+</p>
+
+<pre clojure>
+(conj [1 2 3] nil)
 </pre>
 
 <p>

@@ -28,6 +28,17 @@
 - Vetores são imutáveis  
 - "Removendo" o último elento: (pop [1 2 3])  
  
-conj é uma abreviação de conjunction (conjunção em português). Operação de inteserção de conjuntos na lógica matemática.
+- Podemos misturar tipos: [1 2 3 "limao" "laranja" "abacate"]. Clojure é uma linguagem dinâmica
+- (println "marcio" "Frayze") ; a função println irá adicionar espaços automaticamente
+- (println "marcio" "@" "segunda.tech") ; mas nem sempre queremos ter espaços :(
+- (println (str "marcio" "@" "segunda.tech")) ; mas nem sempre queremos ter espaços :(
 
-Na programação funcional é comum aparecem termos da matemática, pegando muitos conceitos emprestados de vários ramos matemática, como da lógica, teoria dos conjuntos, cálculo lambda, teoria das categorias, ...
+
+
+
+
+
+
+
+
+

@@ -65,10 +65,24 @@ Aqui você encontra minhas anotações de estudos. É uma wiki pessoal levemente
 
 === Clojure ===
 
-[[Curso clojure dev br]]
+[[Curso de Clojure]]
 
 [[Continuacao curso clojure dev br]]
 
 [[Vídeo de chamada ao curso Clojure]]
 
+[[Artigo: Por que decidi aprender (e ensinar) Clojure em 2021]]
+
 A entropia do Software
+
+
+=== Alura Stars ===
+
+[[Alura Stars]]
+
+=== Circo ===
+
+[[Circo]]
+
+
+
