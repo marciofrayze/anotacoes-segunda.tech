@@ -278,23 +278,13 @@ Ser capaz de acompanhar o desenvolvimento de um software simples utilizando as t
 [[Exemplo IMC com Clojure]]
 - Conhecer um código de uma funcionalidade real e criada usando TDD e REPL driven development.
 
-== Aula 18: Mais sobre mapas, map, filter e reduce: Loja de brinquedos ==
-
-Objetivos:
-
-Ser capaz de acompanhar o desenvolvimento de um outro software explorando mais o uso de estrutura de dados mapa e as funções _map_, _filter_ e _reduce_.
-
-Exemplo Calculo preço total da compra em uma loja de brinquedos
-- Conhecer outro exemplo mais próximo do real: dado uma estrutura de dados com os brinquedos que estamos comprando, queremos calcular o preço total da compra.
-- Praticar mais o uso de Threading, trabalhar com mapas e utilizar o filter, map e reduce.
-
-== Aula 19: Conclusões ==
+== Aula 18: Conclusões ==
 
 Objetivos:
 
 Conhecer os possíveis caminhos para continuar os estudos da linguagem Clojure e do Paradigma Funcional.
 
-- Conhecer e ser capaz de procurar informações no clojuredocs.org
+- Conhecer e ser capaz de procurar informações no Clojure Getting Started.
 - Conhecer livros onde pode dar continuidade de seus estudos.
 
 = Sobre o autor =
